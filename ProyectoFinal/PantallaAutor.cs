@@ -30,10 +30,10 @@ namespace ProyectoFinal
             btnEliminar.Visible = false;
             btnBuscarID.Visible = false;
             labelBuscarID.Visible = false;
-            txtBuscarID.Visible = false;
+            cbBuscarID.Visible = false;
             btnEliminar.Visible = false;
             labelEliminar.Visible = false;
-            txtEliminar.Visible = false;
+            cbEliminar.Visible = false;
         }
 
         private void btncerrar_Click(object sender, EventArgs e)
@@ -55,9 +55,9 @@ namespace ProyectoFinal
 
         private void btnrestaurar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
-            btnmaximizar.Visible = true;
-            btnrestaurar.Visible = false;
+            this.WindowState = FormWindowState.Maximized;
+            btnmaximizar.Visible = false;
+            btnrestaurar.Visible = true;
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
@@ -82,10 +82,10 @@ namespace ProyectoFinal
             btnEliminar.Visible = false;
             btnBuscarID.Visible = false;
             labelBuscarID.Visible = false;
-            txtBuscarID.Visible = false;
+            cbBuscarID.Visible = false;
             btnEliminar.Visible = false;
             labelEliminar.Visible = false;
-            txtEliminar.Visible = false;
+            cbEliminar.Visible = false;
         }
 
         private void btnDevolucion_Click(object sender, EventArgs e)
@@ -105,10 +105,10 @@ namespace ProyectoFinal
             btnEliminar.Visible = false;
             btnBuscarID.Visible = false;
             labelBuscarID.Visible = false;
-            txtBuscarID.Visible = false;
+            cbBuscarID.Visible = false;
             btnEliminar.Visible = false;
             labelEliminar.Visible = false;
-            txtEliminar.Visible = false;
+            cbEliminar.Visible = false;
         }
 
         private void btnEstudiante_Click(object sender, EventArgs e)
@@ -128,10 +128,10 @@ namespace ProyectoFinal
             btnEliminar.Visible = false;
             btnBuscarID.Visible = false;
             labelBuscarID.Visible = false;
-            txtBuscarID.Visible = false;
+            cbBuscarID.Visible = false;
             btnEliminar.Visible = false;
             labelEliminar.Visible = false;
-            txtEliminar.Visible = false;
+            cbEliminar.Visible = false;
         }
 
         private void btnBIDVentana_Click(object sender, EventArgs e)
@@ -151,10 +151,10 @@ namespace ProyectoFinal
             btnEliminar.Visible = false;
             btnBuscarID.Visible = true;
             labelBuscarID.Visible = true;
-            txtBuscarID.Visible = true;
+            cbBuscarID.Visible = true;
             btnEliminar.Visible = false;
             labelEliminar.Visible = false;
-            txtEliminar.Visible = false;
+            cbEliminar.Visible = false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -174,10 +174,10 @@ namespace ProyectoFinal
             btnEliminar.Visible = false;
             btnBuscarID.Visible = true;
             labelBuscarID.Visible = true;
-            txtBuscarID.Visible = true;
+            cbBuscarID.Visible = true;
             btnEliminar.Visible = false;
             labelEliminar.Visible = false;
-            txtEliminar.Visible = false;
+            cbEliminar.Visible = false;
         }
 
         private void btnEliminarVentana_Click(object sender, EventArgs e)
@@ -197,10 +197,10 @@ namespace ProyectoFinal
             btnEliminar.Visible = false;
             btnBuscarID.Visible = false;
             labelBuscarID.Visible = false;
-            txtBuscarID.Visible = false;
+            cbBuscarID.Visible = false;
             btnEliminar.Visible = true;
             labelEliminar.Visible = true;
-            txtEliminar.Visible = true;
+            cbEliminar.Visible = true;
 
         }
     }

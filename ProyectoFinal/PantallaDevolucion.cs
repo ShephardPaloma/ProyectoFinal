@@ -20,13 +20,15 @@ namespace ProyectoFinal
             labelPrestamoID.Visible = false;
             btnCrear.Visible = false;
             txtDevolucionID.Visible = false;
-            txtPrestamoID.Visible = false;
+            cbPrestamoID.Visible = false;
             btnBuscarTodos.Visible = false;
             labelBuscarID.Visible = false;
             btnBuscarID.Visible = false;
-            txtBuscarID.Visible = false;
+            cbBuscarID.Visible = false;
             btnActualizar.Visible = false;
             btnEliminar.Visible = false;
+            labelEliminar.Visible = false;
+            cbEliminar.Visible = false;
         }
 
         private void btncerrar_Click(object sender, EventArgs e)
@@ -41,13 +43,15 @@ namespace ProyectoFinal
             labelPrestamoID.Visible = false;
             btnCrear.Visible = false;
             txtDevolucionID.Visible = false;
-            txtPrestamoID.Visible = false;
+            cbPrestamoID.Visible = false;
             btnBuscarTodos.Visible = true;
             labelBuscarID.Visible = false;
             btnBuscarID.Visible = false;
-            txtBuscarID.Visible = false;
+            cbBuscarID.Visible = false;
             btnActualizar.Visible = false;
             btnEliminar.Visible = false;
+            labelEliminar.Visible = false;
+            cbEliminar.Visible = false;
         }
 
         private void btnminimizar_Click(object sender, EventArgs e)
@@ -81,13 +85,15 @@ namespace ProyectoFinal
             labelPrestamoID.Visible = true;
             btnCrear.Visible = true;
             txtDevolucionID.Visible = true;
-            txtPrestamoID.Visible = true;
+            cbPrestamoID.Visible = true;
             btnBuscarTodos.Visible = false;
             labelBuscarID.Visible = false;
             btnBuscarID.Visible = false;
-            txtBuscarID.Visible = false;
+            cbBuscarID.Visible = false;
             btnActualizar.Visible = false;
             btnEliminar.Visible = false;
+            labelEliminar.Visible = false;
+            cbEliminar.Visible = false;
         }
 
         private void btnBIDVentana_Click(object sender, EventArgs e)
@@ -97,13 +103,15 @@ namespace ProyectoFinal
             labelPrestamoID.Visible = false;
             btnCrear.Visible = false;
             txtDevolucionID.Visible = false;
-            txtPrestamoID.Visible = false;
+            cbPrestamoID.Visible = false;
             btnBuscarTodos.Visible = false;
             labelBuscarID.Visible = true;
             btnBuscarID.Visible = true;
-            txtBuscarID.Visible = true;
+            cbBuscarID.Visible = true;
             btnActualizar.Visible = false;
             btnEliminar.Visible = false;
+            labelEliminar.Visible = false;
+            cbEliminar.Visible = false;
         }
 
         private void btnActualizarVentana_Click(object sender, EventArgs e)
@@ -113,29 +121,33 @@ namespace ProyectoFinal
             labelPrestamoID.Visible = true;
             btnCrear.Visible = false;
             txtDevolucionID.Visible = true;
-            txtPrestamoID.Visible = true;
+            cbPrestamoID.Visible = true;
             btnBuscarTodos.Visible = false;
             labelBuscarID.Visible = false;
             btnBuscarID.Visible = false;
-            txtBuscarID.Visible = false;
+            cbBuscarID.Visible = false;
             btnActualizar.Visible = true;
             btnEliminar.Visible = false;
+            labelEliminar.Visible = false;
+            cbEliminar.Visible = false;
         }
 
         private void btnEliminarVentana_Click(object sender, EventArgs e)
         {
             imagenDevolucion.Visible = true;
-            labelDevolucionID.Visible = true;
+            labelDevolucionID.Visible = false;
             labelPrestamoID.Visible = false;
             btnCrear.Visible = false;
-            txtDevolucionID.Visible = true;
-            txtPrestamoID.Visible = false;
+            txtDevolucionID.Visible = false;
+            cbPrestamoID.Visible = false;
             btnBuscarTodos.Visible = false;
             labelBuscarID.Visible = false;
             btnBuscarID.Visible = false;
-            txtBuscarID.Visible = false;
+            cbBuscarID.Visible = false;
             btnActualizar.Visible = false;
             btnEliminar.Visible = true;
+            labelEliminar.Visible = true;
+            cbEliminar.Visible = true;
         }
     }
 }

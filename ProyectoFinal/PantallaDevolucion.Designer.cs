@@ -51,17 +51,19 @@
             this.dgvDevolucion = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.imagenDevolucion = new System.Windows.Forms.PictureBox();
-            this.txtPrestamoID = new System.Windows.Forms.TextBox();
             this.labelPrestamoID = new System.Windows.Forms.Label();
             this.txtDevolucionID = new System.Windows.Forms.TextBox();
             this.labelDevolucionID = new System.Windows.Forms.Label();
             this.btnCrear = new System.Windows.Forms.Button();
             this.btnBuscarTodos = new System.Windows.Forms.Button();
             this.btnBuscarID = new System.Windows.Forms.Button();
-            this.txtBuscarID = new System.Windows.Forms.TextBox();
             this.labelBuscarID = new System.Windows.Forms.Label();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.cbEliminar = new System.Windows.Forms.ComboBox();
+            this.labelEliminar = new System.Windows.Forms.Label();
+            this.cbBuscarID = new System.Windows.Forms.ComboBox();
+            this.cbPrestamoID = new System.Windows.Forms.ComboBox();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnrestaurar)).BeginInit();
@@ -360,19 +362,11 @@
             this.imagenDevolucion.TabIndex = 12;
             this.imagenDevolucion.TabStop = false;
             // 
-            // txtPrestamoID
-            // 
-            this.txtPrestamoID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrestamoID.Location = new System.Drawing.Point(932, 276);
-            this.txtPrestamoID.Name = "txtPrestamoID";
-            this.txtPrestamoID.Size = new System.Drawing.Size(130, 30);
-            this.txtPrestamoID.TabIndex = 25;
-            // 
             // labelPrestamoID
             // 
             this.labelPrestamoID.AutoSize = true;
             this.labelPrestamoID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrestamoID.Location = new System.Drawing.Point(938, 152);
+            this.labelPrestamoID.Location = new System.Drawing.Point(938, 190);
             this.labelPrestamoID.Name = "labelPrestamoID";
             this.labelPrestamoID.Size = new System.Drawing.Size(116, 23);
             this.labelPrestamoID.TabIndex = 24;
@@ -381,7 +375,7 @@
             // txtDevolucionID
             // 
             this.txtDevolucionID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDevolucionID.Location = new System.Drawing.Point(283, 276);
+            this.txtDevolucionID.Location = new System.Drawing.Point(283, 284);
             this.txtDevolucionID.Name = "txtDevolucionID";
             this.txtDevolucionID.Size = new System.Drawing.Size(130, 30);
             this.txtDevolucionID.TabIndex = 19;
@@ -390,7 +384,7 @@
             // 
             this.labelDevolucionID.AutoSize = true;
             this.labelDevolucionID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDevolucionID.Location = new System.Drawing.Point(285, 152);
+            this.labelDevolucionID.Location = new System.Drawing.Point(285, 190);
             this.labelDevolucionID.Name = "labelDevolucionID";
             this.labelDevolucionID.Size = new System.Drawing.Size(129, 23);
             this.labelDevolucionID.TabIndex = 18;
@@ -435,14 +429,6 @@
             this.btnBuscarID.Text = "Buscar";
             this.btnBuscarID.UseVisualStyleBackColor = false;
             // 
-            // txtBuscarID
-            // 
-            this.txtBuscarID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarID.Location = new System.Drawing.Point(610, 442);
-            this.txtBuscarID.Name = "txtBuscarID";
-            this.txtBuscarID.Size = new System.Drawing.Size(130, 30);
-            this.txtBuscarID.TabIndex = 29;
-            // 
             // labelBuscarID
             // 
             this.labelBuscarID.AutoSize = true;
@@ -472,12 +458,46 @@
             this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(921, 213);
+            this.btnEliminar.Location = new System.Drawing.Point(932, 411);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(166, 57);
             this.btnEliminar.TabIndex = 32;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // cbEliminar
+            // 
+            this.cbEliminar.FormattingEnabled = true;
+            this.cbEliminar.Location = new System.Drawing.Point(610, 424);
+            this.cbEliminar.Name = "cbEliminar";
+            this.cbEliminar.Size = new System.Drawing.Size(130, 24);
+            this.cbEliminar.TabIndex = 35;
+            // 
+            // labelEliminar
+            // 
+            this.labelEliminar.AutoSize = true;
+            this.labelEliminar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEliminar.Location = new System.Drawing.Point(273, 424);
+            this.labelEliminar.Name = "labelEliminar";
+            this.labelEliminar.Size = new System.Drawing.Size(142, 23);
+            this.labelEliminar.TabIndex = 34;
+            this.labelEliminar.Text = "Eliminar Por ID";
+            // 
+            // cbBuscarID
+            // 
+            this.cbBuscarID.FormattingEnabled = true;
+            this.cbBuscarID.Location = new System.Drawing.Point(610, 444);
+            this.cbBuscarID.Name = "cbBuscarID";
+            this.cbBuscarID.Size = new System.Drawing.Size(130, 24);
+            this.cbBuscarID.TabIndex = 36;
+            // 
+            // cbPrestamoID
+            // 
+            this.cbPrestamoID.FormattingEnabled = true;
+            this.cbPrestamoID.Location = new System.Drawing.Point(932, 284);
+            this.cbPrestamoID.Name = "cbPrestamoID";
+            this.cbPrestamoID.Size = new System.Drawing.Size(130, 24);
+            this.cbPrestamoID.TabIndex = 37;
             // 
             // PantallaDevolucion
             // 
@@ -485,14 +505,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1182, 693);
+            this.Controls.Add(this.cbPrestamoID);
+            this.Controls.Add(this.cbBuscarID);
+            this.Controls.Add(this.cbEliminar);
+            this.Controls.Add(this.labelEliminar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnBuscarID);
-            this.Controls.Add(this.txtBuscarID);
             this.Controls.Add(this.labelBuscarID);
             this.Controls.Add(this.btnBuscarTodos);
             this.Controls.Add(this.btnCrear);
-            this.Controls.Add(this.txtPrestamoID);
             this.Controls.Add(this.labelPrestamoID);
             this.Controls.Add(this.txtDevolucionID);
             this.Controls.Add(this.labelDevolucionID);
@@ -544,16 +566,18 @@
         private System.Windows.Forms.DataGridView dgvDevolucion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox imagenDevolucion;
-        private System.Windows.Forms.TextBox txtPrestamoID;
         private System.Windows.Forms.Label labelPrestamoID;
         private System.Windows.Forms.TextBox txtDevolucionID;
         private System.Windows.Forms.Label labelDevolucionID;
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.Button btnBuscarTodos;
         private System.Windows.Forms.Button btnBuscarID;
-        private System.Windows.Forms.TextBox txtBuscarID;
         private System.Windows.Forms.Label labelBuscarID;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.ComboBox cbEliminar;
+        private System.Windows.Forms.Label labelEliminar;
+        private System.Windows.Forms.ComboBox cbBuscarID;
+        private System.Windows.Forms.ComboBox cbPrestamoID;
     }
 }

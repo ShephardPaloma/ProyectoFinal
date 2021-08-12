@@ -66,10 +66,10 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.labelBuscarID = new System.Windows.Forms.Label();
-            this.txtBuscarID = new System.Windows.Forms.TextBox();
             this.btnBuscarID = new System.Windows.Forms.Button();
             this.labelEliminar = new System.Windows.Forms.Label();
-            this.txtEliminar = new System.Windows.Forms.TextBox();
+            this.cbBuscarID = new System.Windows.Forms.ComboBox();
+            this.cbEliminar = new System.Windows.Forms.ComboBox();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnrestaurar)).BeginInit();
@@ -469,9 +469,9 @@
             this.imagenAutor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.imagenAutor.BackColor = System.Drawing.Color.Transparent;
             this.imagenAutor.Image = ((System.Drawing.Image)(resources.GetObject("imagenAutor.Image")));
-            this.imagenAutor.Location = new System.Drawing.Point(518, 152);
+            this.imagenAutor.Location = new System.Drawing.Point(540, 161);
             this.imagenAutor.Name = "imagenAutor";
-            this.imagenAutor.Size = new System.Drawing.Size(301, 252);
+            this.imagenAutor.Size = new System.Drawing.Size(246, 225);
             this.imagenAutor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imagenAutor.TabIndex = 19;
             this.imagenAutor.TabStop = false;
@@ -525,15 +525,6 @@
             this.labelBuscarID.TabIndex = 23;
             this.labelBuscarID.Text = "Buscar Por ID";
             // 
-            // txtBuscarID
-            // 
-            this.txtBuscarID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarID.Location = new System.Drawing.Point(608, 453);
-            this.txtBuscarID.Name = "txtBuscarID";
-            this.txtBuscarID.Size = new System.Drawing.Size(130, 30);
-            this.txtBuscarID.TabIndex = 24;
-            this.txtBuscarID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // btnBuscarID
             // 
             this.btnBuscarID.BackColor = System.Drawing.Color.Transparent;
@@ -557,13 +548,21 @@
             this.labelEliminar.TabIndex = 26;
             this.labelEliminar.Text = "Eliminar Por ID";
             // 
-            // txtEliminar
+            // cbBuscarID
             // 
-            this.txtEliminar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEliminar.Location = new System.Drawing.Point(608, 438);
-            this.txtEliminar.Name = "txtEliminar";
-            this.txtEliminar.Size = new System.Drawing.Size(130, 30);
-            this.txtEliminar.TabIndex = 27;
+            this.cbBuscarID.FormattingEnabled = true;
+            this.cbBuscarID.Location = new System.Drawing.Point(598, 458);
+            this.cbBuscarID.Name = "cbBuscarID";
+            this.cbBuscarID.Size = new System.Drawing.Size(130, 24);
+            this.cbBuscarID.TabIndex = 36;
+            // 
+            // cbEliminar
+            // 
+            this.cbEliminar.FormattingEnabled = true;
+            this.cbEliminar.Location = new System.Drawing.Point(598, 437);
+            this.cbEliminar.Name = "cbEliminar";
+            this.cbEliminar.Size = new System.Drawing.Size(130, 24);
+            this.cbEliminar.TabIndex = 35;
             // 
             // PantallaAutor
             // 
@@ -571,10 +570,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1182, 693);
-            this.Controls.Add(this.txtEliminar);
+            this.Controls.Add(this.cbBuscarID);
+            this.Controls.Add(this.cbEliminar);
             this.Controls.Add(this.labelEliminar);
             this.Controls.Add(this.btnBuscarID);
-            this.Controls.Add(this.txtBuscarID);
             this.Controls.Add(this.labelBuscarID);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
@@ -653,9 +652,9 @@
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label labelBuscarID;
-        private System.Windows.Forms.TextBox txtBuscarID;
         private System.Windows.Forms.Button btnBuscarID;
         private System.Windows.Forms.Label labelEliminar;
-        private System.Windows.Forms.TextBox txtEliminar;
+        private System.Windows.Forms.ComboBox cbBuscarID;
+        private System.Windows.Forms.ComboBox cbEliminar;
     }
 }
