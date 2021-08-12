@@ -78,6 +78,11 @@ namespace ProyectoFinal.DataModel.Context
             modelBuilder.Entity<Devolucion>()
                 .Property(p => p.Id)
                 .HasColumnName("DevolucionId");
+
+            modelBuilder.Entity<Devolucion>()
+                .Property(p => p.FechaDevolucion)
+                .HasColumnType("DateTime")
+                .IsRequired();
             #endregion
 
             #region Editorial

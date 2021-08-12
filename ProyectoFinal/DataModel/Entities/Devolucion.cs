@@ -9,7 +9,7 @@ namespace ProyectoFinal.DataModel.Entities
     public class Devolucion:BaseEntity
     {
         public int PrestamoId { get; set; }
-        //FechaDevolucion
+        public DateTime FechaDevolucion { get; set; }
         public Prestamo prestamo { get; set; }
     }
 }
