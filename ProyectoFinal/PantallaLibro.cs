@@ -40,12 +40,12 @@ namespace ProyectoFinal
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            Application.Exit(); //Ponerlo a que vuelva a la pantalla principal
+            this.Close();
         }
 
         private void btncerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit(); //Ponerlo a que vuelva a la pantalla principal
+            this.Close(); 
         }
 
         private void btnminimizar_Click(object sender, EventArgs e)
@@ -67,8 +67,7 @@ namespace ProyectoFinal
             btnmaximizar.Visible = true;
             
         }
-
-        private void btnCrearVentana_Click(object sender, EventArgs e)
+        private void btnCrearVentana_Click_1(object sender, EventArgs e)
         {
             #region Visual
             imagenLibro.Visible = false;
@@ -92,7 +91,7 @@ namespace ProyectoFinal
             #endregion
         }
 
-        private void btnBTodosVentana_Click(object sender, EventArgs e)
+        private void btnBTodosVentana_Click_1(object sender, EventArgs e)
         {
             #region Visual
             imagenLibro.Visible = true;
@@ -116,7 +115,7 @@ namespace ProyectoFinal
             #endregion
         }
 
-        private void btnBIDVentana_Click(object sender, EventArgs e)
+        private void btnBIDVentana_Click_1(object sender, EventArgs e)
         {
             #region Visual
             imagenLibro.Visible = true;
@@ -140,7 +139,7 @@ namespace ProyectoFinal
             #endregion
         }
 
-        private void btnActualizarVentana_Click(object sender, EventArgs e)
+        private void btnActualizarVentana_Click_1(object sender, EventArgs e)
         {
             #region Visual
             imagenLibro.Visible = false;
@@ -164,7 +163,7 @@ namespace ProyectoFinal
             #endregion
         }
 
-        private void btnEliminarVentana_Click(object sender, EventArgs e)
+        private void btnEliminarVentana_Click_1(object sender, EventArgs e)
         {
             #region Visual
             imagenLibro.Visible = true;

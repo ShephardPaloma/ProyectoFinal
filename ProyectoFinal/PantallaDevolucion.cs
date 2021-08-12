@@ -36,28 +36,9 @@ namespace ProyectoFinal
 
         private void btncerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit(); //Ponerlo a que vuelva a la pantalla principal
+            this.Close();
         }
 
-        private void btnBTodosVentana_Click(object sender, EventArgs e)
-        {
-            #region Visual
-            imagenDevolucion.Visible = true;
-            labelDevolucionID.Visible = false;
-            labelPrestamoID.Visible = false;
-            btnCrear.Visible = false;
-            txtDevolucionID.Visible = false;
-            cbPrestamoID.Visible = false;
-            btnBuscarTodos.Visible = true;
-            labelBuscarID.Visible = false;
-            btnBuscarID.Visible = false;
-            cbBuscarID.Visible = false;
-            btnActualizar.Visible = false;
-            btnEliminar.Visible = false;
-            labelEliminar.Visible = false;
-            cbEliminar.Visible = false;
-            #endregion
-        }
 
         private void btnminimizar_Click(object sender, EventArgs e)
         {
@@ -80,10 +61,15 @@ namespace ProyectoFinal
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            Application.Exit(); //Ponerlo a que vuelva a la pantalla principal
+            this.Close();
         }
 
-        private void btnCrearVentana_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCrearVentana_Click_1(object sender, EventArgs e)
         {
             #region Visual
             imagenDevolucion.Visible = true;
@@ -103,7 +89,27 @@ namespace ProyectoFinal
             #endregion
         }
 
-        private void btnBIDVentana_Click(object sender, EventArgs e)
+        private void btnBTodosVentana_Click_1(object sender, EventArgs e)
+        {
+            #region Visual
+            imagenDevolucion.Visible = true;
+            labelDevolucionID.Visible = false;
+            labelPrestamoID.Visible = false;
+            btnCrear.Visible = false;
+            txtDevolucionID.Visible = false;
+            cbPrestamoID.Visible = false;
+            btnBuscarTodos.Visible = true;
+            labelBuscarID.Visible = false;
+            btnBuscarID.Visible = false;
+            cbBuscarID.Visible = false;
+            btnActualizar.Visible = false;
+            btnEliminar.Visible = false;
+            labelEliminar.Visible = false;
+            cbEliminar.Visible = false;
+            #endregion
+        }
+
+        private void btnBIDVentana_Click_1(object sender, EventArgs e)
         {
             #region Visual
             imagenDevolucion.Visible = true;
@@ -123,7 +129,7 @@ namespace ProyectoFinal
             #endregion
         }
 
-        private void btnActualizarVentana_Click(object sender, EventArgs e)
+        private void btnActualizarVentana_Click_1(object sender, EventArgs e)
         {
             #region Visual
             imagenDevolucion.Visible = true;
@@ -143,7 +149,7 @@ namespace ProyectoFinal
             #endregion
         }
 
-        private void btnEliminarVentana_Click(object sender, EventArgs e)
+        private void btnEliminarVentana_Click_1(object sender, EventArgs e)
         {
             #region Visual
             imagenDevolucion.Visible = true;
@@ -161,11 +167,6 @@ namespace ProyectoFinal
             labelEliminar.Visible = true;
             cbEliminar.Visible = true;
             #endregion
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

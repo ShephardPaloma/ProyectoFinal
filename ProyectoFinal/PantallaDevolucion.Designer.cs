@@ -397,6 +397,7 @@
             this.btnEliminarVentana.TabIndex = 10;
             this.btnEliminarVentana.Text = "Eliminar";
             this.btnEliminarVentana.UseVisualStyleBackColor = true;
+            this.btnEliminarVentana.Click += new System.EventHandler(this.btnEliminarVentana_Click_1);
             // 
             // panel5
             // 
@@ -431,6 +432,7 @@
             this.btnActualizarVentana.TabIndex = 8;
             this.btnActualizarVentana.Text = "Actualizar";
             this.btnActualizarVentana.UseVisualStyleBackColor = true;
+            this.btnActualizarVentana.Click += new System.EventHandler(this.btnActualizarVentana_Click_1);
             // 
             // btnBTodosVentana
             // 
@@ -447,6 +449,7 @@
             this.btnBTodosVentana.TabIndex = 3;
             this.btnBTodosVentana.Text = "Buscar Todos";
             this.btnBTodosVentana.UseVisualStyleBackColor = true;
+            this.btnBTodosVentana.Click += new System.EventHandler(this.btnBTodosVentana_Click_1);
             // 
             // panel4
             // 
@@ -481,6 +484,7 @@
             this.btnCrearVentana.TabIndex = 1;
             this.btnCrearVentana.Text = "Crear";
             this.btnCrearVentana.UseVisualStyleBackColor = true;
+            this.btnCrearVentana.Click += new System.EventHandler(this.btnCrearVentana_Click_1);
             // 
             // btnBIDVentana
             // 
@@ -497,6 +501,7 @@
             this.btnBIDVentana.TabIndex = 5;
             this.btnBIDVentana.Text = "Buscar por ID";
             this.btnBIDVentana.UseVisualStyleBackColor = true;
+            this.btnBIDVentana.Click += new System.EventHandler(this.btnBIDVentana_Click_1);
             // 
             // pictureBox1
             // 

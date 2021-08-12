@@ -38,7 +38,7 @@ namespace ProyectoFinal
 
         private void btncerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit(); //Ponerlo a que vuelva a la pantalla principal
+            this.Close();
         }
 
         private void btnminimizar_Click(object sender, EventArgs e)
@@ -168,6 +168,11 @@ namespace ProyectoFinal
             labelEliminar.Visible = true;
             btnEliminar.Visible = true;
             #endregion
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
