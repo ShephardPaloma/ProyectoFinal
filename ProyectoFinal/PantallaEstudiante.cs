@@ -176,9 +176,14 @@ namespace ProyectoFinal
 
         private void btnrestaurar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            btnmaximizar.Visible = false;
-            btnrestaurar.Visible = true;
+            this.WindowState = FormWindowState.Normal;
+            btnrestaurar.Visible = false;
+            btnmaximizar.Visible = true;
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); //Ponerlo a que vuelva a la pantalla principal
         }
     }
 }
