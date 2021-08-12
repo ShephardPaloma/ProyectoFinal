@@ -131,6 +131,9 @@
     <EmbeddedResource Include="PantallaAutor.resx">
       <DependentUpon>PantallaAutor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PantallaDevolucion.resx">
+      <DependentUpon>PantallaDevolucion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>

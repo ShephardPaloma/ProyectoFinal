@@ -30,12 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaAutor));
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnmaximizar = new System.Windows.Forms.PictureBox();
+            this.btnrestaurar = new System.Windows.Forms.PictureBox();
             this.btnminimizar = new System.Windows.Forms.PictureBox();
             this.btncerrar = new System.Windows.Forms.PictureBox();
-            this.btnrestaurar = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnEliminarVentana = new System.Windows.Forms.Button();
@@ -48,8 +50,6 @@
             this.btnCrearVentana = new System.Windows.Forms.Button();
             this.btnBIDVentana = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvAutor = new System.Windows.Forms.DataGridView();
             this.labelID = new System.Windows.Forms.Label();
@@ -72,13 +72,13 @@
             this.txtEliminar = new System.Windows.Forms.TextBox();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnrestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnrestaurar)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenAutor)).BeginInit();
             this.SuspendLayout();
@@ -97,6 +97,17 @@
             this.BarraTitulo.Size = new System.Drawing.Size(1182, 28);
             this.BarraTitulo.TabIndex = 4;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Poor Richard", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(493, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 23);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Biblioteca Virtual";
+            // 
             // btnmaximizar
             // 
             this.btnmaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -109,6 +120,19 @@
             this.btnmaximizar.TabIndex = 8;
             this.btnmaximizar.TabStop = false;
             this.btnmaximizar.Click += new System.EventHandler(this.btnmaximizar_Click);
+            // 
+            // btnrestaurar
+            // 
+            this.btnrestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnrestaurar.BackColor = System.Drawing.Color.Transparent;
+            this.btnrestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnrestaurar.Image")));
+            this.btnrestaurar.Location = new System.Drawing.Point(1062, 3);
+            this.btnrestaurar.Name = "btnrestaurar";
+            this.btnrestaurar.Size = new System.Drawing.Size(25, 25);
+            this.btnrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnrestaurar.TabIndex = 9;
+            this.btnrestaurar.TabStop = false;
+            this.btnrestaurar.Click += new System.EventHandler(this.btnrestaurar_Click);
             // 
             // btnminimizar
             // 
@@ -135,19 +159,6 @@
             this.btncerrar.TabIndex = 7;
             this.btncerrar.TabStop = false;
             this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
-            // 
-            // btnrestaurar
-            // 
-            this.btnrestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnrestaurar.BackColor = System.Drawing.Color.Transparent;
-            this.btnrestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnrestaurar.Image")));
-            this.btnrestaurar.Location = new System.Drawing.Point(1062, 3);
-            this.btnrestaurar.Name = "btnrestaurar";
-            this.btnrestaurar.Size = new System.Drawing.Size(25, 25);
-            this.btnrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnrestaurar.TabIndex = 9;
-            this.btnrestaurar.TabStop = false;
-            this.btnrestaurar.Click += new System.EventHandler(this.btnrestaurar_Click);
             // 
             // panel1
             // 
@@ -179,6 +190,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 630);
             this.panel2.TabIndex = 6;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(0, 583);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(53, 47);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 17;
+            this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // pictureBox9
             // 
@@ -333,30 +357,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(0, 583);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(53, 47);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 17;
-            this.pictureBox10.TabStop = false;
-            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poor Richard", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(493, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 23);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Biblioteca Virtual";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -383,11 +383,11 @@
             // 
             this.labelID.AutoSize = true;
             this.labelID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelID.Location = new System.Drawing.Point(307, 164);
+            this.labelID.Location = new System.Drawing.Point(286, 164);
             this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(31, 23);
+            this.labelID.Size = new System.Drawing.Size(85, 23);
             this.labelID.TabIndex = 10;
-            this.labelID.Text = "ID";
+            this.labelID.Text = "Autor ID";
             // 
             // txtID
             // 
@@ -495,7 +495,7 @@
             this.btnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(933, 233);
+            this.btnActualizar.Location = new System.Drawing.Point(933, 254);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(166, 57);
             this.btnActualizar.TabIndex = 21;
@@ -600,13 +600,13 @@
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnrestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnrestaurar)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenAutor)).EndInit();
             this.ResumeLayout(false);
