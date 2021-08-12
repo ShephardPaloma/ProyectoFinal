@@ -15,6 +15,8 @@ namespace ProyectoFinal
         public PantallaEstudiante()
         {
             InitializeComponent();
+
+            #region Visual
             imagenEstudiante.Visible = true;
             labelIDEstudiante.Visible = false;
             labelNombre.Visible = false;
@@ -35,10 +37,12 @@ namespace ProyectoFinal
             labelEliminar.Visible = false;
             cbEliminar.Visible = false;
             btnEliminar.Visible = false;
+            #endregion
         }
 
         private void btnCrearVentana_Click(object sender, EventArgs e)
         {
+            #region Visual
             imagenEstudiante.Visible = false;
             labelIDEstudiante.Visible = true;
             labelNombre.Visible = true;
@@ -59,10 +63,12 @@ namespace ProyectoFinal
             labelEliminar.Visible = false;
             cbEliminar.Visible = false;
             btnEliminar.Visible = false;
+            #endregion
         }
 
         private void btnBTodosVentana_Click(object sender, EventArgs e)
         {
+            #region Visual
             imagenEstudiante.Visible = true;
             labelIDEstudiante.Visible = false;
             labelNombre.Visible = false;
@@ -83,10 +89,12 @@ namespace ProyectoFinal
             labelEliminar.Visible = false;
             cbEliminar.Visible = false;
             btnEliminar.Visible = false;
+            #endregion
         }
 
         private void btnBIDVentana_Click(object sender, EventArgs e)
         {
+            #region Visual
             imagenEstudiante.Visible = true;
             labelIDEstudiante.Visible = false;
             labelNombre.Visible = false;
@@ -107,10 +115,12 @@ namespace ProyectoFinal
             labelEliminar.Visible = false;
             cbEliminar.Visible = false;
             btnEliminar.Visible = false;
+            #endregion
         }
 
         private void btnActualizarVentana_Click(object sender, EventArgs e)
         {
+            #region Visual
             imagenEstudiante.Visible = false;
             labelIDEstudiante.Visible = true;
             labelNombre.Visible = true;
@@ -131,10 +141,12 @@ namespace ProyectoFinal
             labelEliminar.Visible = false;
             cbEliminar.Visible = false;
             btnEliminar.Visible = false;
+            #endregion
         }
 
         private void btnEliminarVentana_Click(object sender, EventArgs e)
         {
+            #region Visual
             imagenEstudiante.Visible = true;
             labelIDEstudiante.Visible = false;
             labelNombre.Visible = false;
@@ -155,6 +167,7 @@ namespace ProyectoFinal
             labelEliminar.Visible = true;
             cbEliminar.Visible = true;
             btnEliminar.Visible = true;
+            #endregion
         }
 
         private void btncerrar_Click(object sender, EventArgs e)

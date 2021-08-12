@@ -15,6 +15,8 @@ namespace ProyectoFinal
         public PantallaEditorial()
         {
             InitializeComponent();
+
+            #region Visual
             imagenEditorial.Visible = true;
             labelEditorialID.Visible = false;
             labelNombre.Visible = false;
@@ -31,6 +33,7 @@ namespace ProyectoFinal
             cbEliminar.Visible = false;
             labelEliminar.Visible = false;
             btnEliminar.Visible = false;
+            #endregion
         }
 
         private void btncerrar_Click(object sender, EventArgs e)
@@ -53,12 +56,13 @@ namespace ProyectoFinal
         private void btnrestaurar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            btnmaximizar.Visible = false;
-            btnrestaurar.Visible = true;
+            btnmaximizar.Visible = true;
+            btnrestaurar.Visible = false;
         }
 
         private void btnCrearVentana_Click(object sender, EventArgs e)
         {
+            #region Visual
             imagenEditorial.Visible = false;
             labelEditorialID.Visible = true;
             labelNombre.Visible = true;
@@ -75,10 +79,12 @@ namespace ProyectoFinal
             cbEliminar.Visible = false;
             labelEliminar.Visible = false;
             btnEliminar.Visible = false;
+            #endregion
         }
 
         private void btnBTodosVentana_Click(object sender, EventArgs e)
         {
+            #region Visual
             imagenEditorial.Visible = true;
             labelEditorialID.Visible = false;
             labelNombre.Visible = false;
@@ -95,10 +101,12 @@ namespace ProyectoFinal
             cbEliminar.Visible = false;
             labelEliminar.Visible = false;
             btnEliminar.Visible = false;
+            #endregion
         }
 
         private void btnBIDVentana_Click(object sender, EventArgs e)
         {
+            #region Visual
             imagenEditorial.Visible = true;
             labelEditorialID.Visible = false;
             labelNombre.Visible = false;
@@ -115,10 +123,12 @@ namespace ProyectoFinal
             cbEliminar.Visible = false;
             labelEliminar.Visible = false;
             btnEliminar.Visible = false;
+            #endregion
         }
 
         private void btnActualizarVentana_Click(object sender, EventArgs e)
         {
+            #region Visual
             imagenEditorial.Visible = false;
             labelEditorialID.Visible = true;
             labelNombre.Visible = true;
@@ -135,10 +145,12 @@ namespace ProyectoFinal
             cbEliminar.Visible = false;
             labelEliminar.Visible = false;
             btnEliminar.Visible = false;
+            #endregion
         }
 
         private void btnEliminarVentana_Click(object sender, EventArgs e)
         {
+            #region Visual
             imagenEditorial.Visible = true;
             labelEditorialID.Visible = false;
             labelNombre.Visible = false;
@@ -155,6 +167,7 @@ namespace ProyectoFinal
             cbEliminar.Visible = true;
             labelEliminar.Visible = true;
             btnEliminar.Visible = true;
+            #endregion
         }
     }
 }

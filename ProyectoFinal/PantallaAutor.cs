@@ -14,7 +14,10 @@ namespace ProyectoFinal
     {
         public PantallaAutor()
         {
+
             InitializeComponent();
+
+            #region Visual
             imagenAutor.Visible = true;
             txtID.Visible = false;
             txtNombre.Visible = false;
@@ -34,6 +37,7 @@ namespace ProyectoFinal
             btnEliminar.Visible = false;
             labelEliminar.Visible = false;
             cbEliminar.Visible = false;
+            #endregion
         }
 
         private void btncerrar_Click(object sender, EventArgs e)
@@ -56,8 +60,8 @@ namespace ProyectoFinal
         private void btnrestaurar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            btnmaximizar.Visible = false;
-            btnrestaurar.Visible = true;
+            btnmaximizar.Visible = true;
+            btnrestaurar.Visible = false;
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
@@ -67,6 +71,7 @@ namespace ProyectoFinal
 
         private void btnAutor_Click(object sender, EventArgs e)
         {
+            #region Visual
             imagenAutor.Visible = false;
             txtID.Visible = true;
             txtNombre.Visible = true;
@@ -86,10 +91,12 @@ namespace ProyectoFinal
             btnEliminar.Visible = false;
             labelEliminar.Visible = false;
             cbEliminar.Visible = false;
+            #endregion
         }
 
         private void btnDevolucion_Click(object sender, EventArgs e)
         {
+            #region Visual
             imagenAutor.Visible = true;
             btnBuscarTodos.Visible = true;
             txtID.Visible = false;
@@ -109,10 +116,12 @@ namespace ProyectoFinal
             btnEliminar.Visible = false;
             labelEliminar.Visible = false;
             cbEliminar.Visible = false;
+            #endregion
         }
 
         private void btnEstudiante_Click(object sender, EventArgs e)
         {
+            #region Visual
             imagenAutor.Visible = false;
             btnBuscarTodos.Visible = false;
             txtID.Visible = true;
@@ -132,10 +141,12 @@ namespace ProyectoFinal
             btnEliminar.Visible = false;
             labelEliminar.Visible = false;
             cbEliminar.Visible = false;
+            #endregion
         }
 
         private void btnBIDVentana_Click(object sender, EventArgs e)
         {
+            #region Visual
             imagenAutor.Visible = true;
             btnBuscarTodos.Visible = false;
             txtID.Visible = false;
@@ -155,10 +166,12 @@ namespace ProyectoFinal
             btnEliminar.Visible = false;
             labelEliminar.Visible = false;
             cbEliminar.Visible = false;
+            #endregion
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            #region Visual
             imagenAutor.Visible = true;
             btnBuscarTodos.Visible = false;
             txtID.Visible = false;
@@ -178,10 +191,12 @@ namespace ProyectoFinal
             btnEliminar.Visible = false;
             labelEliminar.Visible = false;
             cbEliminar.Visible = false;
+            #endregion
         }
 
         private void btnEliminarVentana_Click(object sender, EventArgs e)
         {
+            #region Visual
             imagenAutor.Visible = true;
             btnBuscarTodos.Visible = false;
             txtID.Visible = false;
@@ -201,6 +216,11 @@ namespace ProyectoFinal
             btnEliminar.Visible = true;
             labelEliminar.Visible = true;
             cbEliminar.Visible = true;
+            #endregion
+        }
+
+        private void PantallaAutor_Load(object sender, EventArgs e)
+        {
 
         }
     }

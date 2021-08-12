@@ -15,6 +15,8 @@ namespace ProyectoFinal
         public PantallaLibro()
         {
             InitializeComponent();
+
+            #region Visual
             imagenLibro.Visible = true;
             labelIDLibro.Visible = false;
             labelAutorID.Visible = false;
@@ -33,6 +35,7 @@ namespace ProyectoFinal
             labelEliminar.Visible = false;
             cbEliminar.Visible = false;
             btnEliminar.Visible = false;
+            #endregion
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
@@ -67,6 +70,7 @@ namespace ProyectoFinal
 
         private void btnCrearVentana_Click(object sender, EventArgs e)
         {
+            #region Visual
             imagenLibro.Visible = false;
             labelIDLibro.Visible = true;
             labelAutorID.Visible = true;
@@ -85,10 +89,12 @@ namespace ProyectoFinal
             labelEliminar.Visible = false;
             cbEliminar.Visible = false;
             btnEliminar.Visible = false;
+            #endregion
         }
 
         private void btnBTodosVentana_Click(object sender, EventArgs e)
         {
+            #region Visual
             imagenLibro.Visible = true;
             labelIDLibro.Visible = false;
             labelAutorID.Visible = false;
@@ -107,10 +113,12 @@ namespace ProyectoFinal
             labelEliminar.Visible = false;
             cbEliminar.Visible = false;
             btnEliminar.Visible = false;
+            #endregion
         }
 
         private void btnBIDVentana_Click(object sender, EventArgs e)
         {
+            #region Visual
             imagenLibro.Visible = true;
             labelIDLibro.Visible = false;
             labelAutorID.Visible = false;
@@ -129,10 +137,12 @@ namespace ProyectoFinal
             labelEliminar.Visible = false;
             cbEliminar.Visible = false;
             btnEliminar.Visible = false;
+            #endregion
         }
 
         private void btnActualizarVentana_Click(object sender, EventArgs e)
         {
+            #region Visual
             imagenLibro.Visible = false;
             labelIDLibro.Visible = true;
             labelAutorID.Visible = true;
@@ -151,10 +161,12 @@ namespace ProyectoFinal
             labelEliminar.Visible = false;
             cbEliminar.Visible = false;
             btnEliminar.Visible = false;
+            #endregion
         }
 
         private void btnEliminarVentana_Click(object sender, EventArgs e)
         {
+            #region Visual
             imagenLibro.Visible = true;
             labelIDLibro.Visible = false;
             labelAutorID.Visible = false;
@@ -173,6 +185,7 @@ namespace ProyectoFinal
             labelEliminar.Visible = true;
             cbEliminar.Visible = true;
             btnEliminar.Visible = true;
+            #endregion
         }
     }
 }
