@@ -39,7 +39,7 @@ namespace ProyectoFinal.DataModel.Repositories
             model.FechaActualizacion = DateTime.Today;
 
             dbContext.SaveChanges();
-            return new OperationResult() { Succes = true };
+            return new OperationResult() { Success = true };
         }
 
         public T FindById(int Id)
@@ -58,7 +58,7 @@ namespace ProyectoFinal.DataModel.Repositories
             model.FechaActualizacion = DateTime.Today;
             dbContext.SaveChanges();
 
-            return new OperationResult() { Succes = true };
+            return new OperationResult() { Success = true };
         }
     }
 }

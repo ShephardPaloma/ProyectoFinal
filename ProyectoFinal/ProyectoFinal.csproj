@@ -82,6 +82,10 @@
     <Compile Include="Migrations\202108072124535_inicial.designer.cs">
       <DependentUpon>202108072124535_inicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108182329528_InicialC.cs" />
+    <Compile Include="Migrations\202108182329528_InicialC.designer.cs">
+      <DependentUpon>202108182329528_InicialC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OperationResult.cs" />
     <Compile Include="PantallaAutor.cs">
@@ -127,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202108072124535_inicial.resx">
       <DependentUpon>202108072124535_inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108182329528_InicialC.resx">
+      <DependentUpon>202108182329528_InicialC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaAutor.resx">
       <DependentUpon>PantallaAutor.cs</DependentUpon>
