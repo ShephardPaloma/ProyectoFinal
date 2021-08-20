@@ -53,7 +53,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dgvAutor = new System.Windows.Forms.DataGridView();
             this.labelID = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.txtNacionalidad = new System.Windows.Forms.TextBox();
             this.labelNacionalidad = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
@@ -70,6 +69,7 @@
             this.labelEliminar = new System.Windows.Forms.Label();
             this.txtBuscarId = new System.Windows.Forms.TextBox();
             this.txtEliminar = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnrestaurar)).BeginInit();
@@ -93,9 +93,9 @@
             this.BarraTitulo.Controls.Add(this.btncerrar);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
-            this.BarraTitulo.Margin = new System.Windows.Forms.Padding(2);
+            this.BarraTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(886, 23);
+            this.BarraTitulo.Size = new System.Drawing.Size(1181, 28);
             this.BarraTitulo.TabIndex = 4;
             // 
             // label1
@@ -103,10 +103,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poor Richard", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(370, 2);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(493, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 19);
+            this.label1.Size = new System.Drawing.Size(164, 23);
             this.label1.TabIndex = 8;
             this.label1.Text = "Biblioteca Virtual";
             // 
@@ -115,10 +114,10 @@
             this.btnmaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnmaximizar.BackColor = System.Drawing.Color.Transparent;
             this.btnmaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnmaximizar.Image")));
-            this.btnmaximizar.Location = new System.Drawing.Point(796, 2);
-            this.btnmaximizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnmaximizar.Location = new System.Drawing.Point(1061, 2);
+            this.btnmaximizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnmaximizar.Name = "btnmaximizar";
-            this.btnmaximizar.Size = new System.Drawing.Size(19, 20);
+            this.btnmaximizar.Size = new System.Drawing.Size(25, 25);
             this.btnmaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnmaximizar.TabIndex = 8;
             this.btnmaximizar.TabStop = false;
@@ -129,10 +128,10 @@
             this.btnrestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnrestaurar.BackColor = System.Drawing.Color.Transparent;
             this.btnrestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnrestaurar.Image")));
-            this.btnrestaurar.Location = new System.Drawing.Point(796, 2);
-            this.btnrestaurar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnrestaurar.Location = new System.Drawing.Point(1061, 2);
+            this.btnrestaurar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnrestaurar.Name = "btnrestaurar";
-            this.btnrestaurar.Size = new System.Drawing.Size(19, 20);
+            this.btnrestaurar.Size = new System.Drawing.Size(25, 25);
             this.btnrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnrestaurar.TabIndex = 9;
             this.btnrestaurar.TabStop = false;
@@ -143,10 +142,10 @@
             this.btnminimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnminimizar.BackColor = System.Drawing.Color.Transparent;
             this.btnminimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnminimizar.Image")));
-            this.btnminimizar.Location = new System.Drawing.Point(827, 2);
-            this.btnminimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnminimizar.Location = new System.Drawing.Point(1103, 2);
+            this.btnminimizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnminimizar.Name = "btnminimizar";
-            this.btnminimizar.Size = new System.Drawing.Size(19, 20);
+            this.btnminimizar.Size = new System.Drawing.Size(25, 25);
             this.btnminimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnminimizar.TabIndex = 9;
             this.btnminimizar.TabStop = false;
@@ -157,10 +156,10 @@
             this.btncerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btncerrar.BackColor = System.Drawing.Color.Transparent;
             this.btncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btncerrar.Image")));
-            this.btncerrar.Location = new System.Drawing.Point(860, 2);
-            this.btncerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btncerrar.Location = new System.Drawing.Point(1147, 2);
+            this.btncerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btncerrar.Name = "btncerrar";
-            this.btncerrar.Size = new System.Drawing.Size(19, 20);
+            this.btncerrar.Size = new System.Drawing.Size(25, 25);
             this.btncerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btncerrar.TabIndex = 7;
             this.btncerrar.TabStop = false;
@@ -170,10 +169,10 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.CadetBlue;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 23);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(0, 28);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(886, 28);
+            this.panel1.Size = new System.Drawing.Size(1181, 34);
             this.panel1.TabIndex = 5;
             // 
             // panel2
@@ -193,10 +192,10 @@
             this.panel2.Controls.Add(this.btnBIDVentana);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 51);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(0, 62);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(150, 512);
+            this.panel2.Size = new System.Drawing.Size(200, 631);
             this.panel2.TabIndex = 6;
             // 
             // pictureBox10
@@ -204,10 +203,10 @@
             this.pictureBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(0, 474);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox10.Location = new System.Drawing.Point(0, 583);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(40, 38);
+            this.pictureBox10.Size = new System.Drawing.Size(53, 47);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 17;
             this.pictureBox10.TabStop = false;
@@ -218,10 +217,10 @@
             this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(0, 513);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox9.Location = new System.Drawing.Point(0, 631);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(40, 38);
+            this.pictureBox9.Size = new System.Drawing.Size(53, 47);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 16;
             this.pictureBox9.TabStop = false;
@@ -230,10 +229,10 @@
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel6.Location = new System.Drawing.Point(2, 374);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Location = new System.Drawing.Point(3, 460);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(8, 27);
+            this.panel6.Size = new System.Drawing.Size(11, 33);
             this.panel6.TabIndex = 9;
             // 
             // btnEliminarVentana
@@ -245,10 +244,10 @@
             this.btnEliminarVentana.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarVentana.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminarVentana.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarVentana.Location = new System.Drawing.Point(9, 374);
-            this.btnEliminarVentana.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminarVentana.Location = new System.Drawing.Point(12, 460);
+            this.btnEliminarVentana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminarVentana.Name = "btnEliminarVentana";
-            this.btnEliminarVentana.Size = new System.Drawing.Size(136, 27);
+            this.btnEliminarVentana.Size = new System.Drawing.Size(181, 33);
             this.btnEliminarVentana.TabIndex = 10;
             this.btnEliminarVentana.Text = "Eliminar";
             this.btnEliminarVentana.UseVisualStyleBackColor = true;
@@ -258,20 +257,20 @@
             // 
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel5.Location = new System.Drawing.Point(2, 324);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Location = new System.Drawing.Point(3, 399);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(8, 27);
+            this.panel5.Size = new System.Drawing.Size(11, 33);
             this.panel5.TabIndex = 7;
             // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel3.Location = new System.Drawing.Point(2, 223);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Location = new System.Drawing.Point(3, 274);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(8, 27);
+            this.panel3.Size = new System.Drawing.Size(11, 33);
             this.panel3.TabIndex = 2;
             // 
             // btnActualizarVentana
@@ -283,10 +282,10 @@
             this.btnActualizarVentana.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarVentana.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnActualizarVentana.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizarVentana.Location = new System.Drawing.Point(9, 324);
-            this.btnActualizarVentana.Margin = new System.Windows.Forms.Padding(2);
+            this.btnActualizarVentana.Location = new System.Drawing.Point(12, 399);
+            this.btnActualizarVentana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnActualizarVentana.Name = "btnActualizarVentana";
-            this.btnActualizarVentana.Size = new System.Drawing.Size(136, 27);
+            this.btnActualizarVentana.Size = new System.Drawing.Size(181, 33);
             this.btnActualizarVentana.TabIndex = 8;
             this.btnActualizarVentana.Text = "Actualizar";
             this.btnActualizarVentana.UseVisualStyleBackColor = true;
@@ -301,10 +300,10 @@
             this.btnBTodosVentana.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBTodosVentana.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBTodosVentana.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBTodosVentana.Location = new System.Drawing.Point(9, 223);
-            this.btnBTodosVentana.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBTodosVentana.Location = new System.Drawing.Point(12, 274);
+            this.btnBTodosVentana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBTodosVentana.Name = "btnBTodosVentana";
-            this.btnBTodosVentana.Size = new System.Drawing.Size(136, 27);
+            this.btnBTodosVentana.Size = new System.Drawing.Size(181, 33);
             this.btnBTodosVentana.TabIndex = 3;
             this.btnBTodosVentana.Text = "Buscar Todos";
             this.btnBTodosVentana.UseVisualStyleBackColor = true;
@@ -314,20 +313,20 @@
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel4.Location = new System.Drawing.Point(2, 274);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Location = new System.Drawing.Point(3, 337);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(8, 27);
+            this.panel4.Size = new System.Drawing.Size(11, 33);
             this.panel4.TabIndex = 4;
             // 
             // panel9
             // 
             this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel9.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel9.Location = new System.Drawing.Point(2, 175);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2);
+            this.panel9.Location = new System.Drawing.Point(3, 215);
+            this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(8, 27);
+            this.panel9.Size = new System.Drawing.Size(11, 33);
             this.panel9.TabIndex = 0;
             // 
             // btnCrearVentana
@@ -339,10 +338,10 @@
             this.btnCrearVentana.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearVentana.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCrearVentana.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCrearVentana.Location = new System.Drawing.Point(9, 175);
-            this.btnCrearVentana.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCrearVentana.Location = new System.Drawing.Point(12, 215);
+            this.btnCrearVentana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCrearVentana.Name = "btnCrearVentana";
-            this.btnCrearVentana.Size = new System.Drawing.Size(136, 27);
+            this.btnCrearVentana.Size = new System.Drawing.Size(181, 33);
             this.btnCrearVentana.TabIndex = 1;
             this.btnCrearVentana.Text = "Crear";
             this.btnCrearVentana.UseVisualStyleBackColor = true;
@@ -357,10 +356,10 @@
             this.btnBIDVentana.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBIDVentana.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBIDVentana.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBIDVentana.Location = new System.Drawing.Point(9, 274);
-            this.btnBIDVentana.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBIDVentana.Location = new System.Drawing.Point(12, 337);
+            this.btnBIDVentana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBIDVentana.Name = "btnBIDVentana";
-            this.btnBIDVentana.Size = new System.Drawing.Size(136, 27);
+            this.btnBIDVentana.Size = new System.Drawing.Size(181, 33);
             this.btnBIDVentana.TabIndex = 5;
             this.btnBIDVentana.Text = "Buscar por ID";
             this.btnBIDVentana.UseVisualStyleBackColor = true;
@@ -371,9 +370,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 119);
+            this.pictureBox1.Size = new System.Drawing.Size(200, 146);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -383,10 +382,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poor Richard", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label2.Location = new System.Drawing.Point(462, 54);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(616, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 35);
+            this.label2.Size = new System.Drawing.Size(112, 45);
             this.label2.TabIndex = 8;
             this.label2.Text = "Autor";
             // 
@@ -394,92 +392,80 @@
             // 
             this.dgvAutor.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvAutor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAutor.Location = new System.Drawing.Point(150, 411);
-            this.dgvAutor.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvAutor.Location = new System.Drawing.Point(200, 506);
+            this.dgvAutor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvAutor.Name = "dgvAutor";
             this.dgvAutor.RowHeadersWidth = 51;
             this.dgvAutor.RowTemplate.Height = 24;
-            this.dgvAutor.Size = new System.Drawing.Size(736, 152);
+            this.dgvAutor.Size = new System.Drawing.Size(981, 187);
             this.dgvAutor.TabIndex = 9;
+           
             this.dgvAutor.SelectionChanged += new System.EventHandler(this.dgvAutor_SelectionChanged);
             // 
             // labelID
             // 
             this.labelID.AutoSize = true;
             this.labelID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelID.Location = new System.Drawing.Point(214, 133);
-            this.labelID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelID.Location = new System.Drawing.Point(285, 164);
             this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(69, 19);
+            this.labelID.Size = new System.Drawing.Size(85, 23);
             this.labelID.TabIndex = 10;
             this.labelID.Text = "Autor ID";
-            // 
-            // txtID
-            // 
-            this.txtID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(349, 131);
-            this.txtID.Margin = new System.Windows.Forms.Padding(2);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(98, 26);
-            this.txtID.TabIndex = 11;
             // 
             // txtNacionalidad
             // 
             this.txtNacionalidad.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNacionalidad.Location = new System.Drawing.Point(349, 304);
-            this.txtNacionalidad.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNacionalidad.Location = new System.Drawing.Point(465, 374);
+            this.txtNacionalidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNacionalidad.Name = "txtNacionalidad";
-            this.txtNacionalidad.Size = new System.Drawing.Size(98, 26);
+            this.txtNacionalidad.Size = new System.Drawing.Size(129, 30);
             this.txtNacionalidad.TabIndex = 13;
             // 
             // labelNacionalidad
             // 
             this.labelNacionalidad.AutoSize = true;
             this.labelNacionalidad.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNacionalidad.Location = new System.Drawing.Point(206, 306);
-            this.labelNacionalidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelNacionalidad.Location = new System.Drawing.Point(275, 377);
             this.labelNacionalidad.Name = "labelNacionalidad";
-            this.labelNacionalidad.Size = new System.Drawing.Size(96, 19);
+            this.labelNacionalidad.Size = new System.Drawing.Size(118, 23);
             this.labelNacionalidad.TabIndex = 12;
             this.labelNacionalidad.Text = "Nacionalidad";
             // 
             // txtApellido
             // 
             this.txtApellido.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(349, 245);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
+            this.txtApellido.Location = new System.Drawing.Point(465, 302);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(98, 26);
+            this.txtApellido.Size = new System.Drawing.Size(129, 30);
             this.txtApellido.TabIndex = 15;
             // 
             // labelApellido
             // 
             this.labelApellido.AutoSize = true;
             this.labelApellido.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelApellido.Location = new System.Drawing.Point(214, 248);
-            this.labelApellido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelApellido.Location = new System.Drawing.Point(285, 305);
             this.labelApellido.Name = "labelApellido";
-            this.labelApellido.Size = new System.Drawing.Size(64, 19);
+            this.labelApellido.Size = new System.Drawing.Size(79, 23);
             this.labelApellido.TabIndex = 14;
             this.labelApellido.Text = "Apellido";
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(349, 187);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombre.Location = new System.Drawing.Point(465, 230);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(98, 26);
+            this.txtNombre.Size = new System.Drawing.Size(129, 30);
             this.txtNombre.TabIndex = 17;
             // 
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
             this.labelNombre.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombre.Location = new System.Drawing.Point(216, 189);
-            this.labelNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelNombre.Location = new System.Drawing.Point(288, 233);
             this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(63, 19);
+            this.labelNombre.Size = new System.Drawing.Size(77, 23);
             this.labelNombre.TabIndex = 16;
             this.labelNombre.Text = "Nombre";
             // 
@@ -489,10 +475,10 @@
             this.btnBuscarTodos.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
             this.btnBuscarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarTodos.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarTodos.Location = new System.Drawing.Point(436, 356);
-            this.btnBuscarTodos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarTodos.Location = new System.Drawing.Point(581, 438);
+            this.btnBuscarTodos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscarTodos.Name = "btnBuscarTodos";
-            this.btnBuscarTodos.Size = new System.Drawing.Size(124, 46);
+            this.btnBuscarTodos.Size = new System.Drawing.Size(165, 57);
             this.btnBuscarTodos.TabIndex = 18;
             this.btnBuscarTodos.Text = "Buscar Todos";
             this.btnBuscarTodos.UseVisualStyleBackColor = false;
@@ -503,10 +489,10 @@
             this.imagenAutor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.imagenAutor.BackColor = System.Drawing.Color.Transparent;
             this.imagenAutor.Image = ((System.Drawing.Image)(resources.GetObject("imagenAutor.Image")));
-            this.imagenAutor.Location = new System.Drawing.Point(405, 131);
-            this.imagenAutor.Margin = new System.Windows.Forms.Padding(2);
+            this.imagenAutor.Location = new System.Drawing.Point(540, 161);
+            this.imagenAutor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.imagenAutor.Name = "imagenAutor";
-            this.imagenAutor.Size = new System.Drawing.Size(184, 183);
+            this.imagenAutor.Size = new System.Drawing.Size(245, 225);
             this.imagenAutor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imagenAutor.TabIndex = 19;
             this.imagenAutor.TabStop = false;
@@ -517,10 +503,10 @@
             this.btnCrear.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
             this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrear.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrear.Location = new System.Drawing.Point(700, 189);
-            this.btnCrear.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCrear.Location = new System.Drawing.Point(933, 233);
+            this.btnCrear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(124, 46);
+            this.btnCrear.Size = new System.Drawing.Size(165, 57);
             this.btnCrear.TabIndex = 20;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = false;
@@ -532,10 +518,10 @@
             this.btnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(700, 206);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnActualizar.Location = new System.Drawing.Point(933, 254);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(124, 46);
+            this.btnActualizar.Size = new System.Drawing.Size(165, 57);
             this.btnActualizar.TabIndex = 21;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
@@ -547,10 +533,10 @@
             this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(700, 346);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Location = new System.Drawing.Point(933, 426);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(124, 46);
+            this.btnEliminar.Size = new System.Drawing.Size(165, 57);
             this.btnEliminar.TabIndex = 22;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -560,10 +546,9 @@
             // 
             this.labelBuscarID.AutoSize = true;
             this.labelBuscarID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBuscarID.Location = new System.Drawing.Point(206, 370);
-            this.labelBuscarID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelBuscarID.Location = new System.Drawing.Point(275, 455);
             this.labelBuscarID.Name = "labelBuscarID";
-            this.labelBuscarID.Size = new System.Drawing.Size(105, 19);
+            this.labelBuscarID.Size = new System.Drawing.Size(129, 23);
             this.labelBuscarID.TabIndex = 23;
             this.labelBuscarID.Text = "Buscar Por ID";
             // 
@@ -573,10 +558,10 @@
             this.btnBuscarID.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
             this.btnBuscarID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarID.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarID.Location = new System.Drawing.Point(700, 356);
-            this.btnBuscarID.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarID.Location = new System.Drawing.Point(933, 438);
+            this.btnBuscarID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscarID.Name = "btnBuscarID";
-            this.btnBuscarID.Size = new System.Drawing.Size(124, 46);
+            this.btnBuscarID.Size = new System.Drawing.Size(165, 57);
             this.btnBuscarID.TabIndex = 25;
             this.btnBuscarID.Text = "Buscar";
             this.btnBuscarID.UseVisualStyleBackColor = false;
@@ -586,33 +571,44 @@
             // 
             this.labelEliminar.AutoSize = true;
             this.labelEliminar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEliminar.Location = new System.Drawing.Point(206, 356);
-            this.labelEliminar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelEliminar.Location = new System.Drawing.Point(275, 438);
             this.labelEliminar.Name = "labelEliminar";
-            this.labelEliminar.Size = new System.Drawing.Size(114, 19);
+            this.labelEliminar.Size = new System.Drawing.Size(142, 23);
             this.labelEliminar.TabIndex = 26;
             this.labelEliminar.Text = "Eliminar Por ID";
             // 
             // txtBuscarId
             // 
-            this.txtBuscarId.Location = new System.Drawing.Point(448, 375);
+            this.txtBuscarId.Location = new System.Drawing.Point(597, 462);
+            this.txtBuscarId.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscarId.Name = "txtBuscarId";
-            this.txtBuscarId.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscarId.Size = new System.Drawing.Size(132, 22);
             this.txtBuscarId.TabIndex = 37;
             // 
             // txtEliminar
             // 
-            this.txtEliminar.Location = new System.Drawing.Point(448, 355);
+            this.txtEliminar.Location = new System.Drawing.Point(597, 437);
+            this.txtEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.txtEliminar.Name = "txtEliminar";
-            this.txtEliminar.Size = new System.Drawing.Size(100, 20);
+            this.txtEliminar.Size = new System.Drawing.Size(132, 22);
             this.txtEliminar.TabIndex = 38;
+            // 
+            // txtID
+            // 
+            this.txtID.Enabled = false;
+            this.txtID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(465, 161);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(130, 30);
+            this.txtID.TabIndex = 48;
             // 
             // PantallaAutor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(886, 563);
+            this.ClientSize = new System.Drawing.Size(1181, 693);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtEliminar);
             this.Controls.Add(this.txtBuscarId);
             this.Controls.Add(this.labelEliminar);
@@ -621,7 +617,6 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnCrear);
-            this.Controls.Add(this.imagenAutor);
             this.Controls.Add(this.btnBuscarTodos);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.labelNombre);
@@ -629,16 +624,16 @@
             this.Controls.Add(this.labelApellido);
             this.Controls.Add(this.txtNacionalidad);
             this.Controls.Add(this.labelNacionalidad);
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.labelID);
             this.Controls.Add(this.dgvAutor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BarraTitulo);
+            this.Controls.Add(this.imagenAutor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PantallaAutor";
             this.Load += new System.EventHandler(this.PantallaAutor_Load);
             this.BarraTitulo.ResumeLayout(false);
@@ -684,7 +679,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvAutor;
         private System.Windows.Forms.Label labelID;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtNacionalidad;
         private System.Windows.Forms.Label labelNacionalidad;
         private System.Windows.Forms.TextBox txtApellido;
@@ -701,5 +695,6 @@
         private System.Windows.Forms.Label labelEliminar;
         private System.Windows.Forms.TextBox txtBuscarId;
         private System.Windows.Forms.TextBox txtEliminar;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

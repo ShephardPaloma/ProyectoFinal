@@ -202,6 +202,7 @@
             // 
             // txtDevolucionID
             // 
+            this.txtDevolucionID.Enabled = false;
             this.txtDevolucionID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDevolucionID.Location = new System.Drawing.Point(283, 284);
             this.txtDevolucionID.Name = "txtDevolucionID";

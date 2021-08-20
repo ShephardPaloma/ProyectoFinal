@@ -66,8 +66,8 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.labelEliminar = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.cbEliminar = new System.Windows.Forms.ComboBox();
-            this.cbBuscarID = new System.Windows.Forms.ComboBox();
+            this.txtBuscarID = new System.Windows.Forms.TextBox();
+            this.txtEliminar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditorial)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -427,6 +427,7 @@
             // 
             // txtIDEditorial
             // 
+            this.txtIDEditorial.Enabled = false;
             this.txtIDEditorial.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDEditorial.Location = new System.Drawing.Point(468, 200);
             this.txtIDEditorial.Name = "txtIDEditorial";
@@ -455,6 +456,7 @@
             this.btnCrear.TabIndex = 24;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = false;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // btnBuscarTodos
             // 
@@ -468,6 +470,7 @@
             this.btnBuscarTodos.TabIndex = 25;
             this.btnBuscarTodos.Text = "Buscar Todos";
             this.btnBuscarTodos.UseVisualStyleBackColor = false;
+            this.btnBuscarTodos.Click += new System.EventHandler(this.btnBuscarTodos_Click);
             // 
             // btnBuscarID
             // 
@@ -481,6 +484,7 @@
             this.btnBuscarID.TabIndex = 28;
             this.btnBuscarID.Text = "Buscar";
             this.btnBuscarID.UseVisualStyleBackColor = false;
+            this.btnBuscarID.Click += new System.EventHandler(this.btnBuscarID_Click);
             // 
             // labelBuscarID
             // 
@@ -504,6 +508,7 @@
             this.btnActualizar.TabIndex = 29;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // labelEliminar
             // 
@@ -527,22 +532,23 @@
             this.btnEliminar.TabIndex = 30;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // cbEliminar
+            // txtBuscarID
             // 
-            this.cbEliminar.FormattingEnabled = true;
-            this.cbEliminar.Location = new System.Drawing.Point(577, 437);
-            this.cbEliminar.Name = "cbEliminar";
-            this.cbEliminar.Size = new System.Drawing.Size(130, 24);
-            this.cbEliminar.TabIndex = 33;
+            this.txtBuscarID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarID.Location = new System.Drawing.Point(593, 462);
+            this.txtBuscarID.Name = "txtBuscarID";
+            this.txtBuscarID.Size = new System.Drawing.Size(130, 30);
+            this.txtBuscarID.TabIndex = 35;
             // 
-            // cbBuscarID
+            // txtEliminar
             // 
-            this.cbBuscarID.FormattingEnabled = true;
-            this.cbBuscarID.Location = new System.Drawing.Point(577, 456);
-            this.cbBuscarID.Name = "cbBuscarID";
-            this.cbBuscarID.Size = new System.Drawing.Size(130, 24);
-            this.cbBuscarID.TabIndex = 34;
+            this.txtEliminar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEliminar.Location = new System.Drawing.Point(593, 435);
+            this.txtEliminar.Name = "txtEliminar";
+            this.txtEliminar.Size = new System.Drawing.Size(130, 30);
+            this.txtEliminar.TabIndex = 36;
             // 
             // PantallaEditorial
             // 
@@ -550,8 +556,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1182, 693);
-            this.Controls.Add(this.cbBuscarID);
-            this.Controls.Add(this.cbEliminar);
+            this.Controls.Add(this.txtEliminar);
+            this.Controls.Add(this.txtBuscarID);
             this.Controls.Add(this.labelEliminar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
@@ -630,7 +636,7 @@
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Label labelEliminar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.ComboBox cbEliminar;
-        private System.Windows.Forms.ComboBox cbBuscarID;
+        private System.Windows.Forms.TextBox txtBuscarID;
+        private System.Windows.Forms.TextBox txtEliminar;
     }
 }

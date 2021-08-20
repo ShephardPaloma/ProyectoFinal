@@ -247,6 +247,7 @@
             // 
             // txtIDLibro
             // 
+            this.txtIDLibro.Enabled = false;
             this.txtIDLibro.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDLibro.Location = new System.Drawing.Point(454, 144);
             this.txtIDLibro.Name = "txtIDLibro";

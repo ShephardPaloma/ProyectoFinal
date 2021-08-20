@@ -11,7 +11,7 @@ namespace ProyectoFinal.DataModel.Context
     public class BibliotecaDbContext:DbContext
     {
         public BibliotecaDbContext()
-         : base("conn")
+         : base("mssql")
         {
         }
 
@@ -46,6 +46,7 @@ namespace ProyectoFinal.DataModel.Context
             modelBuilder.Entity<Autor>()
                 .ToTable("Autor")
                 .HasKey(k => k.Id);
+                
 
             modelBuilder.Entity<Autor>()
                 .Property(p => p.Id)

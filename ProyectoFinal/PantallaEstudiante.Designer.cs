@@ -50,11 +50,9 @@
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.labelTelefono = new System.Windows.Forms.Label();
             this.btnBuscarTodos = new System.Windows.Forms.Button();
-            this.cbBuscarID = new System.Windows.Forms.ComboBox();
             this.btnBuscarID = new System.Windows.Forms.Button();
             this.labelBuscarID = new System.Windows.Forms.Label();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.cbEliminar = new System.Windows.Forms.ComboBox();
             this.labelEliminar = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -72,6 +70,8 @@
             this.btnBIDVentana = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtEliminar = new System.Windows.Forms.TextBox();
+            this.txtBuscarID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiante)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
@@ -208,6 +208,7 @@
             this.btnCrear.TabIndex = 29;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = false;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // txtNombre
             // 
@@ -265,6 +266,7 @@
             // 
             // txtIDEstudiante
             // 
+            this.txtIDEstudiante.Enabled = false;
             this.txtIDEstudiante.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDEstudiante.Location = new System.Drawing.Point(451, 143);
             this.txtIDEstudiante.Name = "txtIDEstudiante";
@@ -311,14 +313,7 @@
             this.btnBuscarTodos.TabIndex = 32;
             this.btnBuscarTodos.Text = "Buscar Todos";
             this.btnBuscarTodos.UseVisualStyleBackColor = false;
-            // 
-            // cbBuscarID
-            // 
-            this.cbBuscarID.FormattingEnabled = true;
-            this.cbBuscarID.Location = new System.Drawing.Point(598, 462);
-            this.cbBuscarID.Name = "cbBuscarID";
-            this.cbBuscarID.Size = new System.Drawing.Size(130, 24);
-            this.cbBuscarID.TabIndex = 39;
+            this.btnBuscarTodos.Click += new System.EventHandler(this.btnBuscarTodos_Click);
             // 
             // btnBuscarID
             // 
@@ -332,6 +327,7 @@
             this.btnBuscarID.TabIndex = 38;
             this.btnBuscarID.Text = "Buscar";
             this.btnBuscarID.UseVisualStyleBackColor = false;
+            this.btnBuscarID.Click += new System.EventHandler(this.btnBuscarID_Click);
             // 
             // labelBuscarID
             // 
@@ -355,14 +351,7 @@
             this.btnActualizar.TabIndex = 40;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
-            // 
-            // cbEliminar
-            // 
-            this.cbEliminar.FormattingEnabled = true;
-            this.cbEliminar.Location = new System.Drawing.Point(598, 436);
-            this.cbEliminar.Name = "cbEliminar";
-            this.cbEliminar.Size = new System.Drawing.Size(130, 24);
-            this.cbEliminar.TabIndex = 43;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // labelEliminar
             // 
@@ -386,6 +375,7 @@
             this.btnEliminar.TabIndex = 41;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // panel2
             // 
@@ -583,19 +573,35 @@
             this.panel1.Size = new System.Drawing.Size(1182, 35);
             this.panel1.TabIndex = 56;
             // 
+            // txtEliminar
+            // 
+            this.txtEliminar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEliminar.Location = new System.Drawing.Point(598, 433);
+            this.txtEliminar.Name = "txtEliminar";
+            this.txtEliminar.Size = new System.Drawing.Size(130, 30);
+            this.txtEliminar.TabIndex = 59;
+            // 
+            // txtBuscarID
+            // 
+            this.txtBuscarID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarID.Location = new System.Drawing.Point(598, 460);
+            this.txtBuscarID.Name = "txtBuscarID";
+            this.txtBuscarID.Size = new System.Drawing.Size(130, 30);
+            this.txtBuscarID.TabIndex = 58;
+            // 
             // PantallaEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1182, 693);
+            this.Controls.Add(this.txtEliminar);
+            this.Controls.Add(this.txtBuscarID);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.cbEliminar);
             this.Controls.Add(this.labelEliminar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.cbBuscarID);
             this.Controls.Add(this.btnBuscarID);
             this.Controls.Add(this.labelBuscarID);
             this.Controls.Add(this.btnBuscarTodos);
@@ -657,11 +663,9 @@
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label labelTelefono;
         private System.Windows.Forms.Button btnBuscarTodos;
-        private System.Windows.Forms.ComboBox cbBuscarID;
         private System.Windows.Forms.Button btnBuscarID;
         private System.Windows.Forms.Label labelBuscarID;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.ComboBox cbEliminar;
         private System.Windows.Forms.Label labelEliminar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Panel panel2;
@@ -679,5 +683,7 @@
         private System.Windows.Forms.Button btnBIDVentana;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtEliminar;
+        private System.Windows.Forms.TextBox txtBuscarID;
     }
 }

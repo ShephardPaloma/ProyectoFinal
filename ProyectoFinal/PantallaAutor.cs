@@ -21,7 +21,8 @@ namespace ProyectoFinal
         {
 
             InitializeComponent();
-
+            dgvAutor.Visible = false;
+            
             #region Visual
             imagenAutor.Visible = true;
             txtID.Visible = false;
@@ -77,6 +78,7 @@ namespace ProyectoFinal
         private void btnAutor_Click(object sender, EventArgs e)
         {
             #region Visual
+            dgvAutor.Visible = true;
             imagenAutor.Visible = false;
             txtID.Visible = true;
             txtNombre.Visible = true;
@@ -107,6 +109,7 @@ namespace ProyectoFinal
         private void btnDevolucion_Click(object sender, EventArgs e)
         {
             #region Visual
+            dgvAutor.Visible = true;
             imagenAutor.Visible = true;
             btnBuscarTodos.Visible = true;
             txtID.Visible = false;
@@ -132,6 +135,7 @@ namespace ProyectoFinal
         private void btnEstudiante_Click(object sender, EventArgs e)
         {
             #region Visual
+            dgvAutor.Visible = true;
             imagenAutor.Visible = false;
             btnBuscarTodos.Visible = false;
             txtID.Visible = true;
@@ -158,6 +162,7 @@ namespace ProyectoFinal
         private void btnBIDVentana_Click(object sender, EventArgs e)
         {
             #region Visual
+            dgvAutor.Visible = true;
             imagenAutor.Visible = true;
             btnBuscarTodos.Visible = false;
             txtID.Visible = false;
@@ -183,6 +188,7 @@ namespace ProyectoFinal
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             #region Visual
+            dgvAutor.Visible = true;
             imagenAutor.Visible = true;
             btnBuscarTodos.Visible = false;
             txtID.Visible = false;
@@ -208,6 +214,7 @@ namespace ProyectoFinal
         private void btnEliminarVentana_Click(object sender, EventArgs e)
         {
             #region Visual
+            dgvAutor.Visible = true;
             imagenAutor.Visible = true;
             btnBuscarTodos.Visible = false;
             txtID.Visible = false;
@@ -279,7 +286,7 @@ namespace ProyectoFinal
             {
                 Autor nuevoautor = new Autor()
                 {
-                    Id = Convert.ToInt32(txtID.Text),
+                    
                     Nombre = txtNombre.Text,
                     Apellido = txtApellido.Text,
                     Nacionalidad = txtNacionalidad.Text
@@ -304,13 +311,14 @@ namespace ProyectoFinal
             if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text) || string.IsNullOrWhiteSpace(txtNacionalidad.Text))
             {
                 MessageBox.Show("Debe completar todos los datos");
-            }
+            }//no deberia de pedirle al autor que llene todos los campos ya que es una actualizacion
             else
             {
                 if (MessageBox.Show("Seguro que desea actualizar el autor?", "Actualizar", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
 
                     var autoresAct = autorepository.FindById(Convert.ToInt32(txtID.Text));
+
 
                     autoresAct.Nombre = txtNombre.Text;
                     autoresAct.Apellido = txtApellido.Text;
@@ -379,5 +387,7 @@ namespace ProyectoFinal
             txtApellido.Text = dgvAutor.CurrentRow.Cells["Apellido"].Value.ToString();
             txtNacionalidad.Text = dgvAutor.CurrentRow.Cells["Nacionalidad"].Value.ToString();
         }
+
+
     }
 }
