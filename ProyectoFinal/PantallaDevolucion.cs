@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoFinal.DataModel.Repositories;
 using ProyectoFinal.DataModel.Entities;
+using ProyectoFinal.DataModel.Context;
 
 namespace ProyectoFinal
 {
     public partial class PantallaDevolucion : Form
     {
         DevolucionRepository devolucionrepository = new DevolucionRepository();
+
         public PantallaDevolucion()
         {
             InitializeComponent();
@@ -35,8 +37,7 @@ namespace ProyectoFinal
             labelEliminar.Visible = false;
             txtEliminar.Visible = false;
             #endregion
-        }
-
+        }  
         private void btncerrar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -176,9 +177,9 @@ namespace ProyectoFinal
         {
             MtBuscarTodo();
             // TODO: This line of code loads data into the 'bibliotecaDBDataSet1.Prestamo' table. You can move, or remove it, as needed.
-            this.prestamoTableAdapter.Fill(this.bibliotecaDBDataSet1.Prestamo);
-            // TODO: This line of code loads data into the 'bibliotecaDBDataSet1.Libro' table. You can move, or remove it, as needed.
-            this.libroTableAdapter.Fill(this.bibliotecaDBDataSet1.Libro);
+            //this.prestamoTableAdapter.Fill(this.bibliotecaDBDataSet1.Prestamo);
+            //// TODO: This line of code loads data into the 'bibliotecaDBDataSet1.Libro' table. You can move, or remove it, as needed.
+            //this.libroTableAdapter.Fill(this.bibliotecaDBDataSet1.Libro);
 
         }
         public void MtBuscarTodo()
@@ -198,7 +199,7 @@ namespace ProyectoFinal
                 {
                     PrestamoId = Convert.ToInt32(cbPrestamoID.Text)
                 };
-
+                
                 var existeID = devolucionrepository.FindById(nuevadevolucion.Id);
                 if (existeID != null && existeID.Borrado == false)
                 {
@@ -239,6 +240,7 @@ namespace ProyectoFinal
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            MtBuscarTodo();
 
             if (string.IsNullOrWhiteSpace(cbPrestamoID.Text))
             {
@@ -272,6 +274,7 @@ namespace ProyectoFinal
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            MtBuscarTodo();
             if (string.IsNullOrWhiteSpace(txtEliminar.Text))
             {
                 MessageBox.Show("Debe indicar el id de la devolucion válida!");
@@ -279,7 +282,7 @@ namespace ProyectoFinal
 
             var infoautor = devolucionrepository.FindById(Convert.ToInt32(txtEliminar.Text));
 
-            //validar que existe el registro de la devolucion
+            
             if (infoautor == null)
             {
                 MessageBox.Show("No existe la devolucion, favor intentar de nuevo!!", "devolucion no encontrada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

@@ -185,14 +185,15 @@ namespace ProyectoFinal
         private void PantallaPrestamo_Load(object sender, EventArgs e)
         {
             MtBuscarTodo();
-            // TODO: This line of code loads data into the 'bibliotecaDBDataSet1.Libro' table. You can move, or remove it, as needed.
-            this.libroTableAdapter.Fill(this.bibliotecaDBDataSet1.Libro);
-            // TODO: This line of code loads data into the 'bibliotecaDBDataSet1.Estudiante' table. You can move, or remove it, as needed.
-            this.estudianteTableAdapter.Fill(this.bibliotecaDBDataSet1.Estudiante);
+            //// TODO: This line of code loads data into the 'bibliotecaDBDataSet1.Libro' table. You can move, or remove it, as needed.
+            //this.libroTableAdapter.Fill(this.bibliotecaDBDataSet1.Libro);
+            //// TODO: This line of code loads data into the 'bibliotecaDBDataSet1.Estudiante' table. You can move, or remove it, as needed.
+            //this.estudianteTableAdapter.Fill(this.bibliotecaDBDataSet1.Estudiante);
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            MtBuscarTodo();
             if (string.IsNullOrWhiteSpace(txtIDPrestamo.Text) || string.IsNullOrWhiteSpace(cbEstudianteID.Text) || string.IsNullOrWhiteSpace(cbLibroID.Text))
             {
                 MessageBox.Show("Debe completar los datos de Estudiante Id y Libro Id");
@@ -283,13 +284,15 @@ namespace ProyectoFinal
                 prestamorepository.Create(nuevoprestamo);
                 MessageBox.Show("Datos del prestamo creados correctamente!");
 
+                cbEstudianteID.Text = string.Empty;
+                cbLibroID.Text = string.Empty;
                 MtBuscarTodo();
             }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //validar si está vacio
+            MtBuscarTodo();
             if (string.IsNullOrWhiteSpace(txtEliminar.Text))
             {
                 MessageBox.Show("Debe indicar el id del prestamo válido!");
@@ -297,7 +300,7 @@ namespace ProyectoFinal
 
             var infoprestamo = prestamorepository.FindById(Convert.ToInt32(txtEliminar.Text));
 
-            //validar que existe el registro de prestamo
+           
             if (infoprestamo == null)
             {
                 MessageBox.Show("No existe el prestamo, favor intentar de nuevo!!", "libro no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

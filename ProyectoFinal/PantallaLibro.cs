@@ -200,10 +200,10 @@ namespace ProyectoFinal
         private void PantallaLibro_Load(object sender, EventArgs e)
         {
             MtBuscarTodo();
-            // TODO: This line of code loads data into the 'bibliotecaDBDataSet1.Editorial' table. You can move, or remove it, as needed.
-            this.editorialTableAdapter.Fill(this.bibliotecaDBDataSet1.Editorial);
-            // TODO: This line of code loads data into the 'bibliotecaDBDataSet.Autor' table. You can move, or remove it, as needed.
-            this.autorTableAdapter.Fill(this.bibliotecaDBDataSet.Autor);
+            //// TODO: This line of code loads data into the 'bibliotecaDBDataSet1.Editorial' table. You can move, or remove it, as needed.
+            //this.editorialTableAdapter.Fill(this.bibliotecaDBDataSet1.Editorial);
+            //// TODO: This line of code loads data into the 'bibliotecaDBDataSet.Autor' table. You can move, or remove it, as needed.
+            //this.autorTableAdapter.Fill(this.bibliotecaDBDataSet.Autor);
             
         }
         public void MtBuscarTodo()
@@ -240,7 +240,9 @@ namespace ProyectoFinal
 
                 librorepository.Create(nuevolibro);
                 MessageBox.Show("Datos del libro creados correctamente!");
-
+                txtNombre.Text = string.Empty;
+                cbAutorID.Text = string.Empty;
+                cbEditorialID.Text = string.Empty;
                 MtBuscarTodo();
             }
         }
@@ -255,6 +257,7 @@ namespace ProyectoFinal
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            MtBuscarTodo();
             if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(cbAutorID.Text) || string.IsNullOrWhiteSpace(cbEditorialID.Text))
             {
                 MessageBox.Show("Debe completar los datos de nombre, autor Id, editorial Id!");
@@ -290,7 +293,7 @@ namespace ProyectoFinal
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //validar si está vacio
+            MtBuscarTodo();
             if (string.IsNullOrWhiteSpace(txtEliminar.Text))
             {
                 MessageBox.Show("Debe indicar el id del libro válido!");
@@ -298,7 +301,7 @@ namespace ProyectoFinal
 
             var infoautor = librorepository.FindById(Convert.ToInt32(txtEliminar.Text));
 
-            //validar que existe el registro de prestamo
+            
             if (infoautor == null)
             {
                 MessageBox.Show("No existe el libro, favor intentar de nuevo!!", "libro no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

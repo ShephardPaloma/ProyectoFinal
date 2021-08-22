@@ -244,6 +244,10 @@ namespace ProyectoFinal
                 estudianterepository.Create(nuevoestudiante);
                 MessageBox.Show("Editorial creada correctamente!");
 
+                txtNombre.Text = string.Empty;
+                txtApellido.Text = string.Empty;
+                txtDireccion.Text = string.Empty;
+                txtTelefono.Text = string.Empty;
                 MtBuscarTodo();
 
             }
@@ -256,6 +260,7 @@ namespace ProyectoFinal
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            MtBuscarTodo();
             if (MessageBox.Show("Seguro que desea actualizar el Estuadiante?", "Actualizar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
 
@@ -307,6 +312,7 @@ namespace ProyectoFinal
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            MtBuscarTodo();
             if (string.IsNullOrWhiteSpace(txtEliminar.Text))
             {
                 MessageBox.Show("Debe indicar un id de Estudiante válido!");

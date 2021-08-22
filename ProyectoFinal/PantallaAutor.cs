@@ -244,6 +244,7 @@ namespace ProyectoFinal
 
         private void btnBuscarID_Click(object sender, EventArgs e)
         {
+            
             if (string.IsNullOrWhiteSpace(txtBuscarId.Text))
             {
                 MessageBox.Show("Debe indicar el id del autor!", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -255,7 +256,7 @@ namespace ProyectoFinal
 
             if (infoautor == null)
             {
-                MessageBox.Show("No existe el autor, favor intentar de nuevo!!", "autor no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("No existe el autor, favor intentar de nuevo!!", "Autor no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 MtBuscarTodo();
                 return;
             }
@@ -302,12 +303,16 @@ namespace ProyectoFinal
                 autorepository.Create(nuevoautor);
                 MessageBox.Show("Datos del autor creados correctamente!");
 
+                txtNombre.Text = string.Empty;
+                txtApellido.Text = string.Empty;
+                txtNacionalidad.Text = string.Empty;
                 MtBuscarTodo();
             }
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            MtBuscarTodo();
             if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text) || string.IsNullOrWhiteSpace(txtNacionalidad.Text))
             {
                 MessageBox.Show("Debe completar Los datos de nombre, apellido o nacionalidad.");
@@ -344,7 +349,7 @@ namespace ProyectoFinal
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //validar si está vacio
+            MtBuscarTodo();
             if (string.IsNullOrWhiteSpace(txtEliminar.Text))
             {
                 MessageBox.Show("Debe indicar el id del autor válido!");

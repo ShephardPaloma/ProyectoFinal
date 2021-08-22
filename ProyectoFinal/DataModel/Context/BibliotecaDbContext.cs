@@ -11,7 +11,7 @@ namespace ProyectoFinal.DataModel.Context
     public class BibliotecaDbContext:DbContext
     {
         public BibliotecaDbContext()
-         : base("conn")
+         : base("mssql")
         {
         }
 

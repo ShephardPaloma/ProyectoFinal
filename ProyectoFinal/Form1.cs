@@ -104,5 +104,11 @@ namespace ProyectoFinal
             PantallaPrestamo pantallaPrestamo = new PantallaPrestamo();
             pantallaPrestamo.ShowDialog();
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            PantallaReporte pantallaReporte = new PantallaReporte();
+            pantallaReporte.ShowDialog();
+        }
     }
 }

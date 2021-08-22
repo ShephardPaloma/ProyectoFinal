@@ -214,6 +214,9 @@ namespace ProyectoFinal
 
                 editorialepository.Create(nuevaeditorial);
                 MessageBox.Show("Editorial creada correctamente!");
+
+                txtNombre.Text = string.Empty;
+                txtDireccion.Text = string.Empty;
                 MtBuscarTodo();
             }
         }
@@ -229,6 +232,8 @@ namespace ProyectoFinal
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            MtBuscarTodo();
+
             if (MessageBox.Show("Seguro que desea actualizar la Editorial?", "Actualizar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
 
@@ -255,6 +260,8 @@ namespace ProyectoFinal
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            MtBuscarTodo();
+
             if (string.IsNullOrWhiteSpace(txtEliminar.Text))
             {
                 MessageBox.Show("Debe indicar un id de Editorial válido!");
@@ -287,11 +294,14 @@ namespace ProyectoFinal
                         MessageBox.Show("Ha ocurrido un error!");
                     }
                 }
+                MtBuscarTodo();
             }
         }
 
         private void btnBuscarID_Click(object sender, EventArgs e)
         {
+            
+
             if (string.IsNullOrWhiteSpace(txtBuscarID.Text))
             {
                 MessageBox.Show("Debe indicar el id de la Editorial!", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

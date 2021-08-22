@@ -10,6 +10,6 @@ namespace ProyectoFinal.DataModel.Entities
     {
         public int PrestamoId { get; set; }
         public DateTime FechaDevolucion { get; set; }
-        public Prestamo prestamo { get; set; }
+        public virtual Prestamo prestamo { get; set; }
     }
 }

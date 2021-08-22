@@ -173,6 +173,7 @@
             this.btnReporte.TabIndex = 15;
             this.btnReporte.Text = "Reporte";
             this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // pictureBox7
             // 
