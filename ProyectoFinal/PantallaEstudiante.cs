@@ -96,6 +96,12 @@ namespace ProyectoFinal
             labelEliminar.Visible = false;
             txtEliminar.Visible = false;
             btnEliminar.Visible = false;
+            txtIDEstudiante.Clear();
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtDireccion.Clear();
+            txtTelefono.Clear();
+            txtIDEstudiante.Enabled = false;
             #endregion
         }
 
@@ -213,7 +219,6 @@ namespace ProyectoFinal
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            MtBuscarTodo();
             if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtDireccion.Text) || string.IsNullOrWhiteSpace(txtApellido.Text) || string.IsNullOrWhiteSpace(txtTelefono.Text))
             {
                 MessageBox.Show("Debe completar todos los datos");
@@ -225,7 +230,7 @@ namespace ProyectoFinal
                     Nombre = txtNombre.Text,
                     Direccion = txtDireccion.Text,
                     Telefono = txtTelefono.Text,
-                    Apellido = txtTelefono.Text
+                    Apellido = txtApellido.Text
 
                 };
 
@@ -327,7 +332,7 @@ namespace ProyectoFinal
                     if (resultado.Success)
                     {
                         MessageBox.Show("Datos del Estudiante eliminados correctamente!");
-
+                        MtBuscarTodo();
                     }
                     else
                     {
@@ -340,6 +345,20 @@ namespace ProyectoFinal
         private void btnBuscarTodos_Click(object sender, EventArgs e)
         {
             MtBuscarTodo();
+        }
+
+        private void PantallaEstudiante_Load(object sender, EventArgs e)
+        {
+            MtBuscarTodo();
+        }
+
+        private void dgvEstudiante_SelectionChanged(object sender, EventArgs e)
+        {
+            txtIDEstudiante.Text = dgvEstudiante.CurrentRow.Cells["Id"].Value.ToString();
+            txtNombre.Text = dgvEstudiante.CurrentRow.Cells["Nombre"].Value.ToString();
+            txtApellido.Text = dgvEstudiante.CurrentRow.Cells["Apellido"].Value.ToString();
+            txtDireccion.Text = dgvEstudiante.CurrentRow.Cells["Direccion"].Value.ToString();
+            txtTelefono.Text = dgvEstudiante.CurrentRow.Cells["Telefono"].Value.ToString();
         }
     }
 }

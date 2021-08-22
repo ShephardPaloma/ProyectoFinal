@@ -56,6 +56,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BibliotecaDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotecaDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BibliotecaDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotecaDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataModel\BaseEntity.cs" />
     <Compile Include="DataModel\Context\BibliotecaDbContext.cs" />
     <Compile Include="DataModel\Entities\Autor.cs" />
@@ -165,6 +175,28 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="BibliotecaDBDataSet.xsc">
+      <DependentUpon>BibliotecaDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotecaDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BibliotecaDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BibliotecaDBDataSet.xss">
+      <DependentUpon>BibliotecaDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotecaDBDataSet1.xsc">
+      <DependentUpon>BibliotecaDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotecaDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BibliotecaDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BibliotecaDBDataSet1.xss">
+      <DependentUpon>BibliotecaDBDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

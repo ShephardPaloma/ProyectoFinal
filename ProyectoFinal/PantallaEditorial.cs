@@ -83,6 +83,10 @@ namespace ProyectoFinal
             txtEliminar.Visible = false;
             labelEliminar.Visible = false;
             btnEliminar.Visible = false;
+            txtIDEditorial.Enabled = false;
+            txtIDEditorial.Clear();
+            txtNombre.Clear();
+            txtDireccion.Clear();
             #endregion
         }
 
@@ -189,7 +193,6 @@ namespace ProyectoFinal
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            MtBuscarTodo();
             if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtDireccion.Text))
             {
                 MessageBox.Show("Debe completar todos los datos");
@@ -211,7 +214,6 @@ namespace ProyectoFinal
 
                 editorialepository.Create(nuevaeditorial);
                 MessageBox.Show("Editorial creada correctamente!");
-
                 MtBuscarTodo();
             }
         }
@@ -278,7 +280,7 @@ namespace ProyectoFinal
                     if (resultado.Success)
                     {
                         MessageBox.Show("Datos de la Editorial eliminados correctamente!");
-
+                        MtBuscarTodo();
                     }
                     else
                     {
@@ -311,5 +313,17 @@ namespace ProyectoFinal
             dgvEditorial.DataSource = vistaeditorial.Where(x => x.Id == infoeditorial.Id).Select(x => new { x.Id, x.Nombre, x.Direccion, x.Estatus, x.FechaRegistro }).ToList();
         }
 
+        private void PantallaEditorial_Load(object sender, EventArgs e)
+        {
+            MtBuscarTodo();
+        }
+
+        private void dgvEditorial_SelectionChanged(object sender, EventArgs e)
+        {
+            txtIDEditorial.Text = dgvEditorial.CurrentRow.Cells["Id"].Value.ToString();
+            txtNombre.Text = dgvEditorial.CurrentRow.Cells["Nombre"].Value.ToString();
+            txtDireccion.Text = dgvEditorial.CurrentRow.Cells["Direccion"].Value.ToString();
+
+        }
     }
 }

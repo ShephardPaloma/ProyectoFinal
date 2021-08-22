@@ -98,7 +98,7 @@ namespace ProyectoFinal
             btnEliminar.Visible = false;
             labelEliminar.Visible = false;
             txtEliminar.Visible = false;
-            txtID.Enabled = true;
+            txtID.Enabled = false;
             txtID.Clear();
             txtNombre.Clear();
             txtApellido.Clear();
@@ -278,7 +278,7 @@ namespace ProyectoFinal
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(txtID.Text)|| string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text) || string.IsNullOrWhiteSpace(txtNacionalidad.Text))
+            if(string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text) || string.IsNullOrWhiteSpace(txtNacionalidad.Text))
             {
                 MessageBox.Show("Debe completar todos los datos");
             }
@@ -310,8 +310,8 @@ namespace ProyectoFinal
         {
             if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text) || string.IsNullOrWhiteSpace(txtNacionalidad.Text))
             {
-                MessageBox.Show("Debe completar todos los datos");
-            }//no deberia de pedirle al autor que llene todos los campos ya que es una actualizacion
+                MessageBox.Show("Debe completar Los datos de nombre, apellido o nacionalidad.");
+            }
             else
             {
                 if (MessageBox.Show("Seguro que desea actualizar el autor?", "Actualizar", MessageBoxButtons.YesNo) == DialogResult.Yes)
