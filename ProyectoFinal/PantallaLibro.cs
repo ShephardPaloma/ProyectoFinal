@@ -18,7 +18,7 @@ namespace ProyectoFinal
         public PantallaLibro()
         {
             InitializeComponent();
-
+            dgvLibro.Visible = false;
             #region Visual
             imagenLibro.Visible = true;
             labelIDLibro.Visible = false;
@@ -42,10 +42,6 @@ namespace ProyectoFinal
             #endregion
         }
 
-        private void pictureBox10_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void btncerrar_Click(object sender, EventArgs e)
         {
@@ -73,6 +69,7 @@ namespace ProyectoFinal
         }
         private void btnCrearVentana_Click_1(object sender, EventArgs e)
         {
+            dgvLibro.Visible = true;
             #region Visual
             dgvLibro.Visible = true;
             imagenLibro.Visible = false;
@@ -101,6 +98,7 @@ namespace ProyectoFinal
 
         private void btnBTodosVentana_Click_1(object sender, EventArgs e)
         {
+            dgvLibro.Visible = true;
             #region Visual
             imagenLibro.Visible = true;
             labelIDLibro.Visible = false;
@@ -125,6 +123,7 @@ namespace ProyectoFinal
 
         private void btnBIDVentana_Click_1(object sender, EventArgs e)
         {
+            dgvLibro.Visible = true;
             #region Visual
             imagenLibro.Visible = true;
             labelIDLibro.Visible = false;
@@ -149,6 +148,7 @@ namespace ProyectoFinal
 
         private void btnActualizarVentana_Click_1(object sender, EventArgs e)
         {
+            dgvLibro.Visible = true;
             #region Visual
             imagenLibro.Visible = false;
             labelIDLibro.Visible = true;
@@ -175,6 +175,7 @@ namespace ProyectoFinal
 
         private void btnEliminarVentana_Click_1(object sender, EventArgs e)
         {
+            dgvLibro.Visible = true;
             #region Visual
             imagenLibro.Visible = true;
             labelIDLibro.Visible = false;
@@ -199,11 +200,12 @@ namespace ProyectoFinal
 
         private void PantallaLibro_Load(object sender, EventArgs e)
         {
+
+            this.editorialTableAdapter1.Fill(this.bibliotecaDBDataSet2.Editorial);
+
+            this.autorTableAdapter2.Fill(this.bibliotecaDBDataSet2.Autor);
             MtBuscarTodo();
-            //// TODO: This line of code loads data into the 'bibliotecaDBDataSet1.Editorial' table. You can move, or remove it, as needed.
-            //this.editorialTableAdapter.Fill(this.bibliotecaDBDataSet1.Editorial);
-            //// TODO: This line of code loads data into the 'bibliotecaDBDataSet.Autor' table. You can move, or remove it, as needed.
-            //this.autorTableAdapter.Fill(this.bibliotecaDBDataSet.Autor);
+
             
         }
         public void MtBuscarTodo()
@@ -361,6 +363,11 @@ namespace ProyectoFinal
         private void dgvLibro_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void pictureBox10_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

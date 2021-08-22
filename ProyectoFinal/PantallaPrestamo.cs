@@ -18,7 +18,7 @@ namespace ProyectoFinal
         public PantallaPrestamo()
         {
             InitializeComponent();
-
+            dgvPrestamo.Visible = false;
             #region Visual
             imagenPrestamo.Visible = true;
             labelPrestamoID.Visible = false;
@@ -71,6 +71,7 @@ namespace ProyectoFinal
 
         private void btnCrearVentana_Click(object sender, EventArgs e)
         {
+            dgvPrestamo.Visible = true;
             #region Visual
             imagenPrestamo.Visible = false;
             labelPrestamoID.Visible = true;
@@ -95,6 +96,7 @@ namespace ProyectoFinal
 
         private void btnBTodosVentana_Click(object sender, EventArgs e)
         {
+            dgvPrestamo.Visible = true;
             #region Visual
             imagenPrestamo.Visible = true;
             labelPrestamoID.Visible = false;
@@ -117,6 +119,7 @@ namespace ProyectoFinal
 
         private void btnBIDVentana_Click(object sender, EventArgs e)
         {
+            dgvPrestamo.Visible = true;
             #region Visual
             imagenPrestamo.Visible = true;
             labelPrestamoID.Visible = false;
@@ -139,6 +142,7 @@ namespace ProyectoFinal
 
         private void btnActualizarVentana_Click(object sender, EventArgs e)
         {
+            dgvPrestamo.Visible = true;
             #region Visual
             imagenPrestamo.Visible = false;
             labelPrestamoID.Visible = true;
@@ -162,6 +166,7 @@ namespace ProyectoFinal
 
         private void btnEliminarVentana_Click(object sender, EventArgs e)
         {
+            dgvPrestamo.Visible = true;
             #region Visual
             imagenPrestamo.Visible = true;
             labelPrestamoID.Visible = false;
@@ -184,11 +189,11 @@ namespace ProyectoFinal
 
         private void PantallaPrestamo_Load(object sender, EventArgs e)
         {
+            this.libroTableAdapter1.Fill(this.bibliotecaDBDataSet2.Libro);
+
+            this.estudianteTableAdapter1.Fill(this.bibliotecaDBDataSet2.Estudiante);
             MtBuscarTodo();
-            //// TODO: This line of code loads data into the 'bibliotecaDBDataSet1.Libro' table. You can move, or remove it, as needed.
-            //this.libroTableAdapter.Fill(this.bibliotecaDBDataSet1.Libro);
-            //// TODO: This line of code loads data into the 'bibliotecaDBDataSet1.Estudiante' table. You can move, or remove it, as needed.
-            //this.estudianteTableAdapter.Fill(this.bibliotecaDBDataSet1.Estudiante);
+
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)

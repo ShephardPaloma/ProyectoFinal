@@ -20,7 +20,7 @@ namespace ProyectoFinal
         public PantallaDevolucion()
         {
             InitializeComponent();
-
+            dgvDevolucion.Visible = false;
             #region Visual
             imagenDevolucion.Visible = true;
             labelDevolucionID.Visible = false;
@@ -42,7 +42,6 @@ namespace ProyectoFinal
         {
             this.Close();
         }
-
 
         private void btnminimizar_Click(object sender, EventArgs e)
         {
@@ -75,6 +74,7 @@ namespace ProyectoFinal
 
         private void btnCrearVentana_Click_1(object sender, EventArgs e)
         {
+            dgvDevolucion.Visible = true;
             #region Visual
             imagenDevolucion.Visible = true;
             labelDevolucionID.Visible = true;
@@ -95,6 +95,7 @@ namespace ProyectoFinal
 
         private void btnBTodosVentana_Click_1(object sender, EventArgs e)
         {
+            dgvDevolucion.Visible = true;
             #region Visual
             imagenDevolucion.Visible = true;
             labelDevolucionID.Visible = false;
@@ -115,6 +116,7 @@ namespace ProyectoFinal
 
         private void btnBIDVentana_Click_1(object sender, EventArgs e)
         {
+            dgvDevolucion.Visible = true;
             #region Visual
             imagenDevolucion.Visible = true;
             labelDevolucionID.Visible = false;
@@ -135,6 +137,7 @@ namespace ProyectoFinal
 
         private void btnActualizarVentana_Click_1(object sender, EventArgs e)
         {
+            dgvDevolucion.Visible = true;
             #region Visual
             imagenDevolucion.Visible = true;
             labelDevolucionID.Visible = true;
@@ -155,6 +158,7 @@ namespace ProyectoFinal
 
         private void btnEliminarVentana_Click_1(object sender, EventArgs e)
         {
+            dgvDevolucion.Visible = true;
             #region Visual
             imagenDevolucion.Visible = true;
             labelDevolucionID.Visible = false;
@@ -175,20 +179,19 @@ namespace ProyectoFinal
 
         private void PantallaDevolucion_Load(object sender, EventArgs e)
         {
+            this.prestamoTableAdapter1.Fill(this.bibliotecaDBDataSet2.Prestamo);
             MtBuscarTodo();
-            // TODO: This line of code loads data into the 'bibliotecaDBDataSet1.Prestamo' table. You can move, or remove it, as needed.
-            //this.prestamoTableAdapter.Fill(this.bibliotecaDBDataSet1.Prestamo);
-            //// TODO: This line of code loads data into the 'bibliotecaDBDataSet1.Libro' table. You can move, or remove it, as needed.
-            //this.libroTableAdapter.Fill(this.bibliotecaDBDataSet1.Libro);
+
 
         }
         public void MtBuscarTodo()
         {
-            dgvDevolucion.DataSource = devolucionrepository.GetAll().Select(x => new { x.Id, x.PrestamoId, x.Estatus, x.FechaRegistro, x.FechaActualizacion }).ToList();
+            dgvDevolucion.DataSource = devolucionrepository.GetAll().Select(x => new { x.Id, x.PrestamoId,x.FechaDevolucion, x.Estatus, x.FechaRegistro, x.FechaActualizacion, }).ToList();
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
+           
             if (string.IsNullOrWhiteSpace(cbPrestamoID.Text))
             {
                 MessageBox.Show("Debe completar el campo de Prestamo Id");
@@ -197,7 +200,8 @@ namespace ProyectoFinal
             {
                 Devolucion nuevadevolucion = new Devolucion()
                 {
-                    PrestamoId = Convert.ToInt32(cbPrestamoID.Text)
+                    PrestamoId = Convert.ToInt32(cbPrestamoID.Text),
+                    FechaDevolucion = DateTime.Today
                 };
                 
                 var existeID = devolucionrepository.FindById(nuevadevolucion.Id);
@@ -216,6 +220,7 @@ namespace ProyectoFinal
 
         private void btnBuscarID_Click(object sender, EventArgs e)
         {
+            
             if (string.IsNullOrWhiteSpace(txtBuscarId.Text))
             {
                 MessageBox.Show("Debe indicar el id de la devolucion!", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -240,6 +245,7 @@ namespace ProyectoFinal
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            
             MtBuscarTodo();
 
             if (string.IsNullOrWhiteSpace(cbPrestamoID.Text))
@@ -274,6 +280,7 @@ namespace ProyectoFinal
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+           
             MtBuscarTodo();
             if (string.IsNullOrWhiteSpace(txtEliminar.Text))
             {
