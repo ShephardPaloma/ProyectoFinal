@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoFinal.DataModel.Repositories;
 using ProyectoFinal.DataModel.Entities;
-
+using System.Runtime.InteropServices;
 
 
 namespace ProyectoFinal
@@ -65,7 +65,7 @@ namespace ProyectoFinal
 
         private void btnrestaurar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Normal;
             btnmaximizar.Visible = true;
             btnrestaurar.Visible = false;
         }
@@ -393,6 +393,15 @@ namespace ProyectoFinal
             txtNacionalidad.Text = dgvAutor.CurrentRow.Cells["Nacionalidad"].Value.ToString();
         }
 
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
+        private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
     }
 }

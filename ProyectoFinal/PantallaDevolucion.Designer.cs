@@ -52,6 +52,8 @@
             this.cbPrestamoID = new System.Windows.Forms.ComboBox();
             this.prestamoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibliotecaDBDataSet1 = new ProyectoFinal.BibliotecaDBDataSet1();
+            this.prestamoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bibliotecaDBDataSet2 = new ProyectoFinal.BibliotecaDBDataSet2();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -72,9 +74,7 @@
             this.libroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.libroTableAdapter = new ProyectoFinal.BibliotecaDBDataSet1TableAdapters.LibroTableAdapter();
             this.prestamoTableAdapter = new ProyectoFinal.BibliotecaDBDataSet1TableAdapters.PrestamoTableAdapter();
-            this.bibliotecaDBDataSet2 = new ProyectoFinal.BibliotecaDBDataSet2();
             this.bibliotecaDBDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.prestamoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.prestamoTableAdapter1 = new ProyectoFinal.BibliotecaDBDataSet2TableAdapters.PrestamoTableAdapter();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
@@ -85,14 +85,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.imagenDevolucion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prestamoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDBDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prestamoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDBDataSet2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libroBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDBDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDBDataSet2BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prestamoBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -109,6 +109,7 @@
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(1181, 28);
             this.BarraTitulo.TabIndex = 5;
+            this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
             // label1
             // 
@@ -360,6 +361,16 @@
             this.bibliotecaDBDataSet1.DataSetName = "BibliotecaDBDataSet1";
             this.bibliotecaDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // prestamoBindingSource1
+            // 
+            this.prestamoBindingSource1.DataMember = "Prestamo";
+            this.prestamoBindingSource1.DataSource = this.bibliotecaDBDataSet2;
+            // 
+            // bibliotecaDBDataSet2
+            // 
+            this.bibliotecaDBDataSet2.DataSetName = "BibliotecaDBDataSet2";
+            this.bibliotecaDBDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkCyan;
@@ -574,7 +585,7 @@
             // txtEliminar
             // 
             this.txtEliminar.Location = new System.Drawing.Point(612, 430);
-            this.txtEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.txtEliminar.Name = "txtEliminar";
             this.txtEliminar.Size = new System.Drawing.Size(132, 22);
             this.txtEliminar.TabIndex = 40;
@@ -582,7 +593,7 @@
             // txtBuscarId
             // 
             this.txtBuscarId.Location = new System.Drawing.Point(612, 459);
-            this.txtBuscarId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscarId.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscarId.Name = "txtBuscarId";
             this.txtBuscarId.Size = new System.Drawing.Size(132, 22);
             this.txtBuscarId.TabIndex = 41;
@@ -600,20 +611,10 @@
             // 
             this.prestamoTableAdapter.ClearBeforeFill = true;
             // 
-            // bibliotecaDBDataSet2
-            // 
-            this.bibliotecaDBDataSet2.DataSetName = "BibliotecaDBDataSet2";
-            this.bibliotecaDBDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // bibliotecaDBDataSet2BindingSource
             // 
             this.bibliotecaDBDataSet2BindingSource.DataSource = this.bibliotecaDBDataSet2;
             this.bibliotecaDBDataSet2BindingSource.Position = 0;
-            // 
-            // prestamoBindingSource1
-            // 
-            this.prestamoBindingSource1.DataMember = "Prestamo";
-            this.prestamoBindingSource1.DataSource = this.bibliotecaDBDataSet2;
             // 
             // prestamoTableAdapter1
             // 
@@ -659,14 +660,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.imagenDevolucion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prestamoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDBDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prestamoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDBDataSet2)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libroBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDBDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDBDataSet2BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prestamoBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

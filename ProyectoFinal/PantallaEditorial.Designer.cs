@@ -615,6 +615,7 @@
             this.Name = "PantallaEditorial";
             this.Text = "PantallaEditorial";
             this.Load += new System.EventHandler(this.PantallaEditorial_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PantallaEditorial_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditorial)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();

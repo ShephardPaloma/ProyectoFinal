@@ -97,6 +97,7 @@
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(1181, 28);
             this.BarraTitulo.TabIndex = 4;
+            this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
             // label1
             // 
@@ -399,7 +400,6 @@
             this.dgvAutor.RowTemplate.Height = 24;
             this.dgvAutor.Size = new System.Drawing.Size(981, 187);
             this.dgvAutor.TabIndex = 9;
-           
             this.dgvAutor.SelectionChanged += new System.EventHandler(this.dgvAutor_SelectionChanged);
             // 
             // labelID

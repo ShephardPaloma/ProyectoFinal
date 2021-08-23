@@ -87,7 +87,7 @@
             // 
             this.BarraTitulo.BackColor = System.Drawing.Color.CadetBlue;
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BarraTitulo.Location = new System.Drawing.Point(0, 24);
+            this.BarraTitulo.Location = new System.Drawing.Point(0, 28);
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(1200, 35);
             this.BarraTitulo.TabIndex = 3;
@@ -119,9 +119,9 @@
             this.panel1.Controls.Add(this.btnEditorial);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 59);
+            this.panel1.Location = new System.Drawing.Point(0, 63);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 681);
+            this.panel1.Size = new System.Drawing.Size(200, 677);
             this.panel1.TabIndex = 4;
             // 
             // pictureBox9
@@ -471,9 +471,10 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1200, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1200, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.menuStrip1_MouseDown);
             // 
             // label1
             // 

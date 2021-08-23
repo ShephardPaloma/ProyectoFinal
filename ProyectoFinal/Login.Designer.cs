@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnmaximizar = new System.Windows.Forms.PictureBox();
             this.btnrestaurar = new System.Windows.Forms.PictureBox();
             this.btnminimizar = new System.Windows.Forms.PictureBox();
             this.btncerrar = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.labelUsuario = new System.Windows.Forms.Label();
@@ -67,6 +67,18 @@
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(800, 28);
             this.BarraTitulo.TabIndex = 39;
+            this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Poor Richard", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(292, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 23);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Biblioteca Virtual";
             // 
             // btnmaximizar
             // 
@@ -124,17 +136,6 @@
             this.btncerrar.TabStop = false;
             this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poor Richard", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(292, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 23);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Biblioteca Virtual";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkCyan;
@@ -145,15 +146,6 @@
             this.panel1.Size = new System.Drawing.Size(200, 387);
             this.panel1.TabIndex = 43;
             // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 28);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(800, 35);
-            this.panel9.TabIndex = 42;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -163,6 +155,15 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 44;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 28);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(800, 35);
+            this.panel9.TabIndex = 42;
             // 
             // label2
             // 
