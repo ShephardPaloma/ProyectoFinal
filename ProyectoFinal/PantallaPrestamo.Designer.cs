@@ -80,6 +80,7 @@
             this.estudianteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.estudianteTableAdapter1 = new ProyectoFinal.BibliotecaDBDataSet2TableAdapters.EstudianteTableAdapter();
             this.libroTableAdapter1 = new ProyectoFinal.BibliotecaDBDataSet2TableAdapters.LibroTableAdapter();
+            this.estudianteBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamo)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -98,6 +99,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvPrestamo
@@ -467,15 +469,12 @@
             // cbEstudianteID
             // 
             this.cbEstudianteID.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.estudianteBindingSource, "EstudianteId", true));
-            this.cbEstudianteID.DataSource = this.estudianteBindingSource2;
-            this.cbEstudianteID.DisplayMember = "EstudianteId";
             this.cbEstudianteID.FormattingEnabled = true;
             this.cbEstudianteID.Location = new System.Drawing.Point(479, 284);
             this.cbEstudianteID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbEstudianteID.Name = "cbEstudianteID";
             this.cbEstudianteID.Size = new System.Drawing.Size(129, 24);
             this.cbEstudianteID.TabIndex = 51;
-            this.cbEstudianteID.ValueMember = "EstudianteId";
             // 
             // estudianteBindingSource
             // 
@@ -659,6 +658,11 @@
             // 
             this.libroTableAdapter1.ClearBeforeFill = true;
             // 
+            // estudianteBindingSource3
+            // 
+            this.estudianteBindingSource3.DataMember = "Estudiante";
+            this.estudianteBindingSource3.DataSource = this.bibliotecaDBDataSet2;
+            // 
             // PantallaPrestamo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -710,6 +714,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estudianteBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -767,5 +772,6 @@
         private System.Windows.Forms.BindingSource libroBindingSource1;
         private BibliotecaDBDataSet2TableAdapters.LibroTableAdapter libroTableAdapter1;
         private System.Windows.Forms.BindingSource estudianteBindingSource2;
+        private System.Windows.Forms.BindingSource estudianteBindingSource3;
     }
 }

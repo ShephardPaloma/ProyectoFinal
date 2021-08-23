@@ -12,7 +12,7 @@ namespace ProyectoFinal.DataModel.Entities
         public int EditorialId { get; set; }
         public string Nombre { get; set; }
 
-        public Autor autor { get; set; }
-        public Editorial editorial { get; set; }
+        public virtual Autor autor { get; set; }
+        public virtual Editorial editorial { get; set; }
     }
 }

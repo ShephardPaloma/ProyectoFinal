@@ -265,7 +265,13 @@ namespace ProyectoFinal
             dgvPrestamo.DataSource = vistaprestamo.Where(x => x.Id == infolibro.Id).Select(x => new { x.Id, x.EstudianteId, x.LibroId, x.Estatus, x.FechaRegistro, x.FechaActualizacion}).ToList();
 
         }
-
+        //private void ListarEstudiante()
+        //{
+        //    Prestamo nuevoprestamo = new Prestamo();
+        //    cbEstudianteID.DataSource = nuevoprestamo.estudiante;
+        //    cbEstudianteID.DisplayMember = nuevoprestamo.estudiante.Nombre;
+        //    cbEstudianteID.ValueMember = Convert.ToString(nuevoprestamo.estudiante.Id);
+        //}
         private void btnCrear_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(cbEstudianteID.Text) || string.IsNullOrWhiteSpace(cbLibroID.Text))

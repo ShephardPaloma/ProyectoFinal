@@ -11,7 +11,7 @@ namespace ProyectoFinal.DataModel.Entities
         public int EstudianteId { get; set; }
         public int LibroId { get; set; }
 
-        public Estudiante estudiante { get; set; }
-        public Libro libro { get; set; }
+        public virtual Estudiante estudiante { get; set; }
+        public virtual Libro libro { get; set; }
     }
 }

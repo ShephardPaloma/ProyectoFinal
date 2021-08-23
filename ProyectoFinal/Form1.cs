@@ -107,8 +107,7 @@ namespace ProyectoFinal
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            PantallaReporte pantallaReporte = new PantallaReporte();
-            pantallaReporte.ShowDialog();
+            panelSubmenu.Visible = true;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -120,6 +119,20 @@ namespace ProyectoFinal
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnReporteConteo_Click(object sender, EventArgs e)
+        {
+            panelSubmenu.Visible = false;
+            PantallaReporte pantallaReporte = new PantallaReporte();
+            pantallaReporte.ShowDialog();
+        }
+
+        private void btnReporteLista_Click(object sender, EventArgs e)
+        {
+            panelSubmenu.Visible = false;
+            PantallaReporte2 pantallaReporte2 = new PantallaReporte2();
+            pantallaReporte2.ShowDialog();
         }
     }
 }
