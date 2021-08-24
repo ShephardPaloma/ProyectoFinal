@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ProyectoFinal.DataModel.Repositories;
 using ProyectoFinal.DataModel.Entities;
 using System.Runtime.InteropServices;
+using ProyectoFinal.DataModel.Context;
 
 namespace ProyectoFinal
 {
@@ -190,10 +191,15 @@ namespace ProyectoFinal
 
         private void PantallaPrestamo_Load(object sender, EventArgs e)
         {
-            this.libroTableAdapter1.Fill(this.bibliotecaDBDataSet2.Libro);
-
-            this.estudianteTableAdapter1.Fill(this.bibliotecaDBDataSet2.Estudiante);
             MtBuscarTodo();
+            using (BibliotecaDbContext context = new BibliotecaDbContext())
+            {
+                var listaestudiantes = context.Estudiantes.Where(x => x.Estatus == "A" && x.Borrado == false).Select(x => x.Id).ToList();
+                cbEstudianteID.DataSource = listaestudiantes;
+
+                var listalibros = context.Libros.Where(x => x.Estatus == "A" && x.Borrado == false).Select(x => x.Id).ToList();
+                cbLibroID.DataSource = listalibros;
+            }
 
         }
 

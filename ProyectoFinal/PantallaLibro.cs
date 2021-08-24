@@ -202,9 +202,6 @@ namespace ProyectoFinal
         private void PantallaLibro_Load(object sender, EventArgs e)
         {
 
-            this.editorialTableAdapter1.Fill(this.bibliotecaDBDataSet2.Editorial);
-
-            this.autorTableAdapter2.Fill(this.bibliotecaDBDataSet2.Autor);
             MtBuscarTodo();
 
             

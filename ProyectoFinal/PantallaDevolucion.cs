@@ -181,22 +181,24 @@ namespace ProyectoFinal
 
         private void PantallaDevolucion_Load(object sender, EventArgs e)
         {
-            this.prestamoTableAdapter1.Fill(this.bibliotecaDBDataSet2.Prestamo);
             MtBuscarTodo();
-
-
+            using (BibliotecaDbContext context = new BibliotecaDbContext())
+            {
+                var listaprestamo = context.Prestamos.Where(x => x.Estatus == "A" && x.Borrado == false).Select(x => x.Id).ToList();
+                cbPrestamoID.DataSource = listaprestamo;
+            }
         }
         public void MtBuscarTodo()
         {
             dgvDevolucion.DataSource = devolucionrepository.GetAll().Select(x => new { x.Id, x.PrestamoId,x.FechaDevolucion, x.Estatus, x.FechaRegistro, x.FechaActualizacion, }).ToList();
         }
-        private void ListarPrestamo()
-        {
-            Devolucion nuevadevolucion = new Devolucion();
-            cbPrestamoID.DataSource = nuevadevolucion.prestamo;
-            cbPrestamoID.DisplayMember = "";
-            cbPrestamoID.ValueMember = "";
-        }
+        //private void ListarPrestamo()
+        //{
+        //    Devolucion nuevadevolucion = new Devolucion();
+        //    cbPrestamoID.DataSource = nuevadevolucion.prestamo;
+        //    cbPrestamoID.DisplayMember = "";
+        //    cbPrestamoID.ValueMember = "";
+        //}
         private void btnCrear_Click(object sender, EventArgs e)
         {
            
