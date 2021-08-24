@@ -48,7 +48,6 @@
             this.labelIDLibro = new System.Windows.Forms.Label();
             this.cbAutorID = new System.Windows.Forms.ComboBox();
             this.cbEditorialID = new System.Windows.Forms.ComboBox();
-            this.editorialBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btnBuscarTodos = new System.Windows.Forms.Button();
             this.btnBuscarID = new System.Windows.Forms.Button();
             this.labelBuscarID = new System.Windows.Forms.Label();
@@ -71,6 +70,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtEliminar = new System.Windows.Forms.TextBox();
             this.txtBuscarId = new System.Windows.Forms.TextBox();
+            this.editorialBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibro)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
@@ -78,17 +78,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenLibro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.editorialBindingSource1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editorialBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvLibro
             // 
             this.dgvLibro.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvLibro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLibro.Location = new System.Drawing.Point(200, 506);
+            this.dgvLibro.Location = new System.Drawing.Point(198, 529);
             this.dgvLibro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvLibro.Name = "dgvLibro";
             this.dgvLibro.RowHeadersWidth = 51;
@@ -635,10 +635,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenLibro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.editorialBindingSource1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editorialBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

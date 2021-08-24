@@ -32,6 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaPrincipal));
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panelSubmenu = new System.Windows.Forms.Panel();
+            this.btnReporteLista = new System.Windows.Forms.Button();
+            this.btnReporteConteo = new System.Windows.Forms.Button();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -67,10 +73,9 @@
             this.horafecha = new System.Windows.Forms.Timer(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panelSubmenu = new System.Windows.Forms.Panel();
-            this.btnReporteConteo = new System.Windows.Forms.Button();
-            this.btnReporteLista = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.panelSubmenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -84,14 +89,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnrestaurar)).BeginInit();
-            this.panelSubmenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // BarraTitulo
             // 
             this.BarraTitulo.BackColor = System.Drawing.Color.CadetBlue;
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BarraTitulo.Location = new System.Drawing.Point(0, 30);
+            this.BarraTitulo.Location = new System.Drawing.Point(0, 24);
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(1200, 35);
             this.BarraTitulo.TabIndex = 3;
@@ -99,6 +103,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkCyan;
+            this.panel1.Controls.Add(this.pictureBox10);
+            this.panel1.Controls.Add(this.panel9);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panelSubmenu);
             this.panel1.Controls.Add(this.pictureBox9);
             this.panel1.Controls.Add(this.pictureBox8);
@@ -124,10 +131,92 @@
             this.panel1.Controls.Add(this.btnEditorial);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 65);
+            this.panel1.Location = new System.Drawing.Point(0, 59);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 675);
+            this.panel1.Size = new System.Drawing.Size(200, 681);
             this.panel1.TabIndex = 4;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(12, 512);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(41, 33);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 17;
+            this.pictureBox10.TabStop = false;
+            // 
+            // panel9
+            // 
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel9.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel9.Location = new System.Drawing.Point(3, 512);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(10, 33);
+            this.panel9.TabIndex = 18;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(12, 512);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(182, 33);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Solicitud";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panelSubmenu
+            // 
+            this.panelSubmenu.Controls.Add(this.btnReporteLista);
+            this.panelSubmenu.Controls.Add(this.btnReporteConteo);
+            this.panelSubmenu.Location = new System.Drawing.Point(53, 611);
+            this.panelSubmenu.Name = "panelSubmenu";
+            this.panelSubmenu.Size = new System.Drawing.Size(147, 72);
+            this.panelSubmenu.TabIndex = 13;
+            this.panelSubmenu.Visible = false;
+            // 
+            // btnReporteLista
+            // 
+            this.btnReporteLista.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReporteLista.FlatAppearance.BorderSize = 0;
+            this.btnReporteLista.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.btnReporteLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteLista.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporteLista.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnReporteLista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporteLista.Location = new System.Drawing.Point(3, 42);
+            this.btnReporteLista.Name = "btnReporteLista";
+            this.btnReporteLista.Size = new System.Drawing.Size(144, 27);
+            this.btnReporteLista.TabIndex = 17;
+            this.btnReporteLista.Text = "Lista de datos";
+            this.btnReporteLista.UseVisualStyleBackColor = true;
+            this.btnReporteLista.Click += new System.EventHandler(this.btnReporteLista_Click);
+            // 
+            // btnReporteConteo
+            // 
+            this.btnReporteConteo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReporteConteo.FlatAppearance.BorderSize = 0;
+            this.btnReporteConteo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.btnReporteConteo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteConteo.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporteConteo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnReporteConteo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporteConteo.Location = new System.Drawing.Point(3, 3);
+            this.btnReporteConteo.Name = "btnReporteConteo";
+            this.btnReporteConteo.Size = new System.Drawing.Size(144, 33);
+            this.btnReporteConteo.TabIndex = 16;
+            this.btnReporteConteo.Text = "Conteo de datos";
+            this.btnReporteConteo.UseVisualStyleBackColor = true;
+            this.btnReporteConteo.Click += new System.EventHandler(this.btnReporteConteo_Click);
             // 
             // pictureBox9
             // 
@@ -147,7 +236,7 @@
             this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(12, 517);
+            this.pictureBox8.Location = new System.Drawing.Point(12, 572);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(41, 33);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -158,7 +247,7 @@
             // 
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel8.Location = new System.Drawing.Point(3, 517);
+            this.panel8.Location = new System.Drawing.Point(3, 572);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(10, 33);
             this.panel8.TabIndex = 14;
@@ -172,7 +261,7 @@
             this.btnReporte.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporte.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporte.Location = new System.Drawing.Point(12, 517);
+            this.btnReporte.Location = new System.Drawing.Point(12, 572);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(182, 33);
             this.btnReporte.TabIndex = 15;
@@ -185,7 +274,7 @@
             this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(12, 457);
+            this.pictureBox7.Location = new System.Drawing.Point(12, 452);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(41, 33);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -197,7 +286,7 @@
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(12, 396);
+            this.pictureBox6.Location = new System.Drawing.Point(12, 394);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(41, 33);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -221,7 +310,7 @@
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(12, 273);
+            this.pictureBox4.Location = new System.Drawing.Point(12, 277);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(41, 33);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -233,7 +322,7 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 211);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 220);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(41, 33);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -245,7 +334,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(12, 151);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 164);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(41, 33);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -256,7 +345,7 @@
             // 
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel7.Location = new System.Drawing.Point(3, 457);
+            this.panel7.Location = new System.Drawing.Point(3, 452);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(10, 33);
             this.panel7.TabIndex = 11;
@@ -270,7 +359,7 @@
             this.btnPrestamo.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrestamo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnPrestamo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrestamo.Location = new System.Drawing.Point(12, 457);
+            this.btnPrestamo.Location = new System.Drawing.Point(12, 452);
             this.btnPrestamo.Name = "btnPrestamo";
             this.btnPrestamo.Size = new System.Drawing.Size(182, 33);
             this.btnPrestamo.TabIndex = 12;
@@ -282,7 +371,7 @@
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel6.Location = new System.Drawing.Point(3, 396);
+            this.panel6.Location = new System.Drawing.Point(3, 394);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(10, 33);
             this.panel6.TabIndex = 9;
@@ -296,7 +385,7 @@
             this.btnLibro.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLibro.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLibro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLibro.Location = new System.Drawing.Point(12, 396);
+            this.btnLibro.Location = new System.Drawing.Point(12, 394);
             this.btnLibro.Name = "btnLibro";
             this.btnLibro.Size = new System.Drawing.Size(182, 33);
             this.btnLibro.TabIndex = 10;
@@ -317,7 +406,7 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel2.Location = new System.Drawing.Point(3, 211);
+            this.panel2.Location = new System.Drawing.Point(3, 220);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(10, 33);
             this.panel2.TabIndex = 2;
@@ -348,7 +437,7 @@
             this.btnDevolucion.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDevolucion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDevolucion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDevolucion.Location = new System.Drawing.Point(12, 211);
+            this.btnDevolucion.Location = new System.Drawing.Point(12, 220);
             this.btnDevolucion.Name = "btnDevolucion";
             this.btnDevolucion.Size = new System.Drawing.Size(182, 33);
             this.btnDevolucion.TabIndex = 3;
@@ -360,7 +449,7 @@
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel4.Location = new System.Drawing.Point(3, 273);
+            this.panel4.Location = new System.Drawing.Point(3, 277);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(10, 33);
             this.panel4.TabIndex = 4;
@@ -369,7 +458,7 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel3.Location = new System.Drawing.Point(3, 151);
+            this.panel3.Location = new System.Drawing.Point(3, 164);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(10, 33);
             this.panel3.TabIndex = 0;
@@ -383,7 +472,7 @@
             this.btnAutor.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAutor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAutor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAutor.Location = new System.Drawing.Point(12, 151);
+            this.btnAutor.Location = new System.Drawing.Point(12, 164);
             this.btnAutor.Name = "btnAutor";
             this.btnAutor.Size = new System.Drawing.Size(182, 33);
             this.btnAutor.TabIndex = 1;
@@ -400,7 +489,7 @@
             this.btnEditorial.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditorial.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEditorial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditorial.Location = new System.Drawing.Point(12, 273);
+            this.btnEditorial.Location = new System.Drawing.Point(12, 277);
             this.btnEditorial.Name = "btnEditorial";
             this.btnEditorial.Size = new System.Drawing.Size(182, 33);
             this.btnEditorial.TabIndex = 5;
@@ -476,7 +565,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1200, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1200, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.menuStrip1_MouseDown);
@@ -552,50 +641,6 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Jorge Luis Borges";
             // 
-            // panelSubmenu
-            // 
-            this.panelSubmenu.Controls.Add(this.btnReporteLista);
-            this.panelSubmenu.Controls.Add(this.btnReporteConteo);
-            this.panelSubmenu.Location = new System.Drawing.Point(53, 556);
-            this.panelSubmenu.Name = "panelSubmenu";
-            this.panelSubmenu.Size = new System.Drawing.Size(147, 72);
-            this.panelSubmenu.TabIndex = 13;
-            this.panelSubmenu.Visible = false;
-            // 
-            // btnReporteConteo
-            // 
-            this.btnReporteConteo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReporteConteo.FlatAppearance.BorderSize = 0;
-            this.btnReporteConteo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
-            this.btnReporteConteo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporteConteo.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReporteConteo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnReporteConteo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporteConteo.Location = new System.Drawing.Point(3, 3);
-            this.btnReporteConteo.Name = "btnReporteConteo";
-            this.btnReporteConteo.Size = new System.Drawing.Size(144, 33);
-            this.btnReporteConteo.TabIndex = 16;
-            this.btnReporteConteo.Text = "Conteo de datos";
-            this.btnReporteConteo.UseVisualStyleBackColor = true;
-            this.btnReporteConteo.Click += new System.EventHandler(this.btnReporteConteo_Click);
-            // 
-            // btnReporteLista
-            // 
-            this.btnReporteLista.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReporteLista.FlatAppearance.BorderSize = 0;
-            this.btnReporteLista.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
-            this.btnReporteLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporteLista.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReporteLista.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnReporteLista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporteLista.Location = new System.Drawing.Point(3, 42);
-            this.btnReporteLista.Name = "btnReporteLista";
-            this.btnReporteLista.Size = new System.Drawing.Size(144, 27);
-            this.btnReporteLista.TabIndex = 17;
-            this.btnReporteLista.Text = "Lista de datos";
-            this.btnReporteLista.UseVisualStyleBackColor = true;
-            this.btnReporteLista.Click += new System.EventHandler(this.btnReporteLista_Click);
-            // 
             // PantallaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -621,6 +666,8 @@
             this.Name = "PantallaPrincipal";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            this.panelSubmenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -634,7 +681,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnrestaurar)).EndInit();
-            this.panelSubmenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -681,6 +727,9 @@
         private System.Windows.Forms.Panel panelSubmenu;
         private System.Windows.Forms.Button btnReporteLista;
         private System.Windows.Forms.Button btnReporteConteo;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button button1;
     }
 }
 

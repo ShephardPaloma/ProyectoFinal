@@ -42,8 +42,10 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.labelUsuario = new System.Windows.Forms.Label();
             this.txtContrasena = new System.Windows.Forms.TextBox();
-            this.labelApellido = new System.Windows.Forms.Label();
+            this.labelContrasena = new System.Windows.Forms.Label();
             this.btnIniciarSecion = new System.Windows.Forms.Button();
+            this.btnAdministrador = new System.Windows.Forms.Button();
+            this.btnUsuario = new System.Windows.Forms.Button();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnrestaurar)).BeginInit();
@@ -205,15 +207,15 @@
             this.txtContrasena.Size = new System.Drawing.Size(157, 30);
             this.txtContrasena.TabIndex = 46;
             // 
-            // labelApellido
+            // labelContrasena
             // 
-            this.labelApellido.AutoSize = true;
-            this.labelApellido.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelApellido.Location = new System.Drawing.Point(326, 253);
-            this.labelApellido.Name = "labelApellido";
-            this.labelApellido.Size = new System.Drawing.Size(108, 23);
-            this.labelApellido.TabIndex = 45;
-            this.labelApellido.Text = "Contraseña";
+            this.labelContrasena.AutoSize = true;
+            this.labelContrasena.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelContrasena.Location = new System.Drawing.Point(326, 253);
+            this.labelContrasena.Name = "labelContrasena";
+            this.labelContrasena.Size = new System.Drawing.Size(108, 23);
+            this.labelContrasena.TabIndex = 45;
+            this.labelContrasena.Text = "Contraseña";
             // 
             // btnIniciarSecion
             // 
@@ -230,17 +232,49 @@
             this.btnIniciarSecion.UseVisualStyleBackColor = false;
             this.btnIniciarSecion.Click += new System.EventHandler(this.btnIniciarSecion_Click);
             // 
+            // btnAdministrador
+            // 
+            this.btnAdministrador.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdministrador.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
+            this.btnAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdministrador.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdministrador.Location = new System.Drawing.Point(244, 219);
+            this.btnAdministrador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdministrador.Name = "btnAdministrador";
+            this.btnAdministrador.Size = new System.Drawing.Size(237, 57);
+            this.btnAdministrador.TabIndex = 50;
+            this.btnAdministrador.Text = "Administrador";
+            this.btnAdministrador.UseVisualStyleBackColor = false;
+            this.btnAdministrador.Click += new System.EventHandler(this.btnAdministrador_Click);
+            // 
+            // btnUsuario
+            // 
+            this.btnUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.btnUsuario.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
+            this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuario.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuario.Location = new System.Drawing.Point(510, 219);
+            this.btnUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUsuario.Name = "btnUsuario";
+            this.btnUsuario.Size = new System.Drawing.Size(237, 57);
+            this.btnUsuario.TabIndex = 51;
+            this.btnUsuario.Text = "Usuario";
+            this.btnUsuario.UseVisualStyleBackColor = false;
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUsuario);
+            this.Controls.Add(this.btnAdministrador);
             this.Controls.Add(this.btnIniciarSecion);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.labelUsuario);
             this.Controls.Add(this.txtContrasena);
-            this.Controls.Add(this.labelApellido);
+            this.Controls.Add(this.labelContrasena);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel9);
@@ -275,7 +309,9 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label labelUsuario;
         private System.Windows.Forms.TextBox txtContrasena;
-        private System.Windows.Forms.Label labelApellido;
+        private System.Windows.Forms.Label labelContrasena;
         private System.Windows.Forms.Button btnIniciarSecion;
+        private System.Windows.Forms.Button btnAdministrador;
+        private System.Windows.Forms.Button btnUsuario;
     }
 }

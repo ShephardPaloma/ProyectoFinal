@@ -201,7 +201,7 @@ namespace ProyectoFinal
 
         private void PantallaLibro_Load(object sender, EventArgs e)
         {
-            MtBuscarTodo();
+           
             using (BibliotecaDbContext context = new BibliotecaDbContext())
             {
                 var listaautores = context.Autors.Where(x => x.Estatus == "A" && x.Borrado == false).Select(x => new { x.Id, x.Nombre }).ToList();

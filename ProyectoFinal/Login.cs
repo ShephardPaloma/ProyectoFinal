@@ -16,6 +16,16 @@ namespace ProyectoFinal
         public Login()
         {
             InitializeComponent();
+
+            #region Visual
+            txtUsuario.Visible = false;
+            txtContrasena.Visible = false;
+            btnIniciarSecion.Visible = false;
+            labelUsuario.Visible = false;
+            labelContrasena.Visible = false;
+            btnAdministrador.Visible = true;
+            btnUsuario.Visible = true;
+            #endregion
         }
 
         private void btncerrar_Click(object sender, EventArgs e)
@@ -75,6 +85,27 @@ namespace ProyectoFinal
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnAdministrador_Click(object sender, EventArgs e)
+        {
+            #region Visual
+            txtUsuario.Visible = true;
+            txtContrasena.Visible = true;
+            btnIniciarSecion.Visible = true;
+            labelUsuario.Visible = true;
+            labelContrasena.Visible = true;
+            btnAdministrador.Visible = false;
+            btnUsuario.Visible = false;
+            #endregion
+        }
+
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+
+            PantallaSolicitud pantallaSolicitud = new PantallaSolicitud();
+            pantallaSolicitud.Show();
+            this.Hide();
         }
     }
 }

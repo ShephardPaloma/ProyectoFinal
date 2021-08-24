@@ -21,6 +21,7 @@ namespace ProyectoFinal.DataModel.Context
         public DbSet<Estudiante> Estudiantes { get; set; }
         public DbSet<Libro> Libros { get; set; }
         public DbSet<Prestamo> Prestamos { get; set; }
+        public DbSet<Solicitud> Solicituds { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -167,6 +168,46 @@ namespace ProyectoFinal.DataModel.Context
             modelBuilder.Entity<Prestamo>()
                 .Property(p => p.Id)
                 .HasColumnName("PrestamoId");
+            #endregion
+
+            #region Solicitud
+            modelBuilder.Entity<Solicitud>()
+                .ToTable("Solicitud")
+                .HasKey(k => k.Id);
+
+            modelBuilder.Entity<Solicitud>()
+                .Property(p => p.Id)
+                .HasColumnName("SolicitudId");
+
+            modelBuilder.Entity<Solicitud>()
+                .Property(p => p.Nombre)
+                .HasMaxLength(100)
+                .HasColumnType("varchar")
+                .IsRequired();
+
+            modelBuilder.Entity<Solicitud>()
+                .Property(p => p.Apellido)
+                .HasMaxLength(100)
+                .HasColumnType("varchar")
+                .IsRequired();
+
+            modelBuilder.Entity<Solicitud>()
+                .Property(p => p.Libro)
+                .HasMaxLength(100)
+                .HasColumnType("varchar")
+                .IsRequired();
+
+            modelBuilder.Entity<Solicitud>()
+                .Property(p => p.Editorial)
+                .HasMaxLength(100)
+                .HasColumnType("varchar")
+                .IsRequired();
+            modelBuilder.Entity<Solicitud>()
+                .Property(p => p.Autor)
+                .HasMaxLength(100)
+                .HasColumnType("varchar")
+                .IsRequired();
+
             #endregion
         }
     }

@@ -142,5 +142,11 @@ namespace ProyectoFinal
             PantallaReporte2 pantallaReporte2 = new PantallaReporte2();
             pantallaReporte2.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PantallaSolicitud2 pantallaSolicitud = new PantallaSolicitud2();
+            pantallaSolicitud.ShowDialog();
+        }
     }
 }

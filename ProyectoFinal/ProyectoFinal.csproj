@@ -79,6 +79,7 @@
     <Compile Include="DataModel\Entities\Estudiante.cs" />
     <Compile Include="DataModel\Entities\Libro.cs" />
     <Compile Include="DataModel\Entities\Prestamo.cs" />
+    <Compile Include="DataModel\Entities\Solicitud.cs" />
     <Compile Include="DataModel\Interfaces\IGenericRepository.cs" />
     <Compile Include="DataModel\Repositories\AutorRepository.cs" />
     <Compile Include="DataModel\Repositories\DevolucionRepository.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="DataModel\Repositories\GenericRepository.cs" />
     <Compile Include="DataModel\Repositories\LibroRepository.cs" />
     <Compile Include="DataModel\Repositories\PrestamoRepository.cs" />
+    <Compile Include="DataModel\Repositories\SolicitudRepository.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +112,10 @@
     <Compile Include="Migrations\202108192240375_inicial1.cs" />
     <Compile Include="Migrations\202108192240375_inicial1.designer.cs">
       <DependentUpon>202108192240375_inicial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108241949451_prueba.cs" />
+    <Compile Include="Migrations\202108241949451_prueba.designer.cs">
+      <DependentUpon>202108241949451_prueba.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OperationResult.cs" />
@@ -161,6 +167,18 @@
     <Compile Include="PantallaReporte2.Designer.cs">
       <DependentUpon>PantallaReporte2.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallaSolicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaSolicitud.Designer.cs">
+      <DependentUpon>PantallaSolicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaSolicitud2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaSolicitud2.Designer.cs">
+      <DependentUpon>PantallaSolicitud2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -177,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202108192240375_inicial1.resx">
       <DependentUpon>202108192240375_inicial1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108241949451_prueba.resx">
+      <DependentUpon>202108241949451_prueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaAutor.resx">
       <DependentUpon>PantallaAutor.cs</DependentUpon>
@@ -201,6 +222,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaReporte2.resx">
       <DependentUpon>PantallaReporte2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaSolicitud.resx">
+      <DependentUpon>PantallaSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaSolicitud2.resx">
+      <DependentUpon>PantallaSolicitud2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
