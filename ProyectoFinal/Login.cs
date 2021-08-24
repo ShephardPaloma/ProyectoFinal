@@ -46,13 +46,13 @@ namespace ProyectoFinal
         {
             if (string.IsNullOrWhiteSpace(txtUsuario.Text) || string.IsNullOrWhiteSpace(txtContrasena.Text))
             {
-                MessageBox.Show("Debe completar todos los datos");
+                MessageBox.Show("Debe completar los campos de usuario y contraseña!");
             }
             else
             {
                 if((txtUsuario.Text == "Admin") && (txtContrasena.Text == "pass"))
                 {
-                   
+                    MessageBox.Show("Datos ingresados correctamente bienvenido al sistema de biblioteca!");
                     PantallaPrincipal pantallaPrincipal = new PantallaPrincipal();
                     pantallaPrincipal.Show();
                     this.Hide();
