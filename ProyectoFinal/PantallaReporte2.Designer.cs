@@ -45,6 +45,16 @@
             this.bibliotecaDBDataSet2 = new ProyectoFinal.BibliotecaDBDataSet2();
             this.prestamoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.prestamoTableAdapter = new ProyectoFinal.BibliotecaDBDataSet2TableAdapters.PrestamoTableAdapter();
+            this.spConsultaReporte2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bibliotecaDBDataSet3 = new ProyectoFinal.BibliotecaDBDataSet3();
+            this.sp_ConsultaReporte2TableAdapter = new ProyectoFinal.BibliotecaDBDataSet3TableAdapters.sp_ConsultaReporte2TableAdapter();
+            this.devolucionIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prestamoIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editorialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.libroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvReporte2 = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -57,6 +67,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDBDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prestamoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spConsultaReporte2BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDBDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporte2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -227,14 +239,98 @@
             // 
             this.prestamoTableAdapter.ClearBeforeFill = true;
             // 
+            // spConsultaReporte2BindingSource
+            // 
+            this.spConsultaReporte2BindingSource.DataMember = "sp_ConsultaReporte2";
+            this.spConsultaReporte2BindingSource.DataSource = this.bibliotecaDBDataSet3;
+            // 
+            // bibliotecaDBDataSet3
+            // 
+            this.bibliotecaDBDataSet3.DataSetName = "BibliotecaDBDataSet3";
+            this.bibliotecaDBDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sp_ConsultaReporte2TableAdapter
+            // 
+            this.sp_ConsultaReporte2TableAdapter.ClearBeforeFill = true;
+            // 
+            // devolucionIdDataGridViewTextBoxColumn
+            // 
+            this.devolucionIdDataGridViewTextBoxColumn.DataPropertyName = "DevolucionId";
+            this.devolucionIdDataGridViewTextBoxColumn.HeaderText = "DevolucionId";
+            this.devolucionIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.devolucionIdDataGridViewTextBoxColumn.Name = "devolucionIdDataGridViewTextBoxColumn";
+            this.devolucionIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.devolucionIdDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // prestamoIdDataGridViewTextBoxColumn
+            // 
+            this.prestamoIdDataGridViewTextBoxColumn.DataPropertyName = "PrestamoId";
+            this.prestamoIdDataGridViewTextBoxColumn.HeaderText = "PrestamoId";
+            this.prestamoIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.prestamoIdDataGridViewTextBoxColumn.Name = "prestamoIdDataGridViewTextBoxColumn";
+            this.prestamoIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.prestamoIdDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nombre1DataGridViewTextBoxColumn
+            // 
+            this.nombre1DataGridViewTextBoxColumn.DataPropertyName = "Nombre1";
+            this.nombre1DataGridViewTextBoxColumn.HeaderText = "Autor";
+            this.nombre1DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nombre1DataGridViewTextBoxColumn.Name = "nombre1DataGridViewTextBoxColumn";
+            this.nombre1DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // editorialDataGridViewTextBoxColumn
+            // 
+            this.editorialDataGridViewTextBoxColumn.DataPropertyName = "Editorial";
+            this.editorialDataGridViewTextBoxColumn.HeaderText = "Editorial";
+            this.editorialDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.editorialDataGridViewTextBoxColumn.Name = "editorialDataGridViewTextBoxColumn";
+            this.editorialDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // libroDataGridViewTextBoxColumn
+            // 
+            this.libroDataGridViewTextBoxColumn.DataPropertyName = "Libro";
+            this.libroDataGridViewTextBoxColumn.HeaderText = "Libro";
+            this.libroDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.libroDataGridViewTextBoxColumn.Name = "libroDataGridViewTextBoxColumn";
+            this.libroDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // apellidoDataGridViewTextBoxColumn
+            // 
+            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
+            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido Estudiante";
+            this.apellidoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
+            this.apellidoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre Estudiante";
+            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.Width = 125;
+            // 
             // dgvReporte2
             // 
+            this.dgvReporte2.AllowUserToDeleteRows = false;
+            this.dgvReporte2.AllowUserToOrderColumns = true;
+            this.dgvReporte2.AutoGenerateColumns = false;
             this.dgvReporte2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReporte2.Location = new System.Drawing.Point(304, 166);
+            this.dgvReporte2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombreDataGridViewTextBoxColumn,
+            this.apellidoDataGridViewTextBoxColumn,
+            this.libroDataGridViewTextBoxColumn,
+            this.editorialDataGridViewTextBoxColumn,
+            this.nombre1DataGridViewTextBoxColumn,
+            this.prestamoIdDataGridViewTextBoxColumn,
+            this.devolucionIdDataGridViewTextBoxColumn});
+            this.dgvReporte2.DataSource = this.spConsultaReporte2BindingSource;
+            this.dgvReporte2.Location = new System.Drawing.Point(235, 143);
             this.dgvReporte2.Name = "dgvReporte2";
             this.dgvReporte2.RowHeadersWidth = 51;
             this.dgvReporte2.RowTemplate.Height = 24;
-            this.dgvReporte2.Size = new System.Drawing.Size(754, 422);
+            this.dgvReporte2.Size = new System.Drawing.Size(919, 503);
             this.dgvReporte2.TabIndex = 16;
             // 
             // PantallaReporte2
@@ -264,6 +360,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDBDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prestamoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spConsultaReporte2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDBDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporte2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -287,6 +385,16 @@
         private BibliotecaDBDataSet2 bibliotecaDBDataSet2;
         private System.Windows.Forms.BindingSource prestamoBindingSource;
         private BibliotecaDBDataSet2TableAdapters.PrestamoTableAdapter prestamoTableAdapter;
+        private BibliotecaDBDataSet3 bibliotecaDBDataSet3;
+        private System.Windows.Forms.BindingSource spConsultaReporte2BindingSource;
+        private BibliotecaDBDataSet3TableAdapters.sp_ConsultaReporte2TableAdapter sp_ConsultaReporte2TableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn devolucionIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prestamoIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn editorialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn libroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dgvReporte2;
     }
 }

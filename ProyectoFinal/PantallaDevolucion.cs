@@ -192,13 +192,6 @@ namespace ProyectoFinal
         {
             dgvDevolucion.DataSource = devolucionrepository.GetAll().Select(x => new { x.Id, x.PrestamoId,x.FechaDevolucion, x.Estatus, x.FechaRegistro, x.FechaActualizacion, }).ToList();
         }
-        //private void ListarPrestamo()
-        //{
-        //    Devolucion nuevadevolucion = new Devolucion();
-        //    cbPrestamoID.DataSource = nuevadevolucion.prestamo;
-        //    cbPrestamoID.DisplayMember = "";
-        //    cbPrestamoID.ValueMember = "";
-        //}
         private void btnCrear_Click(object sender, EventArgs e)
         {
            

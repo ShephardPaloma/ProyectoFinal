@@ -8,58 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using ProyectoFinal.DataModel.Repositories;
-using ProyectoFinal.DataModel.Entities;
+
 
 namespace ProyectoFinal
 {
     public partial class PantallaReporte2 : Form
     {
-        AutorRepository autorepository = new AutorRepository();
-        DevolucionRepository devolucionepository = new DevolucionRepository();
-        EditorialRepository editorialrepository = new EditorialRepository();
-        EstudianteRepository estudianterepository = new EstudianteRepository();
-        LibroRepository librorepository = new LibroRepository();
-        PrestamoRepository prestamoepository = new PrestamoRepository();
+      
 
         public PantallaReporte2()
         {
             InitializeComponent();
 
-            //var conteo1 = prestamoepository.GetAll().Select(x => new { x.Id});
-            //var conteo2 = prestamoepository.GetAll().Select(x => new { x.estudiante.Nombre });
-            //var conteo3 = prestamoepository.GetAll().Select(x => new { x.libro.Nombre });
-            //var conteo4 = prestamoepository.GetAll().Select(x => new { x.Estatus });
-            //var conteo5 = prestamoepository.GetAll().Select(x => new { x.FechaRegistro });
-
-            //DataTable table = new DataTable();
-            //table.Columns.Add("ID");
-            //table.Columns.Add("Estudiante");
-            //table.Columns.Add("Libro");
-            //table.Columns.Add("Estatus");
-            //table.Columns.Add("Fecha Registro");
-            //dgvReporte2.DataSource = table;
-
-           // dgvReporte2.DataSource = (conteo1, conteo2, conteo3, conteo4, conteo5).ToString().ToList();
-           // dgvReporte2.DataSource = conteo1;
-              dgvReporte2.DataSource = prestamoepository.GetAll().Select(x => new { x.Id, x.estudiante.Nombre,  x.Estatus, x.FechaRegistro }).ToList();
-
-
-      // dgvReporte2.Columns["ID"].
-
-            //Grafica.Series["Conteo"].Points.AddXY("Autor", $"{conteo1}");
-            //Grafica.Series["Conteo"].Points.AddXY("Devolucion", $"{conteo2}");
-            //Grafica.Series["Conteo"].Points.AddXY("Editorial", $"{conteo3}");
-            //Grafica.Series["Conteo"].Points.AddXY("Estudiante", $"{conteo4}");
-            //Grafica.Series["Conteo"].Points.AddXY("Libro", $"{conteo5}");
-            //Grafica.Series["Conteo"].Points.AddXY("Prestamo", $"{conteo6}");
-
-            //txtConteoAutor.Text = Convert.ToString(conteo1);
-            //txtConteoDevolucion.Text = Convert.ToString(conteo2);
-            //txtConteoEditorial.Text = Convert.ToString(conteo3);
-            //txtConteoEstudiante.Text = Convert.ToString(conteo4);
-            //txtConteoLibro.Text = Convert.ToString(conteo5);
-            //txtConteoPrestamo.Text = Convert.ToString(conteo6);
+           
         }
 
         private void btncerrar_Click(object sender, EventArgs e)
@@ -104,8 +65,23 @@ namespace ProyectoFinal
 
         private void PantallaReporte2_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'bibliotecaDBDataSet3.sp_ConsultaReporte2' table. You can move, or remove it, as needed.
+            this.sp_ConsultaReporte2TableAdapter.Fill(this.bibliotecaDBDataSet3.sp_ConsultaReporte2);
             // TODO: This line of code loads data into the 'bibliotecaDBDataSet2.Prestamo' table. You can move, or remove it, as needed.
             this.prestamoTableAdapter.Fill(this.bibliotecaDBDataSet2.Prestamo);
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.sp_ConsultaReporte2TableAdapter.FillBy(this.bibliotecaDBDataSet3.sp_ConsultaReporte2);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
 
         }
     }
