@@ -35,7 +35,11 @@ namespace ProyectoFinal
 
         private void btncerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Seguro que desea salir del sistema?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -60,7 +64,11 @@ namespace ProyectoFinal
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Seguro que desea salir del sistema?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
         }
 
         private void horafecha_Tick(object sender, EventArgs e)

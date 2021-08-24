@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaReporte));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -63,6 +63,7 @@
             this.txtConteoLibro = new System.Windows.Forms.TextBox();
             this.txtConteoPrestamo = new System.Windows.Forms.TextBox();
             this.txtConteoEstudiante = new System.Windows.Forms.TextBox();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnrestaurar)).BeginInit();
@@ -236,17 +237,17 @@
             // 
             // Grafica
             // 
-            chartArea2.Name = "ChartArea1";
-            this.Grafica.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.Grafica.Legends.Add(legend2);
+            chartArea5.Name = "ChartArea1";
+            this.Grafica.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.Grafica.Legends.Add(legend5);
             this.Grafica.Location = new System.Drawing.Point(286, 130);
             this.Grafica.Name = "Grafica";
             this.Grafica.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Conteo";
-            this.Grafica.Series.Add(series2);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Conteo";
+            this.Grafica.Series.Add(series5);
             this.Grafica.Size = new System.Drawing.Size(842, 348);
             this.Grafica.TabIndex = 16;
             this.Grafica.Text = "chart1";
@@ -481,12 +482,28 @@
             this.txtConteoEstudiante.Size = new System.Drawing.Size(73, 21);
             this.txtConteoEstudiante.TabIndex = 38;
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.BackColor = System.Drawing.Color.Transparent;
+            this.btnImprimir.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImprimir.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.Location = new System.Drawing.Point(1015, 634);
+            this.btnImprimir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(165, 57);
+            this.btnImprimir.TabIndex = 43;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click_1);
+            // 
             // PantallaReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1181, 693);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.txtConteoLibro);
             this.Controls.Add(this.txtConteoPrestamo);
             this.Controls.Add(this.txtConteoEstudiante);
@@ -567,5 +584,6 @@
         private System.Windows.Forms.TextBox txtConteoLibro;
         private System.Windows.Forms.TextBox txtConteoPrestamo;
         private System.Windows.Forms.TextBox txtConteoEstudiante;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

@@ -418,7 +418,7 @@
             this.txtNacionalidad.Location = new System.Drawing.Point(465, 374);
             this.txtNacionalidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNacionalidad.Name = "txtNacionalidad";
-            this.txtNacionalidad.Size = new System.Drawing.Size(129, 30);
+            this.txtNacionalidad.Size = new System.Drawing.Size(191, 30);
             this.txtNacionalidad.TabIndex = 13;
             // 
             // labelNacionalidad
@@ -437,7 +437,7 @@
             this.txtApellido.Location = new System.Drawing.Point(465, 302);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(129, 30);
+            this.txtApellido.Size = new System.Drawing.Size(191, 30);
             this.txtApellido.TabIndex = 15;
             // 
             // labelApellido
@@ -456,7 +456,7 @@
             this.txtNombre.Location = new System.Drawing.Point(465, 230);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(129, 30);
+            this.txtNombre.Size = new System.Drawing.Size(191, 30);
             this.txtNombre.TabIndex = 17;
             // 
             // labelNombre
@@ -599,7 +599,7 @@
             this.txtID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(465, 161);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(130, 30);
+            this.txtID.Size = new System.Drawing.Size(191, 30);
             this.txtID.TabIndex = 48;
             // 
             // PantallaAutor

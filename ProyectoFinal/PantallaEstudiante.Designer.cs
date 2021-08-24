@@ -225,7 +225,7 @@
             this.txtNombre.Location = new System.Drawing.Point(451, 212);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(129, 30);
+            this.txtNombre.Size = new System.Drawing.Size(191, 30);
             this.txtNombre.TabIndex = 28;
             // 
             // labelNombre
@@ -244,7 +244,7 @@
             this.txtApellido.Location = new System.Drawing.Point(451, 284);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(129, 30);
+            this.txtApellido.Size = new System.Drawing.Size(191, 30);
             this.txtApellido.TabIndex = 26;
             // 
             // labelApellido
@@ -263,7 +263,7 @@
             this.txtDireccion.Location = new System.Drawing.Point(451, 356);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(129, 30);
+            this.txtDireccion.Size = new System.Drawing.Size(191, 30);
             this.txtDireccion.TabIndex = 24;
             // 
             // labelDireccion
@@ -283,7 +283,7 @@
             this.txtIDEstudiante.Location = new System.Drawing.Point(451, 143);
             this.txtIDEstudiante.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIDEstudiante.Name = "txtIDEstudiante";
-            this.txtIDEstudiante.Size = new System.Drawing.Size(129, 30);
+            this.txtIDEstudiante.Size = new System.Drawing.Size(191, 30);
             this.txtIDEstudiante.TabIndex = 22;
             // 
             // labelIDEstudiante
@@ -302,7 +302,7 @@
             this.txtTelefono.Location = new System.Drawing.Point(451, 423);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(129, 30);
+            this.txtTelefono.Size = new System.Drawing.Size(191, 30);
             this.txtTelefono.TabIndex = 31;
             // 
             // labelTelefono
@@ -430,6 +430,7 @@
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 17;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click_1);
             // 
             // pictureBox9
             // 

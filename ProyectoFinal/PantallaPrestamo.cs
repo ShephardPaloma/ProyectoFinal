@@ -44,12 +44,18 @@ namespace ProyectoFinal
 
         private void btncerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Seguro que desea salir de esta pantalla?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Seguro que desea salir de esta pantalla?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void btnminimizar_Click(object sender, EventArgs e)
@@ -194,10 +200,14 @@ namespace ProyectoFinal
             MtBuscarTodo();
             using (BibliotecaDbContext context = new BibliotecaDbContext())
             {
-                var listaestudiantes = context.Estudiantes.Where(x => x.Estatus == "A" && x.Borrado == false).Select(x => x.Id).ToList();
+                var listaestudiantes = context.Estudiantes.Where(x => x.Estatus == "A" && x.Borrado == false).Select(x => new { x.Id, x.Nombre }).ToList();
+                cbEstudianteID.DisplayMember = "Nombre";
+                cbEstudianteID.ValueMember = "Id";
                 cbEstudianteID.DataSource = listaestudiantes;
 
-                var listalibros = context.Libros.Where(x => x.Estatus == "A" && x.Borrado == false).Select(x => x.Id).ToList();
+                var listalibros = context.Libros.Where(x => x.Estatus == "A" && x.Borrado == false).Select(x => new { x.Id, x.Nombre }).ToList();
+                cbLibroID.DisplayMember = "Nombre";
+                cbLibroID.ValueMember = "Id";
                 cbLibroID.DataSource = listalibros;
             }
 
@@ -271,13 +281,7 @@ namespace ProyectoFinal
             dgvPrestamo.DataSource = vistaprestamo.Where(x => x.Id == infolibro.Id).Select(x => new { x.Id, x.EstudianteId, x.LibroId, x.Estatus, x.FechaRegistro, x.FechaActualizacion}).ToList();
 
         }
-        //private void ListarEstudiante()
-        //{
-        //    Prestamo nuevoprestamo = new Prestamo();
-        //    cbEstudianteID.DataSource = nuevoprestamo.estudiante;
-        //    cbEstudianteID.DisplayMember = nuevoprestamo.estudiante.Nombre;
-        //    cbEstudianteID.ValueMember = Convert.ToString(nuevoprestamo.estudiante.Id);
-        //}
+
         private void btnCrear_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(cbEstudianteID.Text) || string.IsNullOrWhiteSpace(cbLibroID.Text))
@@ -286,10 +290,13 @@ namespace ProyectoFinal
             }
             else
             {
+                string estudianteid = cbEstudianteID.SelectedValue.ToString();
+                string libroid = cbLibroID.SelectedValue.ToString();
+
                 Prestamo nuevoprestamo = new Prestamo()
                 {
-                    EstudianteId = Convert.ToInt32(cbEstudianteID.Text),
-                    LibroId = Convert.ToInt32(cbLibroID.Text)
+                    EstudianteId = Convert.ToInt32(estudianteid),
+                    LibroId = Convert.ToInt32(libroid)
                 };
 
                 var existeID = prestamorepository.FindById(nuevoprestamo.Id);

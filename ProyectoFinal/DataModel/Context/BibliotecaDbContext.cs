@@ -157,7 +157,6 @@ namespace ProyectoFinal.DataModel.Context
                 .HasColumnType("varchar")
                 .IsRequired();
 
-            //Preguntar si debemos colocar los FK requeridos en la BD
             #endregion
 
             #region Prestamo

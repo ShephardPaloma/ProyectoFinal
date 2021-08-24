@@ -66,31 +66,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BibliotecaDBDataSet.cs">
-      <DependentUpon>BibliotecaDBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="BibliotecaDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BibliotecaDBDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BibliotecaDBDataSet1.cs">
-      <DependentUpon>BibliotecaDBDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BibliotecaDBDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BibliotecaDBDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BibliotecaDBDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BibliotecaDBDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BibliotecaDBDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BibliotecaDBDataSet3.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataModel\BaseEntity.cs" />
     <Compile Include="DataModel\Context\BibliotecaDbContext.cs" />
@@ -238,39 +217,6 @@
     </None>
     <None Include="BibliotecaDBDataSet.xss">
       <DependentUpon>BibliotecaDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BibliotecaDBDataSet1.xsc">
-      <DependentUpon>BibliotecaDBDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="BibliotecaDBDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BibliotecaDBDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BibliotecaDBDataSet1.xss">
-      <DependentUpon>BibliotecaDBDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="BibliotecaDBDataSet2.xsc">
-      <DependentUpon>BibliotecaDBDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="BibliotecaDBDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BibliotecaDBDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BibliotecaDBDataSet2.xss">
-      <DependentUpon>BibliotecaDBDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="BibliotecaDBDataSet3.xsc">
-      <DependentUpon>BibliotecaDBDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="BibliotecaDBDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BibliotecaDBDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BibliotecaDBDataSet3.xss">
-      <DependentUpon>BibliotecaDBDataSet3.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

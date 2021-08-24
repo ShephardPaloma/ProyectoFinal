@@ -42,20 +42,20 @@
             this.btnrestaurar = new System.Windows.Forms.PictureBox();
             this.btnminimizar = new System.Windows.Forms.PictureBox();
             this.btncerrar = new System.Windows.Forms.PictureBox();
-            this.bibliotecaDBDataSet2 = new ProyectoFinal.BibliotecaDBDataSet2();
             this.prestamoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.prestamoTableAdapter = new ProyectoFinal.BibliotecaDBDataSet2TableAdapters.PrestamoTableAdapter();
             this.spConsultaReporte2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bibliotecaDBDataSet3 = new ProyectoFinal.BibliotecaDBDataSet3();
-            this.sp_ConsultaReporte2TableAdapter = new ProyectoFinal.BibliotecaDBDataSet3TableAdapters.sp_ConsultaReporte2TableAdapter();
-            this.devolucionIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prestamoIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editorialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.libroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvReporte2 = new System.Windows.Forms.DataGridView();
+            this.spConsultaReporte2BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bibliotecaDBDataSet = new ProyectoFinal.BibliotecaDBDataSet();
+            this.sp_ConsultaReporte2TableAdapter = new ProyectoFinal.BibliotecaDBDataSetTableAdapters.sp_ConsultaReporte2TableAdapter();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,11 +65,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnrestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDBDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prestamoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spConsultaReporte2BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDBDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporte2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spConsultaReporte2BindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -225,91 +225,13 @@
             this.btncerrar.TabStop = false;
             this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
             // 
-            // bibliotecaDBDataSet2
-            // 
-            this.bibliotecaDBDataSet2.DataSetName = "BibliotecaDBDataSet2";
-            this.bibliotecaDBDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // prestamoBindingSource
             // 
             this.prestamoBindingSource.DataMember = "Prestamo";
-            this.prestamoBindingSource.DataSource = this.bibliotecaDBDataSet2;
-            // 
-            // prestamoTableAdapter
-            // 
-            this.prestamoTableAdapter.ClearBeforeFill = true;
             // 
             // spConsultaReporte2BindingSource
             // 
             this.spConsultaReporte2BindingSource.DataMember = "sp_ConsultaReporte2";
-            this.spConsultaReporte2BindingSource.DataSource = this.bibliotecaDBDataSet3;
-            // 
-            // bibliotecaDBDataSet3
-            // 
-            this.bibliotecaDBDataSet3.DataSetName = "BibliotecaDBDataSet3";
-            this.bibliotecaDBDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sp_ConsultaReporte2TableAdapter
-            // 
-            this.sp_ConsultaReporte2TableAdapter.ClearBeforeFill = true;
-            // 
-            // devolucionIdDataGridViewTextBoxColumn
-            // 
-            this.devolucionIdDataGridViewTextBoxColumn.DataPropertyName = "DevolucionId";
-            this.devolucionIdDataGridViewTextBoxColumn.HeaderText = "DevolucionId";
-            this.devolucionIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.devolucionIdDataGridViewTextBoxColumn.Name = "devolucionIdDataGridViewTextBoxColumn";
-            this.devolucionIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.devolucionIdDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // prestamoIdDataGridViewTextBoxColumn
-            // 
-            this.prestamoIdDataGridViewTextBoxColumn.DataPropertyName = "PrestamoId";
-            this.prestamoIdDataGridViewTextBoxColumn.HeaderText = "PrestamoId";
-            this.prestamoIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.prestamoIdDataGridViewTextBoxColumn.Name = "prestamoIdDataGridViewTextBoxColumn";
-            this.prestamoIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.prestamoIdDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nombre1DataGridViewTextBoxColumn
-            // 
-            this.nombre1DataGridViewTextBoxColumn.DataPropertyName = "Nombre1";
-            this.nombre1DataGridViewTextBoxColumn.HeaderText = "Autor";
-            this.nombre1DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nombre1DataGridViewTextBoxColumn.Name = "nombre1DataGridViewTextBoxColumn";
-            this.nombre1DataGridViewTextBoxColumn.Width = 125;
-            // 
-            // editorialDataGridViewTextBoxColumn
-            // 
-            this.editorialDataGridViewTextBoxColumn.DataPropertyName = "Editorial";
-            this.editorialDataGridViewTextBoxColumn.HeaderText = "Editorial";
-            this.editorialDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.editorialDataGridViewTextBoxColumn.Name = "editorialDataGridViewTextBoxColumn";
-            this.editorialDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // libroDataGridViewTextBoxColumn
-            // 
-            this.libroDataGridViewTextBoxColumn.DataPropertyName = "Libro";
-            this.libroDataGridViewTextBoxColumn.HeaderText = "Libro";
-            this.libroDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.libroDataGridViewTextBoxColumn.Name = "libroDataGridViewTextBoxColumn";
-            this.libroDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // apellidoDataGridViewTextBoxColumn
-            // 
-            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
-            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido Estudiante";
-            this.apellidoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
-            this.apellidoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre Estudiante";
-            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.Width = 125;
             // 
             // dgvReporte2
             // 
@@ -318,20 +240,107 @@
             this.dgvReporte2.AutoGenerateColumns = false;
             this.dgvReporte2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReporte2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombreDataGridViewTextBoxColumn,
-            this.apellidoDataGridViewTextBoxColumn,
-            this.libroDataGridViewTextBoxColumn,
-            this.editorialDataGridViewTextBoxColumn,
-            this.nombre1DataGridViewTextBoxColumn,
-            this.prestamoIdDataGridViewTextBoxColumn,
-            this.devolucionIdDataGridViewTextBoxColumn});
-            this.dgvReporte2.DataSource = this.spConsultaReporte2BindingSource;
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7});
+            this.dgvReporte2.DataSource = this.spConsultaReporte2BindingSource1;
             this.dgvReporte2.Location = new System.Drawing.Point(235, 143);
             this.dgvReporte2.Name = "dgvReporte2";
             this.dgvReporte2.RowHeadersWidth = 51;
             this.dgvReporte2.RowTemplate.Height = 24;
-            this.dgvReporte2.Size = new System.Drawing.Size(919, 503);
+            this.dgvReporte2.Size = new System.Drawing.Size(919, 432);
             this.dgvReporte2.TabIndex = 16;
+            // 
+            // spConsultaReporte2BindingSource1
+            // 
+            this.spConsultaReporte2BindingSource1.DataMember = "sp_ConsultaReporte2";
+            this.spConsultaReporte2BindingSource1.DataSource = this.bibliotecaDBDataSet;
+            // 
+            // bibliotecaDBDataSet
+            // 
+            this.bibliotecaDBDataSet.DataSetName = "BibliotecaDBDataSet";
+            this.bibliotecaDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sp_ConsultaReporte2TableAdapter
+            // 
+            this.sp_ConsultaReporte2TableAdapter.ClearBeforeFill = true;
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.BackColor = System.Drawing.Color.Transparent;
+            this.btnImprimir.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImprimir.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.Location = new System.Drawing.Point(599, 608);
+            this.btnImprimir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(165, 57);
+            this.btnImprimir.TabIndex = 42;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre E.";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Apellido";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Apellido E.";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Libro";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Libro";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Editorial";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Editorial";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Nombre1";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Autor";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "PrestamoId";
+            this.dataGridViewTextBoxColumn6.HeaderText = "PrestamoId";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "DevolucionId";
+            this.dataGridViewTextBoxColumn7.HeaderText = "DevolucionId";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 125;
             // 
             // PantallaReporte2
             // 
@@ -339,6 +348,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1181, 693);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.dgvReporte2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
@@ -358,11 +368,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnrestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDBDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prestamoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spConsultaReporte2BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDBDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporte2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spConsultaReporte2BindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,12 +392,12 @@
         private System.Windows.Forms.PictureBox btnrestaurar;
         private System.Windows.Forms.PictureBox btnminimizar;
         private System.Windows.Forms.PictureBox btncerrar;
-        private BibliotecaDBDataSet2 bibliotecaDBDataSet2;
+
         private System.Windows.Forms.BindingSource prestamoBindingSource;
-        private BibliotecaDBDataSet2TableAdapters.PrestamoTableAdapter prestamoTableAdapter;
-        private BibliotecaDBDataSet3 bibliotecaDBDataSet3;
+
+
         private System.Windows.Forms.BindingSource spConsultaReporte2BindingSource;
-        private BibliotecaDBDataSet3TableAdapters.sp_ConsultaReporte2TableAdapter sp_ConsultaReporte2TableAdapter;
+
         private System.Windows.Forms.DataGridViewTextBoxColumn devolucionIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prestamoIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre1DataGridViewTextBoxColumn;
@@ -396,5 +406,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dgvReporte2;
+        private BibliotecaDBDataSet bibliotecaDBDataSet;
+        private System.Windows.Forms.BindingSource spConsultaReporte2BindingSource1;
+        private BibliotecaDBDataSetTableAdapters.sp_ConsultaReporte2TableAdapter sp_ConsultaReporte2TableAdapter;
+        private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
     }
 }

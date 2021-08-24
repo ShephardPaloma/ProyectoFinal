@@ -24,7 +24,7 @@ namespace ProyectoFinal {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class BibliotecaDBDataSet : global::System.Data.DataSet {
         
-        private AutorDataTable tableAutor;
+        private sp_ConsultaReporte2DataTable tablesp_ConsultaReporte2;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace ProyectoFinal {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Autor"] != null)) {
-                    base.Tables.Add(new AutorDataTable(ds.Tables["Autor"]));
+                if ((ds.Tables["sp_ConsultaReporte2"] != null)) {
+                    base.Tables.Add(new sp_ConsultaReporte2DataTable(ds.Tables["sp_ConsultaReporte2"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace ProyectoFinal {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public AutorDataTable Autor {
+        public sp_ConsultaReporte2DataTable sp_ConsultaReporte2 {
             get {
-                return this.tableAutor;
+                return this.tablesp_ConsultaReporte2;
             }
         }
         
@@ -152,8 +152,8 @@ namespace ProyectoFinal {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Autor"] != null)) {
-                    base.Tables.Add(new AutorDataTable(ds.Tables["Autor"]));
+                if ((ds.Tables["sp_ConsultaReporte2"] != null)) {
+                    base.Tables.Add(new sp_ConsultaReporte2DataTable(ds.Tables["sp_ConsultaReporte2"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace ProyectoFinal {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableAutor = ((AutorDataTable)(base.Tables["Autor"]));
+            this.tablesp_ConsultaReporte2 = ((sp_ConsultaReporte2DataTable)(base.Tables["sp_ConsultaReporte2"]));
             if ((initTable == true)) {
-                if ((this.tableAutor != null)) {
-                    this.tableAutor.InitVars();
+                if ((this.tablesp_ConsultaReporte2 != null)) {
+                    this.tablesp_ConsultaReporte2.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace ProyectoFinal {
             this.Namespace = "http://tempuri.org/BibliotecaDBDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableAutor = new AutorDataTable();
-            base.Tables.Add(this.tableAutor);
+            this.tablesp_ConsultaReporte2 = new sp_ConsultaReporte2DataTable();
+            base.Tables.Add(this.tablesp_ConsultaReporte2);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeAutor() {
+        private bool ShouldSerializesp_ConsultaReporte2() {
             return false;
         }
         
@@ -270,35 +270,33 @@ namespace ProyectoFinal {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void AutorRowChangeEventHandler(object sender, AutorRowChangeEvent e);
+        public delegate void sp_ConsultaReporte2RowChangeEventHandler(object sender, sp_ConsultaReporte2RowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class AutorDataTable : global::System.Data.TypedTableBase<AutorRow> {
-            
-            private global::System.Data.DataColumn columnAutorId;
+        public partial class sp_ConsultaReporte2DataTable : global::System.Data.TypedTableBase<sp_ConsultaReporte2Row> {
             
             private global::System.Data.DataColumn columnNombre;
             
             private global::System.Data.DataColumn columnApellido;
             
-            private global::System.Data.DataColumn columnNacionalidad;
+            private global::System.Data.DataColumn columnLibro;
             
-            private global::System.Data.DataColumn columnBorrado;
+            private global::System.Data.DataColumn columnEditorial;
             
-            private global::System.Data.DataColumn columnEstatus;
+            private global::System.Data.DataColumn columnNombre1;
             
-            private global::System.Data.DataColumn columnFechaRegistro;
+            private global::System.Data.DataColumn columnPrestamoId;
             
-            private global::System.Data.DataColumn columnFechaActualizacion;
+            private global::System.Data.DataColumn columnDevolucionId;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AutorDataTable() {
-                this.TableName = "Autor";
+            public sp_ConsultaReporte2DataTable() {
+                this.TableName = "sp_ConsultaReporte2";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -306,7 +304,7 @@ namespace ProyectoFinal {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal AutorDataTable(global::System.Data.DataTable table) {
+            internal sp_ConsultaReporte2DataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -323,17 +321,9 @@ namespace ProyectoFinal {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected AutorDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected sp_ConsultaReporte2DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn AutorIdColumn {
-                get {
-                    return this.columnAutorId;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -354,41 +344,41 @@ namespace ProyectoFinal {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn NacionalidadColumn {
+            public global::System.Data.DataColumn LibroColumn {
                 get {
-                    return this.columnNacionalidad;
+                    return this.columnLibro;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BorradoColumn {
+            public global::System.Data.DataColumn EditorialColumn {
                 get {
-                    return this.columnBorrado;
+                    return this.columnEditorial;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn EstatusColumn {
+            public global::System.Data.DataColumn Nombre1Column {
                 get {
-                    return this.columnEstatus;
+                    return this.columnNombre1;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn FechaRegistroColumn {
+            public global::System.Data.DataColumn PrestamoIdColumn {
                 get {
-                    return this.columnFechaRegistro;
+                    return this.columnPrestamoId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn FechaActualizacionColumn {
+            public global::System.Data.DataColumn DevolucionIdColumn {
                 get {
-                    return this.columnFechaActualizacion;
+                    return this.columnDevolucionId;
                 }
             }
             
@@ -403,59 +393,51 @@ namespace ProyectoFinal {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AutorRow this[int index] {
+            public sp_ConsultaReporte2Row this[int index] {
                 get {
-                    return ((AutorRow)(this.Rows[index]));
+                    return ((sp_ConsultaReporte2Row)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event AutorRowChangeEventHandler AutorRowChanging;
+            public event sp_ConsultaReporte2RowChangeEventHandler sp_ConsultaReporte2RowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event AutorRowChangeEventHandler AutorRowChanged;
+            public event sp_ConsultaReporte2RowChangeEventHandler sp_ConsultaReporte2RowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event AutorRowChangeEventHandler AutorRowDeleting;
+            public event sp_ConsultaReporte2RowChangeEventHandler sp_ConsultaReporte2RowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event AutorRowChangeEventHandler AutorRowDeleted;
+            public event sp_ConsultaReporte2RowChangeEventHandler sp_ConsultaReporte2RowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddAutorRow(AutorRow row) {
+            public void Addsp_ConsultaReporte2Row(sp_ConsultaReporte2Row row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AutorRow AddAutorRow(string Nombre, string Apellido, string Nacionalidad, bool Borrado, string Estatus, System.DateTime FechaRegistro, System.DateTime FechaActualizacion) {
-                AutorRow rowAutorRow = ((AutorRow)(this.NewRow()));
+            public sp_ConsultaReporte2Row Addsp_ConsultaReporte2Row(string Nombre, string Apellido, string Libro, string Editorial, string Nombre1) {
+                sp_ConsultaReporte2Row rowsp_ConsultaReporte2Row = ((sp_ConsultaReporte2Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
                         Nombre,
                         Apellido,
-                        Nacionalidad,
-                        Borrado,
-                        Estatus,
-                        FechaRegistro,
-                        FechaActualizacion};
-                rowAutorRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowAutorRow);
-                return rowAutorRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AutorRow FindByAutorId(int AutorId) {
-                return ((AutorRow)(this.Rows.Find(new object[] {
-                            AutorId})));
+                        Libro,
+                        Editorial,
+                        Nombre1,
+                        null,
+                        null};
+                rowsp_ConsultaReporte2Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowsp_ConsultaReporte2Row);
+                return rowsp_ConsultaReporte2Row;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                AutorDataTable cln = ((AutorDataTable)(base.Clone()));
+                sp_ConsultaReporte2DataTable cln = ((sp_ConsultaReporte2DataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -463,85 +445,74 @@ namespace ProyectoFinal {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new AutorDataTable();
+                return new sp_ConsultaReporte2DataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnAutorId = base.Columns["AutorId"];
                 this.columnNombre = base.Columns["Nombre"];
                 this.columnApellido = base.Columns["Apellido"];
-                this.columnNacionalidad = base.Columns["Nacionalidad"];
-                this.columnBorrado = base.Columns["Borrado"];
-                this.columnEstatus = base.Columns["Estatus"];
-                this.columnFechaRegistro = base.Columns["FechaRegistro"];
-                this.columnFechaActualizacion = base.Columns["FechaActualizacion"];
+                this.columnLibro = base.Columns["Libro"];
+                this.columnEditorial = base.Columns["Editorial"];
+                this.columnNombre1 = base.Columns["Nombre1"];
+                this.columnPrestamoId = base.Columns["PrestamoId"];
+                this.columnDevolucionId = base.Columns["DevolucionId"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnAutorId = new global::System.Data.DataColumn("AutorId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAutorId);
                 this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombre);
                 this.columnApellido = new global::System.Data.DataColumn("Apellido", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnApellido);
-                this.columnNacionalidad = new global::System.Data.DataColumn("Nacionalidad", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNacionalidad);
-                this.columnBorrado = new global::System.Data.DataColumn("Borrado", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBorrado);
-                this.columnEstatus = new global::System.Data.DataColumn("Estatus", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEstatus);
-                this.columnFechaRegistro = new global::System.Data.DataColumn("FechaRegistro", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFechaRegistro);
-                this.columnFechaActualizacion = new global::System.Data.DataColumn("FechaActualizacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFechaActualizacion);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnAutorId}, true));
-                this.columnAutorId.AutoIncrement = true;
-                this.columnAutorId.AutoIncrementSeed = -1;
-                this.columnAutorId.AutoIncrementStep = -1;
-                this.columnAutorId.AllowDBNull = false;
-                this.columnAutorId.ReadOnly = true;
-                this.columnAutorId.Unique = true;
-                this.columnNombre.AllowDBNull = false;
+                this.columnLibro = new global::System.Data.DataColumn("Libro", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLibro);
+                this.columnEditorial = new global::System.Data.DataColumn("Editorial", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEditorial);
+                this.columnNombre1 = new global::System.Data.DataColumn("Nombre1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre1);
+                this.columnPrestamoId = new global::System.Data.DataColumn("PrestamoId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrestamoId);
+                this.columnDevolucionId = new global::System.Data.DataColumn("DevolucionId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDevolucionId);
                 this.columnNombre.MaxLength = 100;
-                this.columnApellido.AllowDBNull = false;
                 this.columnApellido.MaxLength = 100;
-                this.columnNacionalidad.AllowDBNull = false;
-                this.columnNacionalidad.MaxLength = 100;
-                this.columnBorrado.AllowDBNull = false;
-                this.columnEstatus.AllowDBNull = false;
-                this.columnEstatus.MaxLength = 2;
-                this.columnFechaRegistro.AllowDBNull = false;
+                this.columnLibro.MaxLength = 200;
+                this.columnEditorial.MaxLength = 100;
+                this.columnNombre1.MaxLength = 100;
+                this.columnPrestamoId.AutoIncrement = true;
+                this.columnPrestamoId.AllowDBNull = false;
+                this.columnPrestamoId.ReadOnly = true;
+                this.columnDevolucionId.AutoIncrement = true;
+                this.columnDevolucionId.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AutorRow NewAutorRow() {
-                return ((AutorRow)(this.NewRow()));
+            public sp_ConsultaReporte2Row Newsp_ConsultaReporte2Row() {
+                return ((sp_ConsultaReporte2Row)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new AutorRow(builder);
+                return new sp_ConsultaReporte2Row(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(AutorRow);
+                return typeof(sp_ConsultaReporte2Row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.AutorRowChanged != null)) {
-                    this.AutorRowChanged(this, new AutorRowChangeEvent(((AutorRow)(e.Row)), e.Action));
+                if ((this.sp_ConsultaReporte2RowChanged != null)) {
+                    this.sp_ConsultaReporte2RowChanged(this, new sp_ConsultaReporte2RowChangeEvent(((sp_ConsultaReporte2Row)(e.Row)), e.Action));
                 }
             }
             
@@ -549,8 +520,8 @@ namespace ProyectoFinal {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.AutorRowChanging != null)) {
-                    this.AutorRowChanging(this, new AutorRowChangeEvent(((AutorRow)(e.Row)), e.Action));
+                if ((this.sp_ConsultaReporte2RowChanging != null)) {
+                    this.sp_ConsultaReporte2RowChanging(this, new sp_ConsultaReporte2RowChangeEvent(((sp_ConsultaReporte2Row)(e.Row)), e.Action));
                 }
             }
             
@@ -558,8 +529,8 @@ namespace ProyectoFinal {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.AutorRowDeleted != null)) {
-                    this.AutorRowDeleted(this, new AutorRowChangeEvent(((AutorRow)(e.Row)), e.Action));
+                if ((this.sp_ConsultaReporte2RowDeleted != null)) {
+                    this.sp_ConsultaReporte2RowDeleted(this, new sp_ConsultaReporte2RowChangeEvent(((sp_ConsultaReporte2Row)(e.Row)), e.Action));
                 }
             }
             
@@ -567,14 +538,14 @@ namespace ProyectoFinal {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.AutorRowDeleting != null)) {
-                    this.AutorRowDeleting(this, new AutorRowChangeEvent(((AutorRow)(e.Row)), e.Action));
+                if ((this.sp_ConsultaReporte2RowDeleting != null)) {
+                    this.sp_ConsultaReporte2RowDeleting(this, new sp_ConsultaReporte2RowChangeEvent(((sp_ConsultaReporte2Row)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveAutorRow(AutorRow row) {
+            public void Removesp_ConsultaReporte2Row(sp_ConsultaReporte2Row row) {
                 this.Rows.Remove(row);
             }
             
@@ -601,7 +572,7 @@ namespace ProyectoFinal {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "AutorDataTable";
+                attribute2.FixedValue = "sp_ConsultaReporte2DataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -645,36 +616,30 @@ namespace ProyectoFinal {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class AutorRow : global::System.Data.DataRow {
+        public partial class sp_ConsultaReporte2Row : global::System.Data.DataRow {
             
-            private AutorDataTable tableAutor;
+            private sp_ConsultaReporte2DataTable tablesp_ConsultaReporte2;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal AutorRow(global::System.Data.DataRowBuilder rb) : 
+            internal sp_ConsultaReporte2Row(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableAutor = ((AutorDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int AutorId {
-                get {
-                    return ((int)(this[this.tableAutor.AutorIdColumn]));
-                }
-                set {
-                    this[this.tableAutor.AutorIdColumn] = value;
-                }
+                this.tablesp_ConsultaReporte2 = ((sp_ConsultaReporte2DataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Nombre {
                 get {
-                    return ((string)(this[this.tableAutor.NombreColumn]));
+                    try {
+                        return ((string)(this[this.tablesp_ConsultaReporte2.NombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Nombre\' in table \'sp_ConsultaReporte2\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableAutor.NombreColumn] = value;
+                    this[this.tablesp_ConsultaReporte2.NombreColumn] = value;
                 }
             }
             
@@ -682,83 +647,163 @@ namespace ProyectoFinal {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Apellido {
                 get {
-                    return ((string)(this[this.tableAutor.ApellidoColumn]));
-                }
-                set {
-                    this[this.tableAutor.ApellidoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Nacionalidad {
-                get {
-                    return ((string)(this[this.tableAutor.NacionalidadColumn]));
-                }
-                set {
-                    this[this.tableAutor.NacionalidadColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Borrado {
-                get {
-                    return ((bool)(this[this.tableAutor.BorradoColumn]));
-                }
-                set {
-                    this[this.tableAutor.BorradoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Estatus {
-                get {
-                    return ((string)(this[this.tableAutor.EstatusColumn]));
-                }
-                set {
-                    this[this.tableAutor.EstatusColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime FechaRegistro {
-                get {
-                    return ((global::System.DateTime)(this[this.tableAutor.FechaRegistroColumn]));
-                }
-                set {
-                    this[this.tableAutor.FechaRegistroColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime FechaActualizacion {
-                get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableAutor.FechaActualizacionColumn]));
+                        return ((string)(this[this.tablesp_ConsultaReporte2.ApellidoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FechaActualizacion\' in table \'Autor\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Apellido\' in table \'sp_ConsultaReporte2\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAutor.FechaActualizacionColumn] = value;
+                    this[this.tablesp_ConsultaReporte2.ApellidoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsFechaActualizacionNull() {
-                return this.IsNull(this.tableAutor.FechaActualizacionColumn);
+            public string Libro {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_ConsultaReporte2.LibroColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Libro\' in table \'sp_ConsultaReporte2\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_ConsultaReporte2.LibroColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetFechaActualizacionNull() {
-                this[this.tableAutor.FechaActualizacionColumn] = global::System.Convert.DBNull;
+            public string Editorial {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_ConsultaReporte2.EditorialColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Editorial\' in table \'sp_ConsultaReporte2\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_ConsultaReporte2.EditorialColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Nombre1 {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_ConsultaReporte2.Nombre1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Nombre1\' in table \'sp_ConsultaReporte2\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_ConsultaReporte2.Nombre1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int PrestamoId {
+                get {
+                    return ((int)(this[this.tablesp_ConsultaReporte2.PrestamoIdColumn]));
+                }
+                set {
+                    this[this.tablesp_ConsultaReporte2.PrestamoIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int DevolucionId {
+                get {
+                    try {
+                        return ((int)(this[this.tablesp_ConsultaReporte2.DevolucionIdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DevolucionId\' in table \'sp_ConsultaReporte2\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_ConsultaReporte2.DevolucionIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNombreNull() {
+                return this.IsNull(this.tablesp_ConsultaReporte2.NombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNombreNull() {
+                this[this.tablesp_ConsultaReporte2.NombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsApellidoNull() {
+                return this.IsNull(this.tablesp_ConsultaReporte2.ApellidoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetApellidoNull() {
+                this[this.tablesp_ConsultaReporte2.ApellidoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLibroNull() {
+                return this.IsNull(this.tablesp_ConsultaReporte2.LibroColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLibroNull() {
+                this[this.tablesp_ConsultaReporte2.LibroColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEditorialNull() {
+                return this.IsNull(this.tablesp_ConsultaReporte2.EditorialColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEditorialNull() {
+                this[this.tablesp_ConsultaReporte2.EditorialColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNombre1Null() {
+                return this.IsNull(this.tablesp_ConsultaReporte2.Nombre1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNombre1Null() {
+                this[this.tablesp_ConsultaReporte2.Nombre1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDevolucionIdNull() {
+                return this.IsNull(this.tablesp_ConsultaReporte2.DevolucionIdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDevolucionIdNull() {
+                this[this.tablesp_ConsultaReporte2.DevolucionIdColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -766,22 +811,22 @@ namespace ProyectoFinal {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class AutorRowChangeEvent : global::System.EventArgs {
+        public class sp_ConsultaReporte2RowChangeEvent : global::System.EventArgs {
             
-            private AutorRow eventRow;
+            private sp_ConsultaReporte2Row eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AutorRowChangeEvent(AutorRow row, global::System.Data.DataRowAction action) {
+            public sp_ConsultaReporte2RowChangeEvent(sp_ConsultaReporte2Row row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AutorRow Row {
+            public sp_ConsultaReporte2Row Row {
                 get {
                     return this.eventRow;
                 }
@@ -809,7 +854,7 @@ namespace ProyectoFinal.BibliotecaDBDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class AutorTableAdapter : global::System.ComponentModel.Component {
+    public partial class sp_ConsultaReporte2TableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -823,7 +868,7 @@ namespace ProyectoFinal.BibliotecaDBDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public AutorTableAdapter() {
+        public sp_ConsultaReporte2TableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -920,98 +965,40 @@ namespace ProyectoFinal.BibliotecaDBDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Autor";
-            tableMapping.ColumnMappings.Add("AutorId", "AutorId");
+            tableMapping.DataSetTable = "sp_ConsultaReporte2";
             tableMapping.ColumnMappings.Add("Nombre", "Nombre");
             tableMapping.ColumnMappings.Add("Apellido", "Apellido");
-            tableMapping.ColumnMappings.Add("Nacionalidad", "Nacionalidad");
-            tableMapping.ColumnMappings.Add("Borrado", "Borrado");
-            tableMapping.ColumnMappings.Add("Estatus", "Estatus");
-            tableMapping.ColumnMappings.Add("FechaRegistro", "FechaRegistro");
-            tableMapping.ColumnMappings.Add("FechaActualizacion", "FechaActualizacion");
+            tableMapping.ColumnMappings.Add("Libro", "Libro");
+            tableMapping.ColumnMappings.Add("Editorial", "Editorial");
+            tableMapping.ColumnMappings.Add("Nombre1", "Nombre1");
+            tableMapping.ColumnMappings.Add("PrestamoId", "PrestamoId");
+            tableMapping.ColumnMappings.Add("DevolucionId", "DevolucionId");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Autor] WHERE (([AutorId] = @Original_AutorId) AND ([Nombre] = @Original_Nombre) AND ([Apellido] = @Original_Apellido) AND ([Nacionalidad] = @Original_Nacionalidad) AND ([Borrado] = @Original_Borrado) AND ([Estatus] = @Original_Estatus) AND ([FechaRegistro] = @Original_FechaRegistro) AND ((@IsNull_FechaActualizacion = 1 AND [FechaActualizacion] IS NULL) OR ([FechaActualizacion] = @Original_FechaActualizacion)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AutorId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AutorId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Apellido", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Apellido", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nacionalidad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nacionalidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Borrado", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Borrado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Estatus", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estatus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FechaRegistro", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaRegistro", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FechaActualizacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaActualizacion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FechaActualizacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaActualizacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Autor] ([Nombre], [Apellido], [Nacionalidad], [Borrado], [Estatus], [FechaRegistro], [FechaActualizacion]) VALUES (@Nombre, @Apellido, @Nacionalidad, @Borrado, @Estatus, @FechaRegistro, @FechaActualizacion);
-SELECT AutorId, Nombre, Apellido, Nacionalidad, Borrado, Estatus, FechaRegistro, FechaActualizacion FROM Autor WHERE (AutorId = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Apellido", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Apellido", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nacionalidad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nacionalidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Borrado", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Borrado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estatus", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaRegistro", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaRegistro", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaActualizacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaActualizacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Autor] SET [Nombre] = @Nombre, [Apellido] = @Apellido, [Nacionalidad] = @Nacionalidad, [Borrado] = @Borrado, [Estatus] = @Estatus, [FechaRegistro] = @FechaRegistro, [FechaActualizacion] = @FechaActualizacion WHERE (([AutorId] = @Original_AutorId) AND ([Nombre] = @Original_Nombre) AND ([Apellido] = @Original_Apellido) AND ([Nacionalidad] = @Original_Nacionalidad) AND ([Borrado] = @Original_Borrado) AND ([Estatus] = @Original_Estatus) AND ([FechaRegistro] = @Original_FechaRegistro) AND ((@IsNull_FechaActualizacion = 1 AND [FechaActualizacion] IS NULL) OR ([FechaActualizacion] = @Original_FechaActualizacion)));
-SELECT AutorId, Nombre, Apellido, Nacionalidad, Borrado, Estatus, FechaRegistro, FechaActualizacion FROM Autor WHERE (AutorId = @AutorId)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Apellido", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Apellido", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nacionalidad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nacionalidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Borrado", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Borrado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estatus", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaRegistro", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaRegistro", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaActualizacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaActualizacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AutorId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AutorId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Apellido", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Apellido", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nacionalidad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nacionalidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Borrado", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Borrado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Estatus", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estatus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FechaRegistro", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaRegistro", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FechaActualizacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaActualizacion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FechaActualizacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaActualizacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AutorId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "AutorId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProyectoFinal.Properties.Settings.Default.BibliotecaDBConnectionString;
+            this._connection.ConnectionString = global::ProyectoFinal.Properties.Settings.Default.BibliotecaDBConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT AutorId, Nombre, Apellido, Nacionalidad, Borrado, Estatus, FechaRegistro, " +
-                "FechaActualizacion FROM dbo.Autor";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        AutorId, Nombre, Apellido, Nacionalidad, Borrado, Estatus, FechaReg" +
-                "istro, FechaActualizacion\r\nFROM            Autor\r\nWHERE        (Estatus = \'A\')";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT AutorId, Nombre, Apellido, Nacionalidad, Borrado, Estatus, FechaRegistro, " +
-                "FechaActualizacion FROM dbo.Autor WHERE Estatus = \'A\'";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].CommandText = "dbo.sp_ConsultaReporte2";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(BibliotecaDBDataSet.AutorDataTable dataTable) {
+        public virtual int Fill(BibliotecaDBDataSet.sp_ConsultaReporte2DataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1024,288 +1011,11 @@ SELECT AutorId, Nombre, Apellido, Nacionalidad, Borrado, Estatus, FechaRegistro,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual BibliotecaDBDataSet.AutorDataTable GetData() {
+        public virtual BibliotecaDBDataSet.sp_ConsultaReporte2DataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            BibliotecaDBDataSet.AutorDataTable dataTable = new BibliotecaDBDataSet.AutorDataTable();
+            BibliotecaDBDataSet.sp_ConsultaReporte2DataTable dataTable = new BibliotecaDBDataSet.sp_ConsultaReporte2DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(BibliotecaDBDataSet.AutorDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy1(BibliotecaDBDataSet.AutorDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(BibliotecaDBDataSet.AutorDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(BibliotecaDBDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Autor");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_AutorId, string Original_Nombre, string Original_Apellido, string Original_Nacionalidad, bool Original_Borrado, string Original_Estatus, System.DateTime Original_FechaRegistro, global::System.Nullable<global::System.DateTime> Original_FechaActualizacion) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_AutorId));
-            if ((Original_Nombre == null)) {
-                throw new global::System.ArgumentNullException("Original_Nombre");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Nombre));
-            }
-            if ((Original_Apellido == null)) {
-                throw new global::System.ArgumentNullException("Original_Apellido");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Apellido));
-            }
-            if ((Original_Nacionalidad == null)) {
-                throw new global::System.ArgumentNullException("Original_Nacionalidad");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Nacionalidad));
-            }
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((bool)(Original_Borrado));
-            if ((Original_Estatus == null)) {
-                throw new global::System.ArgumentNullException("Original_Estatus");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Estatus));
-            }
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_FechaRegistro));
-            if ((Original_FechaActualizacion.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_FechaActualizacion.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Nombre, string Apellido, string Nacionalidad, bool Borrado, string Estatus, System.DateTime FechaRegistro, global::System.Nullable<global::System.DateTime> FechaActualizacion) {
-            if ((Nombre == null)) {
-                throw new global::System.ArgumentNullException("Nombre");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Nombre));
-            }
-            if ((Apellido == null)) {
-                throw new global::System.ArgumentNullException("Apellido");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Apellido));
-            }
-            if ((Nacionalidad == null)) {
-                throw new global::System.ArgumentNullException("Nacionalidad");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Nacionalidad));
-            }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((bool)(Borrado));
-            if ((Estatus == null)) {
-                throw new global::System.ArgumentNullException("Estatus");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Estatus));
-            }
-            this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(FechaRegistro));
-            if ((FechaActualizacion.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(FechaActualizacion.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string Nombre, 
-                    string Apellido, 
-                    string Nacionalidad, 
-                    bool Borrado, 
-                    string Estatus, 
-                    System.DateTime FechaRegistro, 
-                    global::System.Nullable<global::System.DateTime> FechaActualizacion, 
-                    int Original_AutorId, 
-                    string Original_Nombre, 
-                    string Original_Apellido, 
-                    string Original_Nacionalidad, 
-                    bool Original_Borrado, 
-                    string Original_Estatus, 
-                    System.DateTime Original_FechaRegistro, 
-                    global::System.Nullable<global::System.DateTime> Original_FechaActualizacion, 
-                    int AutorId) {
-            if ((Nombre == null)) {
-                throw new global::System.ArgumentNullException("Nombre");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Nombre));
-            }
-            if ((Apellido == null)) {
-                throw new global::System.ArgumentNullException("Apellido");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Apellido));
-            }
-            if ((Nacionalidad == null)) {
-                throw new global::System.ArgumentNullException("Nacionalidad");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Nacionalidad));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((bool)(Borrado));
-            if ((Estatus == null)) {
-                throw new global::System.ArgumentNullException("Estatus");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Estatus));
-            }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(FechaRegistro));
-            if ((FechaActualizacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(FechaActualizacion.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_AutorId));
-            if ((Original_Nombre == null)) {
-                throw new global::System.ArgumentNullException("Original_Nombre");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Nombre));
-            }
-            if ((Original_Apellido == null)) {
-                throw new global::System.ArgumentNullException("Original_Apellido");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Apellido));
-            }
-            if ((Original_Nacionalidad == null)) {
-                throw new global::System.ArgumentNullException("Original_Nacionalidad");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Nacionalidad));
-            }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((bool)(Original_Borrado));
-            if ((Original_Estatus == null)) {
-                throw new global::System.ArgumentNullException("Original_Estatus");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Estatus));
-            }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_FechaRegistro));
-            if ((Original_FechaActualizacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_FechaActualizacion.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(AutorId));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nombre, string Apellido, string Nacionalidad, bool Borrado, string Estatus, System.DateTime FechaRegistro, global::System.Nullable<global::System.DateTime> FechaActualizacion, int Original_AutorId, string Original_Nombre, string Original_Apellido, string Original_Nacionalidad, bool Original_Borrado, string Original_Estatus, System.DateTime Original_FechaRegistro, global::System.Nullable<global::System.DateTime> Original_FechaActualizacion) {
-            return this.Update(Nombre, Apellido, Nacionalidad, Borrado, Estatus, FechaRegistro, FechaActualizacion, Original_AutorId, Original_Nombre, Original_Apellido, Original_Nacionalidad, Original_Borrado, Original_Estatus, Original_FechaRegistro, Original_FechaActualizacion, Original_AutorId);
         }
     }
     
@@ -1321,8 +1031,6 @@ SELECT AutorId, Nombre, Apellido, Nacionalidad, Borrado, Estatus, FechaRegistro,
         
         private UpdateOrderOption _updateOrder;
         
-        private AutorTableAdapter _autorTableAdapter;
-        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -1335,20 +1043,6 @@ SELECT AutorId, Nombre, Apellido, Nacionalidad, Borrado, Estatus, FechaRegistro,
             }
             set {
                 this._updateOrder = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public AutorTableAdapter AutorTableAdapter {
-            get {
-                return this._autorTableAdapter;
-            }
-            set {
-                this._autorTableAdapter = value;
             }
         }
         
@@ -1371,10 +1065,6 @@ SELECT AutorId, Nombre, Apellido, Nacionalidad, Borrado, Estatus, FechaRegistro,
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._autorTableAdapter != null) 
-                            && (this._autorTableAdapter.Connection != null))) {
-                    return this._autorTableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -1388,9 +1078,6 @@ SELECT AutorId, Nombre, Apellido, Nacionalidad, Borrado, Estatus, FechaRegistro,
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._autorTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 return count;
             }
         }
@@ -1402,15 +1089,6 @@ SELECT AutorId, Nombre, Apellido, Nacionalidad, Borrado, Estatus, FechaRegistro,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateUpdatedRows(BibliotecaDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._autorTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Autor.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._autorTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -1421,14 +1099,6 @@ SELECT AutorId, Nombre, Apellido, Nacionalidad, Borrado, Estatus, FechaRegistro,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateInsertedRows(BibliotecaDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._autorTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Autor.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._autorTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -1439,14 +1109,6 @@ SELECT AutorId, Nombre, Apellido, Nacionalidad, Borrado, Estatus, FechaRegistro,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(BibliotecaDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._autorTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Autor.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._autorTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             return result;
         }
         
@@ -1486,11 +1148,6 @@ SELECT AutorId, Nombre, Apellido, Nacionalidad, Borrado, Estatus, FechaRegistro,
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._autorTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._autorTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -1523,15 +1180,6 @@ SELECT AutorId, Nombre, Apellido, Nacionalidad, Borrado, Estatus, FechaRegistro,
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._autorTableAdapter != null)) {
-                    revertConnections.Add(this._autorTableAdapter, this._autorTableAdapter.Connection);
-                    this._autorTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._autorTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._autorTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._autorTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._autorTableAdapter.Adapter);
-                    }
-                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -1589,10 +1237,6 @@ SELECT AutorId, Nombre, Apellido, Nacionalidad, Borrado, Estatus, FechaRegistro,
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
-                }
-                if ((this._autorTableAdapter != null)) {
-                    this._autorTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._autorTableAdapter]));
-                    this._autorTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

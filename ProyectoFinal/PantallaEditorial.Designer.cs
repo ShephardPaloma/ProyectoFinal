@@ -418,7 +418,7 @@
             this.txtNombre.Location = new System.Drawing.Point(468, 270);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(129, 30);
+            this.txtNombre.Size = new System.Drawing.Size(191, 30);
             this.txtNombre.TabIndex = 23;
             // 
             // labelNombre
@@ -437,7 +437,7 @@
             this.txtDireccion.Location = new System.Drawing.Point(468, 341);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(129, 30);
+            this.txtDireccion.Size = new System.Drawing.Size(191, 30);
             this.txtDireccion.TabIndex = 21;
             // 
             // labelDireccion
@@ -457,7 +457,7 @@
             this.txtIDEditorial.Location = new System.Drawing.Point(468, 199);
             this.txtIDEditorial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIDEditorial.Name = "txtIDEditorial";
-            this.txtIDEditorial.Size = new System.Drawing.Size(129, 30);
+            this.txtIDEditorial.Size = new System.Drawing.Size(191, 30);
             this.txtIDEditorial.TabIndex = 19;
             // 
             // labelEditorialID

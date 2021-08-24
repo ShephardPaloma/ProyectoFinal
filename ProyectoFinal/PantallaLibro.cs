@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using ProyectoFinal.DataModel.Repositories;
+﻿using ProyectoFinal.DataModel.Context;
 using ProyectoFinal.DataModel.Entities;
+using ProyectoFinal.DataModel.Repositories;
+using System;
+using System.Data;
+using System.Linq;
 using System.Runtime.InteropServices;
-using ProyectoFinal.DataModel.Context;
+using System.Windows.Forms;
 
 namespace ProyectoFinal
 {
@@ -19,6 +14,7 @@ namespace ProyectoFinal
         LibroRepository librorepository = new LibroRepository();
         public PantallaLibro()
         {
+
             InitializeComponent();
             dgvLibro.Visible = false;
             #region Visual
@@ -47,7 +43,10 @@ namespace ProyectoFinal
 
         private void btncerrar_Click(object sender, EventArgs e)
         {
-            this.Close(); 
+            if (MessageBox.Show("Seguro que desea salir de esta pantalla?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void btnminimizar_Click(object sender, EventArgs e)
@@ -67,7 +66,7 @@ namespace ProyectoFinal
             this.WindowState = FormWindowState.Normal;
             btnrestaurar.Visible = false;
             btnmaximizar.Visible = true;
-            
+
         }
         private void btnCrearVentana_Click_1(object sender, EventArgs e)
         {
@@ -205,10 +204,14 @@ namespace ProyectoFinal
             MtBuscarTodo();
             using (BibliotecaDbContext context = new BibliotecaDbContext())
             {
-                var listaautores = context.Autors.Where(x => x.Estatus == "A" && x.Borrado == false).Select(x => x.Id).ToList();
+                var listaautores = context.Autors.Where(x => x.Estatus == "A" && x.Borrado == false).Select(x => new { x.Id, x.Nombre }).ToList();
+                cbAutorID.DisplayMember = "Nombre";
+                cbAutorID.ValueMember = "Id";
                 cbAutorID.DataSource = listaautores;
 
-                var listaeditoriales = context.Editorials.Where(x => x.Estatus == "A" && x.Borrado == false).Select(x => x.Id).ToList();
+                var listaeditoriales = context.Editorials.Where(x => x.Estatus == "A" && x.Borrado == false).Select(x => new { x.Id, x.Nombre }).ToList();
+                cbEditorialID.DisplayMember = "Nombre";
+                cbEditorialID.ValueMember = "Id";
                 cbEditorialID.DataSource = listaeditoriales;
             }
         }
@@ -230,11 +233,15 @@ namespace ProyectoFinal
             }
             else
             {
+                string autorid = cbAutorID.SelectedValue.ToString();
+                string editorialid = cbEditorialID.SelectedValue.ToString();
+
+
                 Libro nuevolibro = new Libro()
                 {
                     Nombre = txtNombre.Text,
-                    AutorId = Convert.ToInt32(cbAutorID.Text),
-                    EditorialId = Convert.ToInt32(cbEditorialID.Text)
+                    AutorId = Convert.ToInt32(autorid),
+                    EditorialId = Convert.ToInt32(editorialid)
                 };
 
                 var existeID = librorepository.FindById(nuevolibro.Id);
@@ -307,7 +314,7 @@ namespace ProyectoFinal
 
             var infoautor = librorepository.FindById(Convert.ToInt32(txtEliminar.Text));
 
-            
+
             if (infoautor == null)
             {
                 MessageBox.Show("No existe el libro, favor intentar de nuevo!!", "libro no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -371,7 +378,10 @@ namespace ProyectoFinal
 
         private void pictureBox10_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Seguro que desea salir de esta pantalla?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

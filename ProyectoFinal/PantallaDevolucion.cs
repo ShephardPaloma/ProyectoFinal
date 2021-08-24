@@ -42,7 +42,10 @@ namespace ProyectoFinal
         }  
         private void btncerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Seguro que desea salir de esta pantalla?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void btnminimizar_Click(object sender, EventArgs e)
@@ -66,7 +69,10 @@ namespace ProyectoFinal
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Seguro que desea salir de esta pantalla?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
