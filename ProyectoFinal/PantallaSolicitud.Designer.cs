@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaSolicitud));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnActualizarVentana = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnCrearVentana = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -58,14 +63,11 @@
             this.lblfecha = new System.Windows.Forms.Label();
             this.lblhora = new System.Windows.Forms.Label();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnActualizarVentana = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.btnCrearVentana = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.txtSolicitudID = new System.Windows.Forms.TextBox();
+            this.dgvSolicitud = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.BarraTitulo.SuspendLayout();
@@ -74,7 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenSolicitud)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitud)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -93,6 +95,74 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 631);
             this.panel2.TabIndex = 43;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 146);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel5.Location = new System.Drawing.Point(7, 361);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(11, 33);
+            this.panel5.TabIndex = 24;
+            // 
+            // btnActualizarVentana
+            // 
+            this.btnActualizarVentana.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizarVentana.FlatAppearance.BorderSize = 0;
+            this.btnActualizarVentana.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.btnActualizarVentana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizarVentana.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarVentana.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnActualizarVentana.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActualizarVentana.Location = new System.Drawing.Point(16, 361);
+            this.btnActualizarVentana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnActualizarVentana.Name = "btnActualizarVentana";
+            this.btnActualizarVentana.Size = new System.Drawing.Size(181, 33);
+            this.btnActualizarVentana.TabIndex = 25;
+            this.btnActualizarVentana.Text = "Actualizar";
+            this.btnActualizarVentana.UseVisualStyleBackColor = true;
+            this.btnActualizarVentana.Click += new System.EventHandler(this.btnActualizarVentana_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel9.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel9.Location = new System.Drawing.Point(7, 271);
+            this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(11, 33);
+            this.panel9.TabIndex = 18;
+            // 
+            // btnCrearVentana
+            // 
+            this.btnCrearVentana.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCrearVentana.FlatAppearance.BorderSize = 0;
+            this.btnCrearVentana.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.btnCrearVentana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrearVentana.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearVentana.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCrearVentana.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCrearVentana.Location = new System.Drawing.Point(16, 271);
+            this.btnCrearVentana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCrearVentana.Name = "btnCrearVentana";
+            this.btnCrearVentana.Size = new System.Drawing.Size(181, 33);
+            this.btnCrearVentana.TabIndex = 19;
+            this.btnCrearVentana.Text = "Crear";
+            this.btnCrearVentana.UseVisualStyleBackColor = true;
+            this.btnCrearVentana.Click += new System.EventHandler(this.btnCrearVentana_Click);
             // 
             // pictureBox10
             // 
@@ -240,7 +310,7 @@
             // 
             this.labelEditorial.AutoSize = true;
             this.labelEditorial.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEditorial.Location = new System.Drawing.Point(280, 467);
+            this.labelEditorial.Location = new System.Drawing.Point(275, 454);
             this.labelEditorial.Name = "labelEditorial";
             this.labelEditorial.Size = new System.Drawing.Size(83, 23);
             this.labelEditorial.TabIndex = 52;
@@ -250,7 +320,7 @@
             // 
             this.labelNombre.AutoSize = true;
             this.labelNombre.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombre.Location = new System.Drawing.Point(280, 256);
+            this.labelNombre.Location = new System.Drawing.Point(275, 243);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(77, 23);
             this.labelNombre.TabIndex = 50;
@@ -260,7 +330,7 @@
             // 
             this.labelApellido.AutoSize = true;
             this.labelApellido.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelApellido.Location = new System.Drawing.Point(280, 329);
+            this.labelApellido.Location = new System.Drawing.Point(275, 316);
             this.labelApellido.Name = "labelApellido";
             this.labelApellido.Size = new System.Drawing.Size(79, 23);
             this.labelApellido.TabIndex = 48;
@@ -270,7 +340,7 @@
             // 
             this.labelLibro.AutoSize = true;
             this.labelLibro.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLibro.Location = new System.Drawing.Point(280, 400);
+            this.labelLibro.Location = new System.Drawing.Point(275, 387);
             this.labelLibro.Name = "labelLibro";
             this.labelLibro.Size = new System.Drawing.Size(56, 23);
             this.labelLibro.TabIndex = 46;
@@ -280,7 +350,7 @@
             // 
             this.txtIDSolicitud.Enabled = false;
             this.txtIDSolicitud.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDSolicitud.Location = new System.Drawing.Point(472, 184);
+            this.txtIDSolicitud.Location = new System.Drawing.Point(467, 171);
             this.txtIDSolicitud.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIDSolicitud.Name = "txtIDSolicitud";
             this.txtIDSolicitud.Size = new System.Drawing.Size(191, 30);
@@ -290,7 +360,7 @@
             // 
             this.labelIDEstudiante.AutoSize = true;
             this.labelIDEstudiante.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIDEstudiante.Location = new System.Drawing.Point(280, 187);
+            this.labelIDEstudiante.Location = new System.Drawing.Point(275, 174);
             this.labelIDEstudiante.Name = "labelIDEstudiante";
             this.labelIDEstudiante.Size = new System.Drawing.Size(108, 23);
             this.labelIDEstudiante.TabIndex = 44;
@@ -300,7 +370,7 @@
             // 
             this.labelAutor.AutoSize = true;
             this.labelAutor.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAutor.Location = new System.Drawing.Point(280, 535);
+            this.labelAutor.Location = new System.Drawing.Point(275, 522);
             this.labelAutor.Name = "labelAutor";
             this.labelAutor.Size = new System.Drawing.Size(59, 23);
             this.labelAutor.TabIndex = 54;
@@ -309,7 +379,7 @@
             // cbNombre
             // 
             this.cbNombre.FormattingEnabled = true;
-            this.cbNombre.Location = new System.Drawing.Point(472, 258);
+            this.cbNombre.Location = new System.Drawing.Point(467, 245);
             this.cbNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbNombre.Name = "cbNombre";
             this.cbNombre.Size = new System.Drawing.Size(191, 24);
@@ -318,7 +388,7 @@
             // cbApellido
             // 
             this.cbApellido.FormattingEnabled = true;
-            this.cbApellido.Location = new System.Drawing.Point(472, 328);
+            this.cbApellido.Location = new System.Drawing.Point(467, 315);
             this.cbApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbApellido.Name = "cbApellido";
             this.cbApellido.Size = new System.Drawing.Size(191, 24);
@@ -327,7 +397,7 @@
             // cbLibro
             // 
             this.cbLibro.FormattingEnabled = true;
-            this.cbLibro.Location = new System.Drawing.Point(472, 402);
+            this.cbLibro.Location = new System.Drawing.Point(467, 389);
             this.cbLibro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbLibro.Name = "cbLibro";
             this.cbLibro.Size = new System.Drawing.Size(191, 24);
@@ -336,7 +406,7 @@
             // cbEditorial
             // 
             this.cbEditorial.FormattingEnabled = true;
-            this.cbEditorial.Location = new System.Drawing.Point(472, 469);
+            this.cbEditorial.Location = new System.Drawing.Point(467, 456);
             this.cbEditorial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbEditorial.Name = "cbEditorial";
             this.cbEditorial.Size = new System.Drawing.Size(191, 24);
@@ -345,7 +415,7 @@
             // cbAutor
             // 
             this.cbAutor.FormattingEnabled = true;
-            this.cbAutor.Location = new System.Drawing.Point(472, 537);
+            this.cbAutor.Location = new System.Drawing.Point(467, 524);
             this.cbAutor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbAutor.Name = "cbAutor";
             this.cbAutor.Size = new System.Drawing.Size(191, 24);
@@ -372,7 +442,7 @@
             this.lblfecha.AutoSize = true;
             this.lblfecha.Font = new System.Drawing.Font("Poor Richard", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblfecha.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblfecha.Location = new System.Drawing.Point(879, 669);
+            this.lblfecha.Location = new System.Drawing.Point(870, 661);
             this.lblfecha.Name = "lblfecha";
             this.lblfecha.Size = new System.Drawing.Size(60, 23);
             this.lblfecha.TabIndex = 63;
@@ -384,7 +454,7 @@
             this.lblhora.AutoSize = true;
             this.lblhora.Font = new System.Drawing.Font("Poor Richard", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblhora.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblhora.Location = new System.Drawing.Point(936, 627);
+            this.lblhora.Location = new System.Drawing.Point(927, 619);
             this.lblhora.Name = "lblhora";
             this.lblhora.Size = new System.Drawing.Size(71, 31);
             this.lblhora.TabIndex = 62;
@@ -395,74 +465,6 @@
             // 
             this.horafecha.Enabled = true;
             this.horafecha.Tick += new System.EventHandler(this.horafecha_Tick);
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel5.Location = new System.Drawing.Point(7, 361);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(11, 33);
-            this.panel5.TabIndex = 24;
-            // 
-            // btnActualizarVentana
-            // 
-            this.btnActualizarVentana.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizarVentana.FlatAppearance.BorderSize = 0;
-            this.btnActualizarVentana.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
-            this.btnActualizarVentana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizarVentana.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizarVentana.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnActualizarVentana.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizarVentana.Location = new System.Drawing.Point(16, 361);
-            this.btnActualizarVentana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnActualizarVentana.Name = "btnActualizarVentana";
-            this.btnActualizarVentana.Size = new System.Drawing.Size(181, 33);
-            this.btnActualizarVentana.TabIndex = 25;
-            this.btnActualizarVentana.Text = "Actualizar";
-            this.btnActualizarVentana.UseVisualStyleBackColor = true;
-            this.btnActualizarVentana.Click += new System.EventHandler(this.btnActualizarVentana_Click);
-            // 
-            // panel9
-            // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel9.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel9.Location = new System.Drawing.Point(7, 271);
-            this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(11, 33);
-            this.panel9.TabIndex = 18;
-            // 
-            // btnCrearVentana
-            // 
-            this.btnCrearVentana.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCrearVentana.FlatAppearance.BorderSize = 0;
-            this.btnCrearVentana.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
-            this.btnCrearVentana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearVentana.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearVentana.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCrearVentana.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCrearVentana.Location = new System.Drawing.Point(16, 271);
-            this.btnCrearVentana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCrearVentana.Name = "btnCrearVentana";
-            this.btnCrearVentana.Size = new System.Drawing.Size(181, 33);
-            this.btnCrearVentana.TabIndex = 19;
-            this.btnCrearVentana.Text = "Crear";
-            this.btnCrearVentana.UseVisualStyleBackColor = true;
-            this.btnCrearVentana.Click += new System.EventHandler(this.btnCrearVentana_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 146);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
             // 
             // btnActualizar
             // 
@@ -482,12 +484,22 @@
             // txtSolicitudID
             // 
             this.txtSolicitudID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSolicitudID.Location = new System.Drawing.Point(472, 187);
+            this.txtSolicitudID.Location = new System.Drawing.Point(467, 171);
             this.txtSolicitudID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSolicitudID.Name = "txtSolicitudID";
             this.txtSolicitudID.Size = new System.Drawing.Size(191, 30);
             this.txtSolicitudID.TabIndex = 65;
             this.txtSolicitudID.TextChanged += new System.EventHandler(this.txtSolicitudID_TextChanged);
+            // 
+            // dgvSolicitud
+            // 
+            this.dgvSolicitud.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSolicitud.Location = new System.Drawing.Point(195, 573);
+            this.dgvSolicitud.Name = "dgvSolicitud";
+            this.dgvSolicitud.RowHeadersWidth = 51;
+            this.dgvSolicitud.RowTemplate.Height = 24;
+            this.dgvSolicitud.Size = new System.Drawing.Size(986, 120);
+            this.dgvSolicitud.TabIndex = 66;
             // 
             // PantallaSolicitud
             // 
@@ -495,6 +507,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1181, 693);
+            this.Controls.Add(this.dgvSolicitud);
             this.Controls.Add(this.txtSolicitudID);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.lblfecha);
@@ -523,6 +536,7 @@
             this.Text = "PantallaSolicitud";
             this.Load += new System.EventHandler(this.PantallaSolicitud_Load);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.BarraTitulo.ResumeLayout(false);
@@ -532,7 +546,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenSolicitud)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitud)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -575,5 +589,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.TextBox txtSolicitudID;
+        private System.Windows.Forms.DataGridView dgvSolicitud;
     }
 }

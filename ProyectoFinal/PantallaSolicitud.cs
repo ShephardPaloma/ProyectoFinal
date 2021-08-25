@@ -38,6 +38,7 @@ namespace ProyectoFinal
             btnCrear.Visible = false;
             btnActualizar.Visible = false;
             txtSolicitudID.Visible = false;
+            dgvSolicitud.Visible = false;
             #endregion
 
             cbNombre.Text = string.Empty;
@@ -94,6 +95,8 @@ namespace ProyectoFinal
 
                 solicitudRepository.Create(nuevasolicitud);
                 MessageBox.Show("Solicitud creada correctamente!");
+
+                
                 cbNombre.Text = string.Empty;
                 cbApellido.Text = string.Empty;
                 cbLibro.Text = string.Empty;
@@ -167,6 +170,8 @@ namespace ProyectoFinal
 
         private void btnCrearVentana_Click(object sender, EventArgs e)
         {
+            #region visual
+            dgvSolicitud.Visible = false;
             imagenSolicitud.Visible = false;
             labelIDEstudiante.Visible = true;
             labelNombre.Visible = true;
@@ -183,11 +188,13 @@ namespace ProyectoFinal
             btnCrear.Visible = true;
             btnActualizar.Visible = false;
             txtSolicitudID.Visible = false;
+            #endregion
         }
 
         private void btnActualizarVentana_Click(object sender, EventArgs e)
         {
             #region Visual
+            dgvSolicitud.Visible = true;
             imagenSolicitud.Visible = false;
             labelIDEstudiante.Visible = true;
             labelNombre.Visible = true;
@@ -227,7 +234,10 @@ namespace ProyectoFinal
                 if (respuesta.Success)
                 {
                     MessageBox.Show("Datos de la solicitud actualizados correctamente!");
-
+                    
+                    var infosolicitud = solicitudRepository.FindById(Convert.ToInt32(txtSolicitudID.Text));
+                    var vistasolicitud = solicitudRepository.GetAll();
+                    dgvSolicitud.DataSource = vistasolicitud.Where(x => x.Id == infosolicitud.Id).Select(x => new { x.Id, x.Nombre, x.Apellido, x.Libro, x.Editorial, x.Autor, x.Estatus, x.FechaRegistro, x.FechaActualizacion }).ToList();
                 }
                 else
                 {

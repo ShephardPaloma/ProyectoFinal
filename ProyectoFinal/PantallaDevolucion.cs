@@ -22,8 +22,9 @@ namespace ProyectoFinal
         public PantallaDevolucion()
         {
             InitializeComponent();
-            dgvDevolucion.Visible = false;
+
             #region Visual
+            dgvDevolucion.Visible = false;
             imagenDevolucion.Visible = true;
             labelDevolucionID.Visible = false;
             labelPrestamoID.Visible = false;
@@ -82,8 +83,9 @@ namespace ProyectoFinal
 
         private void btnCrearVentana_Click_1(object sender, EventArgs e)
         {
-            dgvDevolucion.Visible = true;
+   
             #region Visual
+            dgvDevolucion.Visible = true;
             imagenDevolucion.Visible = true;
             labelDevolucionID.Visible = true;
             labelPrestamoID.Visible = true;
@@ -103,8 +105,9 @@ namespace ProyectoFinal
 
         private void btnBTodosVentana_Click_1(object sender, EventArgs e)
         {
-            dgvDevolucion.Visible = true;
+
             #region Visual
+            dgvDevolucion.Visible = true;
             imagenDevolucion.Visible = true;
             labelDevolucionID.Visible = false;
             labelPrestamoID.Visible = false;
@@ -124,8 +127,9 @@ namespace ProyectoFinal
 
         private void btnBIDVentana_Click_1(object sender, EventArgs e)
         {
-            dgvDevolucion.Visible = true;
+
             #region Visual
+            dgvDevolucion.Visible = true;
             imagenDevolucion.Visible = true;
             labelDevolucionID.Visible = false;
             labelPrestamoID.Visible = false;
@@ -145,8 +149,9 @@ namespace ProyectoFinal
 
         private void btnActualizarVentana_Click_1(object sender, EventArgs e)
         {
-            dgvDevolucion.Visible = true;
+
             #region Visual
+            dgvDevolucion.Visible = true;
             imagenDevolucion.Visible = true;
             labelDevolucionID.Visible = true;
             labelPrestamoID.Visible = true;
@@ -166,8 +171,9 @@ namespace ProyectoFinal
 
         private void btnEliminarVentana_Click_1(object sender, EventArgs e)
         {
-            dgvDevolucion.Visible = true;
+          
             #region Visual
+            dgvDevolucion.Visible = true;
             imagenDevolucion.Visible = true;
             labelDevolucionID.Visible = false;
             labelPrestamoID.Visible = false;
@@ -187,7 +193,7 @@ namespace ProyectoFinal
 
         private void PantallaDevolucion_Load(object sender, EventArgs e)
         {
-            MtBuscarTodo();
+            
             using (BibliotecaDbContext context = new BibliotecaDbContext())
             {
                 var listaprestamo = context.Prestamos.Where(x => x.Estatus == "A" && x.Borrado == false).Select(x => x.Id).ToList();
@@ -200,7 +206,7 @@ namespace ProyectoFinal
         }
         private void btnCrear_Click(object sender, EventArgs e)
         {
-           
+            MtBuscarTodo();
             if (string.IsNullOrWhiteSpace(cbPrestamoID.Text))
             {
                 MessageBox.Show("Debe completar el campo de Prestamo Id");
@@ -229,7 +235,7 @@ namespace ProyectoFinal
 
         private void btnBuscarID_Click(object sender, EventArgs e)
         {
-            
+            MtBuscarTodo();
             if (string.IsNullOrWhiteSpace(txtBuscarId.Text))
             {
                 MessageBox.Show("Debe indicar el id de la devolucion!", "Campo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

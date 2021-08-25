@@ -206,6 +206,8 @@ namespace ProyectoFinal
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            MtBuscarTodo();
+
             PrintDocument doc = new PrintDocument();
             doc.DefaultPageSettings.Landscape = true;
             doc.PrinterSettings.PrinterName = "Microsoft Print to PDF";

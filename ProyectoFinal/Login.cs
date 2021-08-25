@@ -62,7 +62,7 @@ namespace ProyectoFinal
             {
                 if((txtUsuario.Text == "Admin") && (txtContrasena.Text == "pass"))
                 {
-                    MessageBox.Show("Datos ingresados correctamente bienvenido al sistema de biblioteca!");
+                    
                     PantallaPrincipal pantallaPrincipal = new PantallaPrincipal();
                     pantallaPrincipal.Show();
                     this.Hide();
